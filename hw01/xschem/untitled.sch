@@ -73,7 +73,7 @@ device=resistor
 m=1}
 C {devices/ind.sym} -80 100 1 0 {name=L4
 m=1
-value=1G
+value=1n
 footprint=1206
 device=inductor}
 C {devices/lab_wire.sym} 220 0 0 0 {name=p1 sig_type=std_logic lab=Vout}
