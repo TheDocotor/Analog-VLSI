@@ -258,6 +258,8 @@ sa=0 sb=0 sd=0
 model=pfet_g5v0d10v5
 spiceprefix=X
 }
-C {sky130_fd_pr/cap_mim_m3_1.sym} 260 160 1 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 260 210 1 0 {name=C3 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 260 240 1 0 {name=C4 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 140 1 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 160 1 0 {name=C3 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 170 1 0 {name=C4 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 190 1 0 {name=C5 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 210 1 0 {name=C6 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
