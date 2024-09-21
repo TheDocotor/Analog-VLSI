@@ -1,0 +1,20 @@
+** sch_path: /home/renslow/Documents/ece5120/hw02/xschem/cs_amp.sch
+**.subckt cs_amp Vin VSS VDD VDD VSS VSS Vo VSS
+*.ipin Vin
+*.ipin VSS
+*.ipin VDD
+*.ipin VDD
+*.ipin VSS
+*.ipin VSS
+*.opin Vo
+*.ipin VSS
+x1 net2 net1 net3 VSS my_nmos
+XRG1 net1 VDD net4 sky130_fd_pr__res_xhigh_po_0p69 L=0.69*20 mult=1 m=1
+XRS VSS net3 net5 sky130_fd_pr__res_xhigh_po_0p69 L=0.69*20 mult=1 m=1
+XRD net2 VDD net6 sky130_fd_pr__res_xhigh_po_0p69 L=0.69*20 mult=1 m=1
+XRG2 VSS net1 net7 sky130_fd_pr__res_xhigh_po_0p69 L=0.69*20 mult=1 m=1
+XCc1 Vin net1 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+XCS net8 net3 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+XCc2 Vo net2 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+**.ends
+.end

@@ -1,6 +1,6 @@
-* SPICE3 file created from nmos.ext - technology: sky130A
+* SPICE3 file created from my_nmos.ext - technology: sky130A
 
-.subckt nmos D G S B
+.subckt my_nmos D G S B
 X0 S G D B sky130_fd_pr__nfet_01v8 ad=3.944 pd=20.52 as=3.5496 ps=20.44 w=9.86 l=4.75
 C0 G B 3.22248f
 .ends

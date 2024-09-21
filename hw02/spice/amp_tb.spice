@@ -1,0 +1,62 @@
+** sch_path: /home/renslow/Documents/ece5120/hw02/xschem/amp_tb.sch
+**.subckt amp_tb
+V1 net1 GND 10
+V2 Vin net2 ac 1 sine(0 100m 1k)
+V3 net2 GND 5
+R1 net4 net2 1meg m=1
+R2 Vout net3 9meg m=1
+L4 net3 net4 1n m=1
+x1 net1 Vout Vin GND cs_amp
+**** begin user architecture code
+
+
+
+.option wnflag=1
+.option savecurrents
+.include ../mag/my_nmos.spice
+
+.control
+save all
+tran 10u 2m
+set color0=white
+set color1=blue
+plot vin, vout
+ac dec 100 10 1000meg
+let mag = db(vout)
+plot mag
+let phase = cph(vout)*180/pi
+plot phase
+save all
+write hw1_tb.raw
+
+.endc
+
+
+
+** opencircuitdesign pdks install
+.lib /usr/magic/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  cs_amp.sym # of pins=4
+** sym_path: /home/renslow/Documents/ece5120/hw02/xschem/cs_amp.sym
+** sch_path: /home/renslow/Documents/ece5120/hw02/xschem/cs_amp.sch
+.subckt cs_amp VDD Vo Vin VSS
+*.ipin Vin
+*.ipin VDD
+*.opin Vo
+*.ipin VSS
+x1 net2 net1 net3 VSS my_nmos
+XRG1 net1 VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=400 mult=1 m=1
+XRS VSS net3 VSS sky130_fd_pr__res_xhigh_po_0p69 L=2 mult=1 m=1
+XRD net2 VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=2 mult=1 m=1
+XRG2 VSS net1 VSS sky130_fd_pr__res_xhigh_po_0p69 L=2000 mult=1 m=1
+XCc1 Vin net1 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+XCS net4 net3 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+XCc2 Vo net2 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+.ends
+
+.GLOBAL GND
+.end
