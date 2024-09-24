@@ -13,27 +13,15 @@ N -240 -10 -240 70 {
 lab=Vin}
 N -240 -10 -140 -10 {
 lab=Vin}
-N -240 130 -240 200 {
-lab=#net2}
-N -240 180 -170 180 {
-lab=#net2}
-N -50 100 -10 100 {
-lab=#net3}
-N 50 100 220 100 {
-lab=Vout}
-N 220 -30 220 100 {
-lab=Vout}
-N 160 -30 220 -30 {
-lab=Vout}
 N -140 10 -140 30 {
 lab=GND}
-N -170 100 -110 100 {
-lab=#net4}
-N -170 100 -170 120 {
-lab=#net4}
+N 160 -30 220 -30 {
+lab=Vout}
+N 220 -30 220 -10 {
+lab=Vout}
 C {devices/simulator_commands_shown.sym} -570 -350 0 0 {name=COMMANDS
 simulator=ngspice
-only_toplevel=false 
+only_toplevel=true
 value= "
 .option wnflag=1
 .option savecurrents
@@ -55,28 +43,12 @@ write hw1_tb.raw
 
 .endc
 "}
-C {devices/vsource.sym} -420 50 0 0 {name=V1 value=10 savecurrent=false}
-C {devices/vsource.sym} -240 100 0 0 {name=V2 value="ac 1 sine(0 100m 1k)" savecurrent=false}
-C {devices/vsource.sym} -240 230 0 0 {name=V3 value=5 savecurrent=false}
+C {devices/vsource.sym} -420 50 0 0 {name=V1 value=5.0 savecurrent=false}
+C {devices/vsource.sym} -240 100 0 0 {name=V2 value="ac 1 sine(0 5m 1k)" savecurrent=false}
 C {devices/gnd.sym} -420 80 0 0 {name=l1 lab=GND}
-C {devices/gnd.sym} -240 260 0 0 {name=l2 lab=GND}
-C {devices/res.sym} -170 150 0 0 {name=R1
-value=1meg
-footprint=1206
-device=resistor
-m=1}
+C {devices/gnd.sym} -240 130 0 0 {name=l2 lab=GND}
 C {devices/gnd.sym} -140 30 0 0 {name=l3 lab=GND}
-C {devices/res.sym} 20 100 1 0 {name=R2
-value=9meg
-footprint=1206
-device=resistor
-m=1}
-C {devices/ind.sym} -80 100 1 0 {name=L4
-m=1
-value=1n
-footprint=1206
-device=inductor}
-C {devices/lab_wire.sym} 220 0 0 0 {name=p1 sig_type=std_logic lab=Vout}
+C {devices/lab_wire.sym} 220 -30 0 0 {name=p1 sig_type=std_logic lab=Vout}
 C {devices/lab_wire.sym} -230 -10 0 0 {name=p2 sig_type=std_logic lab=Vin}
 C {devices/code.sym} 120 -360 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -88,3 +60,9 @@ value="
 "
 spice_ignore=false}
 C {cs_amp.sym} 10 -10 0 0 {name=x1}
+C {devices/res.sym} 220 20 0 0 {name=R1
+value=1Meg
+footprint=1206
+device=resistor
+m=1}
+C {devices/gnd.sym} 220 50 0 0 {name=l4 lab=GND}

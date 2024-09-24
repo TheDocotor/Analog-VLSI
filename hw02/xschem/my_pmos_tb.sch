@@ -5,24 +5,24 @@ K {}
 V {}
 S {}
 E {}
-N 570 -800 590 -800 {
+N 680 -1420 700 -1420 {
 lab=G1v8}
-N 570 -780 590 -780 {
+N 680 -1400 700 -1400 {
 lab=S}
-N 570 -760 590 -760 {
+N 680 -1380 700 -1380 {
 lab=B}
-N 610 -910 610 -880 {
+N 720 -1530 720 -1500 {
 lab=D1v8}
-N 570 -820 610 -820 {
+N 680 -1440 720 -1440 {
 lab=D}
-C {sky130_fd_pr/corner.sym} 0 -750 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/lab_pin.sym} 590 -780 0 1 {name=p3 lab=S}
-C {devices/lab_pin.sym} 590 -760 0 1 {name=p4 lab=B}
-C {devices/lab_pin.sym} 590 -800 0 1 {name=p2 lab=G1v8}
-C {devices/lab_pin.sym} 610 -910 0 0 {name=p17 lab=D1v8}
-C {devices/ammeter.sym} 610 -850 2 0 {name=Vd1 current=5.7132e-04}
-C {devices/lab_pin.sym} 610 -820 0 1 {name=p1 lab=D}
-C {my_pmos.sym} 420 -790 0 0 {name=x1}
+C {sky130_fd_pr/corner.sym} 30 -1250 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/lab_pin.sym} 700 -1400 0 1 {name=p3 lab=S}
+C {devices/lab_pin.sym} 700 -1380 0 1 {name=p4 lab=B}
+C {devices/lab_pin.sym} 700 -1420 0 1 {name=p2 lab=G1v8}
+C {devices/lab_pin.sym} 720 -1530 0 0 {name=p17 lab=D1v8}
+C {devices/ammeter.sym} 720 -1470 2 0 {name=Vd1 current=5.7132e-04}
+C {devices/lab_pin.sym} 720 -1440 0 1 {name=p1 lab=D}
+C {my_pmos.sym} 530 -1410 0 0 {name=x1}
 C {devices/code_shown.sym} -10 -1620 0 0 {name=NGSPICE
 only_toplevel=true
 value="* this option enables mos model bin 

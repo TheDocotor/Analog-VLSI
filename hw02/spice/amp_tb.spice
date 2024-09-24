@@ -1,12 +1,9 @@
 ** sch_path: /home/renslow/Documents/ece5120/hw02/xschem/amp_tb.sch
 **.subckt amp_tb
-V1 net1 GND 10
-V2 Vin net2 ac 1 sine(0 100m 1k)
-V3 net2 GND 5
-R1 net4 net2 1meg m=1
-R2 Vout net3 9meg m=1
-L4 net3 net4 1n m=1
+V1 net1 GND 5.0
+V2 Vin GND ac 1 sine(0 5m 1k)
 x1 net1 Vout Vin GND cs_amp
+R1 Vout GND 1Meg m=1
 **** begin user architecture code
 
 
@@ -48,14 +45,14 @@ write hw1_tb.raw
 *.ipin VDD
 *.opin Vo
 *.ipin VSS
-x1 net2 net1 net3 VSS my_nmos
-XRG1 net1 VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=400 mult=1 m=1
-XRS VSS net3 VSS sky130_fd_pr__res_xhigh_po_0p69 L=2 mult=1 m=1
-XRD net2 VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=2 mult=1 m=1
-XRG2 VSS net1 VSS sky130_fd_pr__res_xhigh_po_0p69 L=2000 mult=1 m=1
-XCc1 Vin net1 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
-XCS net4 net3 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
-XCc2 Vo net2 sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=1 m=1
+x1 V_D V_gate net1 VSS my_nmos
+C1 Vin V_gate 100u m=1
+C2 Vo V_D 100u m=1
+Vmeas net1 VSS 0
+.save i(vmeas)
+R1 VDD V_gate 400k m=1
+R2 V_gate VSS 100k m=1
+R3 VDD V_D 76.9k m=1
 .ends
 
 .GLOBAL GND
