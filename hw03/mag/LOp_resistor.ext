@@ -1,0 +1,12 @@
+timestamp 1729283835
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0 1 0 -131 0 1 261
+use sky130_fd_pr__res_xhigh_po_0p69_P8UVGE sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0 1 0 -131 0 1 1154
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/VSUBS" "sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/VSUBS" "VSUBS"
+merge "sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_n554#" "sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" -686.321 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -116472 -2240 -48380 -1056 0 0 0 0 0 0 0 0 0 0

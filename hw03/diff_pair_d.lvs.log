@@ -1,0 +1,47 @@
+Netgen 1.5.277 compiled on Wed Aug 21 04:14:48 PM MDT 2024
+Warning: netgen command 'format' use fully-qualified name '::netgen::format'
+Warning: netgen command 'global' use fully-qualified name '::netgen::global'
+Reading netlist file /home/renslow/Documents/ece5120/hw03/diff_pair_d.ext.spc
+Call to undefined subcircuit sky130_fd_pr__nfet_01v8
+Creating placeholder cell definition.
+Call to undefined subcircuit sky130_fd_pr__res_xhigh_po_0p69
+Creating placeholder cell definition.
+Reading netlist file /home/renslow/Documents/ece5120/hw03/diff_pair_d.sch.spc
+
+Reading setup file /usr/magic/pdk/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+Model sky130_fd_pr__res_xhigh_po_0p69 pin 1 == 2
+No property w found for device sky130_fd_pr__res_xhigh_po_0p69
+No property w found for device sky130_fd_pr__res_xhigh_po_0p69
+No property value found for device sky130_fd_pr__res_xhigh_po_0p69
+No property w found for device sky130_fd_pr__res_xhigh_po_0p69
+No property mult found for device sky130_fd_pr__res_xhigh_po_0p69
+Model sky130_fd_pr__nfet_01v8 pin 1 == 3
+No property mult found for device sky130_fd_pr__nfet_01v8
+No property sa found for device sky130_fd_pr__nfet_01v8
+No property sb found for device sky130_fd_pr__nfet_01v8
+No property sd found for device sky130_fd_pr__nfet_01v8
+No property nf found for device sky130_fd_pr__nfet_01v8
+No property nrd found for device sky130_fd_pr__nfet_01v8
+No property nrs found for device sky130_fd_pr__nfet_01v8
+No property area found for device sky130_fd_pr__nfet_01v8
+No property perim found for device sky130_fd_pr__nfet_01v8
+No property topography found for device sky130_fd_pr__nfet_01v8
+Comparison output logged to file /home/renslow/Documents/ece5120/hw03/diff_pair_d.lvs.out
+Logging to file "/home/renslow/Documents/ece5120/hw03/diff_pair_d.lvs.out" enabled
+
+Contents of circuit 1:  Circuit: 'diff_pair_d'
+Circuit diff_pair_d contains 57 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:  44
+  Class: sky130_fd_pr__res_xhigh_po_0p69 instances:  13
+Circuit contains 14 nets.
+Contents of circuit 2:  Circuit: 'diff_pair_d'
+Circuit diff_pair_d contains 0 device instances.
+Circuit contains 0 nets, and 8 disconnected pins.
+
+Circuit diff_pair_d contains no devices.
+
+Final result: 
+Verify:  cell /home/renslow/Documents/ece5120/hw03/diff_pair_d.sch.spc has no elements and/or nodes.  Not checked.
+Logging to file "/home/renslow/Documents/ece5120/hw03/diff_pair_d.lvs.out" disabled
+LVS Done.
