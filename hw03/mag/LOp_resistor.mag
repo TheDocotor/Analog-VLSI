@@ -1,0 +1,17 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1729283835
+use sky130_fd_pr__res_xhigh_po_0p69_P8UVGE  sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0
+timestamp 1729283835
+transform 1 0 -131 0 1 1154
+box -69 -554 69 554
+use sky130_fd_pr__res_xhigh_po_0p69_X24TGQ  sky130_fd_pr__res_xhigh_po_0p69_X24TGQ_0
+timestamp 1729279523
+transform 1 0 -53 0 1 -53
+box 0 0 1 1
+use sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV  sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0
+timestamp 1729279523
+transform 1 0 -131 0 1 261
+box -69 -761 69 761
+<< end >>
