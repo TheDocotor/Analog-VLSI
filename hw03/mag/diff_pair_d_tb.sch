@@ -26,7 +26,7 @@ C {devices/simulator_commands_shown.sym} -380 -610 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value= "
-.include /home/renslow/Documents/ece5120/hw03/mag/diff_pair_d.mag
+.include /home/renslow/Documents/ece5120/hw03/mag/diff_pair_d.spice
 VVDD VDD 0 1.8
 VVSS VSS 0 0
 VRF RFp RFn SINE(0 5m 1k)
@@ -36,7 +36,7 @@ save all
 set color0=white
 set color1=blue
 tran 10u 20m
-write gilbert_tb.raw
+write diff_pair_d_tb.raw
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
 let IF = V(IFp, IFn)
@@ -57,4 +57,4 @@ C {devices/lab_wire.sym} 400 -120 0 1 {name=p4 sig_type=std_logic lab=LOp}
 C {devices/lab_wire.sym} 400 -140 0 1 {name=p5 sig_type=std_logic lab=LOn}
 C {devices/lab_wire.sym} 400 -80 0 1 {name=p6 sig_type=std_logic lab=RFp}
 C {devices/lab_wire.sym} 400 -100 0 1 {name=p7 sig_type=std_logic lab=RFn}
-C {Documents/ece5120/hw03/xschem/diff_pair_d.sym} 220 -110 0 0 {name=x1}
+C {diff_pair_d.sym} 220 -110 0 0 {name=x1}

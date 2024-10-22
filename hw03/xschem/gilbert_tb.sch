@@ -5,11 +5,11 @@ K {}
 V {}
 S {}
 E {}
-N -70 -130 -30 -130 {
+N 270 -150 310 -150 {
 lab=VDD}
-N -50 -110 -30 -110 {
+N 270 -10 290 -10 {
 lab=GND}
-N -50 -110 -50 -100 {
+N 290 -10 290 0 {
 lab=GND}
 N 270 -130 300 -130 {
 lab=IFp}
@@ -23,7 +23,6 @@ N 270 -50 300 -50 {
 lab=RFp}
 N 270 -30 300 -30 {
 lab=RFn}
-C {gill_cell.sym} 120 -80 0 0 {name=x1}
 C {devices/simulator_commands_shown.sym} -380 -600 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
@@ -48,8 +47,8 @@ plot mag(LO) mag(RF)
 plot mag(IF)
 .endc
 "}
-C {devices/gnd.sym} -50 -100 0 0 {name=l1 lab=GND}
-C {devices/lab_wire.sym} -70 -130 0 0 {name=p1 sig_type=std_logic lab=VDD}
+C {devices/gnd.sym} 290 0 0 1 {name=l1 lab=GND}
+C {devices/lab_wire.sym} 310 -150 0 1 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 300 -130 0 1 {name=p2 sig_type=std_logic lab=IFp
 }
 C {devices/lab_wire.sym} 300 -110 0 1 {name=p3 sig_type=std_logic lab=IFn
@@ -59,3 +58,4 @@ C {devices/lab_wire.sym} 300 -70 0 1 {name=p5 sig_type=std_logic lab=LOn}
 C {devices/lab_wire.sym} 300 -50 0 1 {name=p6 sig_type=std_logic lab=RFp}
 C {devices/lab_wire.sym} 300 -30 0 1 {name=p7 sig_type=std_logic lab=RFn}
 C {sky130_fd_pr/corner.sym} -50 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {gill_cell.sym} 120 -80 0 0 {name=x1}

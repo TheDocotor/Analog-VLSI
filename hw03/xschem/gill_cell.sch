@@ -112,27 +112,27 @@ lab=VSS}
 N -220 -170 -70 -170 {
 lab=RFp}
 N -30 -240 -30 -200 {
-lab=#net2}
+lab=Vmid}
 N 250 -250 250 -200 {
-lab=#net3}
+lab=Vmid2}
 N 290 -170 420 -170 {
 lab=RFn}
 N 220 -320 220 -250 {
-lab=#net3}
+lab=Vmid2}
 N 220 -250 330 -250 {
-lab=#net3}
+lab=Vmid2}
 N 330 -320 330 -250 {
-lab=#net3}
+lab=Vmid2}
 N 10 -380 330 -410 {
 lab=IF--}
 N -120 -410 220 -380 {
 lab=IF++}
 N -120 -320 -120 -240 {
-lab=#net2}
+lab=Vmid}
 N -120 -240 10 -240 {
-lab=#net2}
+lab=Vmid}
 N 10 -320 10 -240 {
-lab=#net2}
+lab=Vmid}
 N -310 -350 -160 -350 {
 lab=LOp}
 N 370 -350 540 -350 {
@@ -158,15 +158,15 @@ lab=LOp}
 N 780 210 780 230 {
 lab=VSS}
 N 780 80 780 150 {
-lab=#net4}
+lab=Vamp}
 N 720 80 780 80 {
-lab=#net4}
+lab=Vamp}
 N 720 -30 720 80 {
-lab=#net4}
+lab=Vamp}
 N 880 -30 880 80 {
-lab=#net4}
+lab=Vamp}
 N 780 80 880 80 {
-lab=#net4}
+lab=Vamp}
 N 720 -120 720 -90 {
 lab=IFp}
 N 880 -120 880 -90 {
@@ -184,12 +184,9 @@ lab=IFp}
 N 880 -110 930 -110 {
 lab=IFn}
 N 60 40 60 130 {
-lab=#net5}
+lab=#net2}
 N 60 -80 60 -20 {
 lab=#net1}
-C {devices/ipin.sym} -40 240 1 1 {name=p4 lab=VSS
-}
-C {devices/ipin.sym} 100 -560 1 0 {name=p1 lab=VDD}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -120 -460 0 0 {name=R1
 L=0.69*10
 model=res_xhigh_po_0p69
@@ -504,3 +501,8 @@ plot mag(IF)
 .endc
 "}
 C {devices/ammeter.sym} 60 10 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
+C {devices/iopin.sym} 100 -560 3 0 {name=p1 lab=VDD}
+C {devices/iopin.sym} -40 240 1 0 {name=p4 lab=VSS}
+C {devices/lab_pin.sym} 780 80 0 0 {name=p62 sig_type=std_logic lab=Vamp}
+C {devices/lab_pin.sym} -60 -240 0 0 {name=p63 sig_type=std_logic lab=Vmid}
+C {devices/lab_pin.sym} 290 -250 0 0 {name=p64 sig_type=std_logic lab=Vmid2}

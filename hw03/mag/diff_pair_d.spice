@@ -5,8 +5,8 @@ X0 D G S B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=1.5 ps=10.3 w=10 l=1.1
 X1 D G S B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=3 ps=20.6 w=10 l=1.1
 X2 S G D B sky130_fd_pr__nfet_01v8 ad=3 pd=20.6 as=1.5 ps=10.3 w=10 l=1.1
 X3 S G D B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=1.5 ps=10.3 w=10 l=1.1
-C0 S G 3.20505f
-C1 D G 2.53191f
+C0 G D 2.53191f
+C1 S G 3.20505f
 C2 S D 2.16384f
 C3 G B 2.53805f
 .ends
@@ -31,6 +31,10 @@ X0 a_n69_295# a_n69_n727# VSUBS sky130_fd_pr__res_xhigh_po_0p69 l=3.11
 + VSUBS
 Xsky130_fd_pr__res_xhigh_po_0p69_C432MY_0 sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#
 + sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_295# VSUBS sky130_fd_pr__res_xhigh_po_0p69_C432MY
+.ends
+
+.subckt if_res a_n400_0# a_n400_2334# VSUBS
+X0 a_n400_2334# a_n400_0# VSUBS sky130_fd_pr__res_xhigh_po_0p69 l=9.67
 .ends
 
 .subckt sky130_fd_pr__res_xhigh_po_0p69_LZXZX3 a_n69_674# a_n69_n1106# VSUBS
@@ -66,39 +70,39 @@ C1 nmos_40_0/G VSUBS 2.53805f
 .ends
 
 .subckt diff_pair_d VDD VSS LOn LOp RFn RFp IFp IFn
-Xnmos_40_2 VSS VSS nmos_40_2/S VSUBS nmos_40
+Xnmos_40_2 VSS VSS Vamp VSUBS nmos_40
 XRf_res_0 VSS VDD VSUBS RFp Rf_res
 XCS_res_0 VSS VDD VSUBS CS_res
 XRf_res_1 VSS VDD VSUBS RFn Rf_res
-XVdd_res_0 VDD VSUBS Gilbert_3/nmos_40_0/G Vdd_res
-XVdd_res_1 VDD VSUBS Gilbert_3/nmos_40_1/G Vdd_res
-XVdd_res_2 VDD VSUBS IFp Vdd_res
-XVdd_res_3 IFn VSUBS VDD Vdd_res
+Xif_res_1 IFn VDD VSUBS if_res
+Xif_res_0 VDD IFp VSUBS if_res
+XVdd_res_0 VDD VSUBS IF++ Vdd_res
+XVdd_res_1 VDD VSUBS IF-- Vdd_res
 XLOp_resistor_0 VDD LOn VSS VSUBS LOp_resistor
 XLOp_resistor_1 VDD LOp VSS VSUBS LOp_resistor
-XGilbert_0 LOp Gilbert_2/nmos_40_1/S Gilbert_3/nmos_40_1/G LOn Gilbert_3/nmos_40_0/G
-+ VSUBS Gilbert
-XGilbert_1 LOn Gilbert_2/nmos_40_0/S Gilbert_3/nmos_40_1/G LOp Gilbert_3/nmos_40_0/G
-+ VSUBS Gilbert
-XGilbert_2 RFp VSS Gilbert_2/nmos_40_0/S RFn Gilbert_2/nmos_40_1/S VSUBS Gilbert
-XGilbert_3 Gilbert_3/nmos_40_1/G nmos_40_2/S IFn Gilbert_3/nmos_40_0/G IFp VSUBS Gilbert
+XGilbert_0 LOp Vmid IF-- LOn IF++ VSUBS Gilbert
+XGilbert_1 LOn Vmid2 IF-- LOp IF++ VSUBS Gilbert
+XGilbert_2 RFp VSS Vmid2 RFn Vmid VSUBS Gilbert
+XGilbert_3 IF-- Vamp IFn IF++ IFp VSUBS Gilbert
 Xnmos_40_0 VSS VSS VSS VSUBS nmos_40
 Xnmos_40_1 VSS VSS VSS VSUBS nmos_40
-C0 VDD VSS 4.733183f
-C1 RFp RFn 2.146045f
-C2 RFn VSS 2.161304f
-C3 LOn LOp 3.089737f
-C4 RFp VSS 2.190594f
-C5 Gilbert_3/nmos_40_0/G Gilbert_3/nmos_40_1/G 5.896877f
-C6 LOn VDD 4.226158f
-C7 nmos_40_2/S VSUBS 2.375135f
-C8 Gilbert_3/nmos_40_1/G VSUBS 7.896218f
-C9 Gilbert_3/nmos_40_0/G VSUBS 6.927928f
-C10 RFn VSUBS 3.85366f
-C11 LOp VSUBS 7.269139f
-C12 LOn VSUBS 2.985119f
-C13 VSS VSUBS 79.69544f
-C14 VDD VSUBS 22.40041f
-C15 RFp VSUBS 4.197855f
+C0 VSS RFn 2.161304f
+C1 VSS RFp 2.190594f
+C2 LOn LOp 3.089737f
+C3 LOn VDD 4.22694f
+C4 RFp RFn 2.146045f
+C5 IF-- IF++ 5.905244f
+C6 VSS VDD 4.840173f
+C7 Vamp VSUBS 2.375514f
+C8 IFp VSUBS 2.001913f
+C9 IF-- VSUBS 7.894908f
+C10 IFn VSUBS 2.019003f
+C11 IF++ VSUBS 6.959948f
+C12 RFn VSUBS 3.85366f
+C13 LOp VSUBS 7.268859f
+C14 LOn VSUBS 2.985119f
+C15 VSS VSUBS 78.11744f
+C16 VDD VSUBS 21.496143f
+C17 RFp VSUBS 4.197855f
 .ends
 

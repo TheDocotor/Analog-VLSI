@@ -1,0 +1,10 @@
+* SPICE3 file created from Vdd_res.ext - technology: sky130A
+
+.subckt sky130_fd_pr__res_xhigh_po_0p69_LZXZX3 VSUBS
+X0 a_n69_674# a_n69_n1106# VSUBS sky130_fd_pr__res_xhigh_po_0p69 l=6.9
+.ends
+
+.subckt Vdd_res
+Xsky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0 VSUBS sky130_fd_pr__res_xhigh_po_0p69_LZXZX3
+.ends
+

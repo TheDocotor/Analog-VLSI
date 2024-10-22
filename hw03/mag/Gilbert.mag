@@ -1,12 +1,12 @@
 magic
 tech sky130A
-timestamp 1729525499
+timestamp 1729559727
 use nmos_40  nmos_40_0
-timestamp 1729525499
+timestamp 1729559727
 transform 1 0 700 0 1 -100
 box -700 100 0 1300
 use nmos_40  nmos_40_1
-timestamp 1729525499
+timestamp 1729559727
 transform 1 0 700 0 -1 150
 box -700 100 0 1300
 << end >>
