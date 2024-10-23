@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1729559727
+timestamp 1729706154
 use sky130_fd_pr__res_xhigh_po_0p69_2LTKQM  sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0
 timestamp 1729559727
 transform 1 0 727 0 1 393
@@ -10,4 +10,11 @@ use sky130_fd_pr__res_xhigh_po_0p69_2LTKQM  sky130_fd_pr__res_xhigh_po_0p69_2LTK
 timestamp 1729559727
 transform 1 0 729 0 1 -699
 box -69 -761 69 761
+<< labels >>
+flabel space 720 920 720 920 0 FreeSans 1600 0 0 0 P
+port 0 nsew
+flabel space 740 -1240 740 -1240 0 FreeSans 1600 0 0 0 N
+port 1 nsew
+flabel space 720 -160 720 -160 0 FreeSans 1600 0 0 0 M
+port 2 nsew
 << end >>

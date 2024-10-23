@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1729559727
+timestamp 1729706060
 << xpolycontact >>
 rect -400 2334 -262 2766
 rect -400 0 -262 432
@@ -19,4 +19,9 @@ rect -400 416 -262 432
 rect -400 19 -382 416
 rect -276 19 -262 416
 rect -400 0 -262 19
+<< labels >>
+flabel viali -340 2580 -340 2580 0 FreeSans 1600 0 0 0 P
+port 1 nsew
+flabel viali -320 180 -320 180 0 FreeSans 1600 0 0 0 N
+port 2 nsew
 << end >>

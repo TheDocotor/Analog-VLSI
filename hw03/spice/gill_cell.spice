@@ -8,19 +8,17 @@
 *.iopin RFn
 *.iopin VDD
 *.iopin VSS
-XR1 IF++ VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*10 mult=1 m=1
-XR3 IF-- VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*10 mult=1 m=1
-XR2 VM VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*4.5 mult=1 m=1
-XR4 VDD LOp VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*2 mult=1 m=1
-XR5 LOp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR10 VDD LOp VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*2 mult=1 m=1
-XR11 LOp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR6 VDD RFn VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR7 RFn VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR8 VDD RFp VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR9 RFp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
-XR12 LOn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*2 mult=1 m=1
-XR13 VSS LOn VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*5 mult=1 m=1
+XR1 IF++ VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
+XR3 IF-- VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
+XR2 VM VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.11 mult=1 m=1
+XR10 VDD LOp VSS sky130_fd_pr__res_xhigh_po_0p69 L=1.38 mult=1 m=1
+XR11 LOp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR6 VDD RFn VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR7 RFn VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR8 VDD RFp VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR9 RFp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR12 LOn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=1.38 mult=1 m=1
+XR13 VSS LOn VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
 XM2 net2 VM VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM3 Vmid RFp net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
@@ -43,8 +41,8 @@ XM10 IFn IF-- Vamp VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) *
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM11 IFp IF++ Vamp VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XR14 IFp VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*14 mult=1 m=1
-XR15 IFn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=0.69*14 mult=1 m=1
+XR14 IFp VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=9.67 mult=1 m=1
+XR15 IFn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=9.67 mult=1 m=1
 Vmeas net1 net2 0
 .save i(vmeas)
 **** begin user architecture code

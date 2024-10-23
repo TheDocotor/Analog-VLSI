@@ -31,14 +31,6 @@ N 160 -320 160 -310 {
 lab=VSS}
 N -150 -460 -140 -460 {
 lab=VSS}
-N -290 -450 -290 -430 {
-lab=VDD}
-N -330 -400 -310 -400 {
-lab=VSS}
-N -320 -300 -310 -300 {
-lab=VSS}
-N -290 -270 -290 -260 {
-lab=VSS}
 N 30 -290 40 -290 {
 lab=VDD}
 N 190 -290 200 -290 {
@@ -151,10 +143,6 @@ N 330 -430 330 -380 {
 lab=IF--}
 N -120 -430 -120 -380 {
 lab=IF++}
-N -290 -370 -290 -350 {
-lab=LOp}
-N -290 -350 -290 -330 {
-lab=LOp}
 N 780 210 780 230 {
 lab=VSS}
 N 780 80 780 150 {
@@ -183,17 +171,23 @@ N 700 -100 720 -100 {
 lab=IFp}
 N 880 -110 930 -110 {
 lab=IFn}
-N 60 40 60 130 {
-lab=#net2}
-N 60 -80 60 -20 {
+N 410 -660 410 -350 {
+lab=LOp}
+N -320 -660 410 -660 {
+lab=LOp}
+N -320 -660 -320 -350 {
+lab=LOp}
+N -320 -350 -310 -350 {
+lab=LOp}
+N 60 -80 60 130 {
 lab=#net1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -120 -460 0 0 {name=R1
-L=0.69*10
+L=6.9
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 330 -460 0 0 {name=R3
-L=0.69*10
+L=6.9
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
@@ -205,61 +199,50 @@ C {devices/iopin.sym} -450 -190 0 0 {name=p25 lab=LOn}
 C {devices/iopin.sym} -450 -160 0 0 {name=p5 lab=RFp}
 C {devices/iopin.sym} -450 -130 0 0 {name=p26 lab=RFn}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -150 20 0 0 {name=R2
-L=0.69*4.5
-model=res_xhigh_po_0p69
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} -290 -400 2 1 {name=R4
-L=0.69*2
-model=res_xhigh_po_0p69
-spiceprefix=X
-mult=1}
-C {sky130_fd_pr/res_xhigh_po_0p69.sym} -290 -300 2 1 {name=R5
-L=0.69*5
+L=3.11
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 460 -400 2 1 {name=R10
-L=0.69*2
+L=1.38
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 460 -300 2 1 {name=R11
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 370 -210 2 1 {name=R6
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 370 -110 2 1 {name=R7
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -200 -210 2 1 {name=R8
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -200 -110 2 1 {name=R9
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 70 -290 3 1 {name=R12
-L=0.69*2
+L=1.38
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 160 -290 3 1 {name=R13
-L=0.69*5
+L=3.45
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
-C {devices/lab_pin.sym} -290 -450 0 0 {name=p48 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -200 -250 0 0 {name=p27 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -150 -50 0 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 30 -290 0 0 {name=p32 sig_type=std_logic lab=VDD}
@@ -276,9 +259,6 @@ C {devices/lab_pin.sym} 340 -110 0 0 {name=p38 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -200 -70 0 0 {name=p33 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -230 -110 0 0 {name=p39 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -220 -210 0 0 {name=p40 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -290 -260 0 0 {name=p28 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -320 -300 0 0 {name=p41 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -330 -400 0 0 {name=p42 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -110 -350 0 1 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 0 -350 0 0 {name=p13 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 70 -320 0 0 {name=p43 sig_type=std_logic lab=VSS}
@@ -293,12 +273,11 @@ C {devices/lab_pin.sym} 300 -460 0 0 {name=p3 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -150 -460 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 660 -110 0 0 {name=p21 sig_type=std_logic lab=IFp}
 C {devices/lab_pin.sym} 370 -420 0 1 {name=p20 sig_type=std_logic lab=IF--}
-C {devices/lab_pin.sym} -310 -350 0 0 {name=p17 sig_type=std_logic lab=LOp}
 C {devices/lab_pin.sym} 540 -350 0 1 {name=p16 sig_type=std_logic lab=LOp}
 C {devices/lab_pin.sym} -220 -170 0 0 {name=p19 sig_type=std_logic lab=RFp}
 C {devices/lab_pin.sym} 420 -170 0 1 {name=p18 sig_type=std_logic lab=RFn}
 C {sky130_fd_pr/nfet_01v8.sym} 40 160 0 0 {name=M2
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -312,7 +291,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -50 -170 0 0 {name=M3
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -326,7 +305,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -140 -350 0 0 {name=M5
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -340,7 +319,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 200 -350 0 0 {name=M7
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -354,7 +333,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -130 160 0 1 {name=M1
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -368,7 +347,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 270 -170 0 1 {name=M4
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -382,7 +361,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 350 -350 0 1 {name=M8
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -396,7 +375,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 30 -350 0 1 {name=M6
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -409,9 +388,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/corner.sym} -720 130 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {sky130_fd_pr/nfet_01v8.sym} 760 180 0 0 {name=M9
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -425,7 +403,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 900 -60 0 1 {name=M10
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -439,7 +417,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 700 -60 0 0 {name=M11
-L=1
+L=1.1
 W=40
 nf=1 
 mult=1
@@ -454,12 +432,12 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 780 230 0 0 {name=p47 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 720 -150 0 0 {name=R14
-L=0.69*14
+L=9.67
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} 880 -150 0 0 {name=R15
-L=0.69*14
+L=9.67
 model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
@@ -469,38 +447,13 @@ C {devices/lab_pin.sym} 740 180 0 0 {name=p51 sig_type=std_logic lab=VM}
 C {devices/lab_pin.sym} -50 130 0 0 {name=p52 sig_type=std_logic lab=VM}
 C {devices/lab_pin.sym} 930 -110 0 1 {name=p53 sig_type=std_logic lab=IFn}
 C {devices/lab_pin.sym} -160 -420 0 0 {name=p54 sig_type=std_logic lab=IF++}
-C {devices/lab_pin.sym} 680 -60 0 0 {name=p55 sig_type=std_logic lab=IF++}
-C {devices/lab_pin.sym} 920 -60 0 1 {name=p56 sig_type=std_logic lab=IF--}
+C {devices/lab_pin.sym} 920 -60 0 0 {name=p55 sig_type=std_logic lab=IF++}
+C {devices/lab_pin.sym} 680 -60 0 1 {name=p56 sig_type=std_logic lab=IF--}
 C {devices/lab_pin.sym} 700 -150 0 0 {name=p57 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 860 -150 0 0 {name=p58 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 880 -60 0 0 {name=p59 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 720 -60 0 1 {name=p60 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 780 180 0 1 {name=p61 sig_type=std_logic lab=VSS}
-C {devices/simulator_commands_shown.sym} -770 -370 0 0 {name=COMMANDS
-simulator=ngspice
-only_toplevel=false 
-value= "
-VVDD VDD 0 1.8
-VVSS VSS 0 0
-VRF RFp RFn SINE(0 5m 1k)
-VLO LOp LOn SINE(0 5m 1.1k)
-.control
-save all
-set color0=white
-set color1=blue
-tran 10u 20m
-write gilbert_tb.raw
-let RF = V(RFp, RFn)
-let LO = V(LOp,LOn)
-let IF = V(IFp, IFn)
-plot LO RF
-plot IF
-spec 10 3k 100 LO RF IF
-plot mag(LO) mag(RF)
-plot mag(IF)
-.endc
-"}
-C {devices/ammeter.sym} 60 10 0 0 {name=Vmeas savecurrent=true spice_ignore=0}
 C {devices/iopin.sym} 100 -560 3 0 {name=p1 lab=VDD}
 C {devices/iopin.sym} -40 240 1 0 {name=p4 lab=VSS}
 C {devices/lab_pin.sym} 780 80 0 0 {name=p62 sig_type=std_logic lab=Vamp}
