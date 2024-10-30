@@ -399,6 +399,6 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pnp_05v5.sym} 180 -50 0 1 {name=Q2
 model=pnp_05v5_W3p40L3p40
-m=1
+m=24
 spiceprefix=X
 }

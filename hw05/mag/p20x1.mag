@@ -1,16 +1,16 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1730304573
-<< pwell >>
-rect -100 -1200 1200 600
-<< nmos >>
+timestamp 1730302828
+<< nwell >>
+rect -25 -1150 1075 550
+<< pmos >>
 rect 300 200 900 400
 rect 300 -100 900 100
 rect 300 -400 900 -200
 rect 300 -700 900 -500
 rect 300 -1000 900 -800
-<< ndiff >>
+<< pdiff >>
 rect 300 475 900 500
 rect 300 425 325 475
 rect 875 425 900 475
@@ -35,7 +35,7 @@ rect 300 -1025 900 -1000
 rect 300 -1075 325 -1025
 rect 875 -1075 900 -1025
 rect 300 -1100 900 -1075
-<< ndiffc >>
+<< pdiffc >>
 rect 325 425 875 475
 rect 325 125 875 175
 rect 325 -175 875 -125
@@ -96,12 +96,12 @@ rect 300 -1075 325 -1025
 rect 875 -1075 1050 -1025
 rect 300 -1100 1050 -1075
 << labels >>
-flabel ndiffc 600 450 600 450 0 FreeSans 800 0 0 0 D
+flabel pdiffc 600 450 600 450 0 FreeSans 800 0 0 0 D
 port 0 nsew
 flabel polycont 50 -300 50 -300 0 FreeSans 800 0 0 0 G
 port 1 nsew
-flabel ndiffc 625 -1050 625 -1050 0 FreeSans 800 0 0 0 S
+flabel pdiffc 625 -1050 625 -1050 0 FreeSans 800 0 0 0 S
 port 2 nsew
-flabel pwell 0 500 0 500 0 FreeSans 800 0 0 0 B
-port 4 nsew
+flabel nwell 50 475 50 475 0 FreeSans 800 0 0 0 B
+port 3 nsew
 << end >>
