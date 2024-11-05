@@ -1,0 +1,45 @@
+** sch_path: /home/renslow/Documents/ece5120/hw05/mag/bandgap_tb.sch
+**.subckt bandgap_tb
+x1 VDD Vref VSS bandgap
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+
+
+VVDD VDD 0 1.8
+VVSS VSS 0 0
+.include /home/renslow/Documents/ece5120/hw05/mag/bandgap.spice
+x1 Vref VSS VDD bandgap
+C1 Vref VSS 100n
+
+.control
+save all
+op
+print all
+set color0=white
+set color1=blue
+foreach temp 10 30 60
+ set TEMP=$temp
+ tran 1u 1m 900u
+end
+plot tran1.v(vref) tran2.v(vref) tran3.v(vref) title 'Vref vs temp'
+foreach VDD 1.7 1.8 1.9
+ alter VVDD = $VDD
+ tran 1u 1m 900u
+end
+plot tran4.v(vref) tran5.v(vref) tran6.v(vref) title 'Vref vs VDD'
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.end

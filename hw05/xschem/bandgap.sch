@@ -6,7 +6,7 @@ V {}
 S {}
 E {}
 N -280 -480 -200 -480 {
-lab=#net1}
+lab=Vpgates}
 N -320 -560 -320 -510 {
 lab=VDD}
 N -320 -560 250 -560 {
@@ -34,19 +34,19 @@ lab=VDD}
 N -330 -510 -320 -510 {
 lab=VDD}
 N -320 -450 -320 -430 {
-lab=#net1}
+lab=Vpgates}
 N -320 -430 -60 -430 {
-lab=#net1}
+lab=Vpgates}
 N -60 -480 -60 -430 {
-lab=#net1}
+lab=Vpgates}
 N -60 -480 -30 -480 {
-lab=#net1}
+lab=Vpgates}
 N -240 -480 -240 -430 {
-lab=#net1}
+lab=Vpgates}
 N -320 -430 -320 -360 {
-lab=#net1}
+lab=Vpgates}
 N -160 -450 -160 -400 {
-lab=#net2}
+lab=P20G}
 N -280 -330 360 -330 {
 lab=Vref}
 N 180 -370 180 -330 {
@@ -60,53 +60,53 @@ lab=VDD}
 N 180 -440 190 -440 {
 lab=VDD}
 N -160 -400 140 -400 {
-lab=#net2}
+lab=P20G}
 N -320 -180 -320 -150 {
-lab=#net3}
+lab=#net1}
 N -320 -300 -320 -240 {
-lab=#net4}
+lab=Vres}
 N -120 -370 -100 -370 {
 lab=Vref}
 N -100 -370 -100 -330 {
 lab=Vref}
 N -20 -210 -10 -210 {
-lab=#net5}
+lab=Vdiff}
 N -10 -240 -10 -210 {
-lab=#net5}
+lab=Vdiff}
 N -20 -240 -10 -240 {
-lab=#net5}
+lab=Vdiff}
 N -20 -260 -20 -240 {
-lab=#net5}
+lab=Vdiff}
 N -20 -260 60 -260 {
-lab=#net5}
+lab=Vdiff}
 N 20 -80 40 -80 {
-lab=#net6}
-N -20 -180 -20 -110 {
-lab=#net7}
-N 80 -180 80 -110 {
-lab=#net6}
-N 80 -260 80 -240 {
-lab=#net5}
-N 60 -260 80 -260 {
-lab=#net5}
-N 70 -210 80 -210 {
-lab=#net5}
-N 70 -240 70 -210 {
-lab=#net5}
-N 70 -240 80 -240 {
-lab=#net5}
-N 30 -120 30 -80 {
-lab=#net6}
-N 30 -120 80 -120 {
-lab=#net6}
-N -230 -410 -160 -410 {
 lab=#net2}
+N -20 -180 -20 -110 {
+lab=#net3}
+N 80 -180 80 -110 {
+lab=#net2}
+N 80 -260 80 -240 {
+lab=Vdiff}
+N 60 -260 80 -260 {
+lab=Vdiff}
+N 70 -210 80 -210 {
+lab=Vdiff}
+N 70 -240 70 -210 {
+lab=Vdiff}
+N 70 -240 80 -240 {
+lab=Vdiff}
+N 30 -120 30 -80 {
+lab=#net2}
+N 30 -120 80 -120 {
+lab=#net2}
+N -230 -410 -160 -410 {
+lab=P20G}
 N -240 -30 -230 -30 {
 lab=Vss}
 N -160 -340 -160 -180 {
-lab=#net8}
+lab=#net4}
 N -120 -150 -20 -150 {
-lab=#net7}
+lab=#net3}
 N -320 -90 -320 -10 {
 lab=Vss}
 N -320 -10 440 -10 {
@@ -124,17 +124,17 @@ lab=Vss}
 N -240 -60 -240 -30 {
 lab=Vss}
 N -230 -100 -230 -90 {
-lab=#net9}
+lab=#net5}
 N -190 -60 -180 -60 {
-lab=#net2}
+lab=P20G}
 N -180 -180 -180 -60 {
-lab=#net2}
+lab=P20G}
 N -230 -180 -180 -180 {
-lab=#net2}
+lab=P20G}
 N -230 -410 -230 -160 {
-lab=#net2}
+lab=P20G}
 N -190 -130 -180 -130 {
-lab=#net2}
+lab=P20G}
 N -30 -80 -20 -80 {
 lab=Vss}
 N -30 -80 -30 -50 {
@@ -148,31 +148,31 @@ lab=Vss}
 N 80 -80 90 -80 {
 lab=Vss}
 N 160 -240 160 -160 {
-lab=#net10}
+lab=diffg1}
 N -60 -210 -60 -170 {
-lab=#net10}
+lab=diffg1}
 N -60 -170 160 -170 {
-lab=#net10}
+lab=diffg1}
 N 160 -330 160 -300 {
 lab=Vref}
 N 290 -330 290 -300 {
 lab=Vref}
 N 160 -100 160 -80 {
-lab=#net11}
+lab=#net6}
 N 160 -20 160 -10 {
 lab=Vss}
 N 200 -50 200 -10 {
 lab=Vss}
 N 290 -240 290 -90 {
-lab=#net12}
+lab=diffg2}
 N 290 -30 290 -10 {
 lab=Vss}
 N 330 -60 330 -10 {
 lab=Vss}
 N 120 -210 290 -210 {
-lab=#net12}
+lab=diffg2}
 N 10 -450 10 -260 {
-lab=#net5}
+lab=Vdiff}
 C {sky130_fd_pr/nfet_01v8.sym} -140 -370 0 1 {name=M7
 L=1
 W=20
@@ -402,3 +402,11 @@ model=pnp_05v5_W3p40L3p40
 m=24
 spiceprefix=X
 }
+C {devices/lab_pin.sym} 90 -400 0 0 {name=p13 sig_type=std_logic lab=P20G}
+C {devices/lab_pin.sym} -230 -290 0 0 {name=p15 sig_type=std_logic lab=Vl}
+C {devices/lab_pin.sym} -270 -430 0 0 {name=p14 sig_type=std_logic lab=Vpgates}
+C {devices/lab_pin.sym} 10 -300 0 0 {name=p16 sig_type=std_logic lab=Vdiff}
+C {devices/lab_pin.sym} -320 -280 0 0 {name=p17 sig_type=std_logic lab=Vres}
+C {devices/lab_pin.sym} -230 -380 0 0 {name=p18 sig_type=std_logic lab=Vdm2}
+C {devices/lab_pin.sym} 130 -170 0 0 {name=p19 sig_type=std_logic lab=diffg1}
+C {devices/lab_pin.sym} 250 -210 0 0 {name=p20 sig_type=std_logic lab=diffg2}
