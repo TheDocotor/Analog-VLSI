@@ -53,7 +53,7 @@ plot Vin Vout
 *noise v(Vout vvin dec 1000 1 1e8
 *setplot noise1
 *plot inoise_spectrum ylog
-ac dec 100 100k 100Meg
+ac dec 100 100k 10Meg
 let Vout = V(Voutp, Voutn)
 let mag_vout = db(vout)
 let mag_cg = db(x1.vg2)
