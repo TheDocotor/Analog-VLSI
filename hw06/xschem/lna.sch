@@ -7,8 +7,6 @@ S {}
 E {}
 N -210 -280 -210 -230 {
 lab=Vg}
-N -210 -250 -100 -250 {
-lab=Vg}
 N 80 -370 130 -370 {
 lab=Voutn}
 N 40 -340 40 -320 {
@@ -49,16 +47,8 @@ N 170 -340 170 -310 {
 lab=Voutp}
 N -0 -280 -0 -230 {
 lab=Vg2}
-N 210 -280 210 -230 {
-lab=Vg3}
 N 0 -230 70 -230 {
 lab=Vg2}
-N 130 -230 210 -230 {
-lab=Vg3}
-N 60 -150 60 -130 {
-lab=#net1}
-N 60 -220 60 -210 {
-lab=Vs}
 N 210 -280 260 -280 {
 lab=Vg3}
 N -210 -70 280 -70 {
@@ -77,19 +67,33 @@ N 190 -400 190 -370 {
 lab=VDD}
 N 170 -400 190 -400 {
 lab=VDD}
+N -60 -280 -60 -270 {
+lab=Vg2}
+N -210 -240 -100 -240 {
+lab=Vg}
+N 60 -220 60 -130 {
+lab=Vs}
+N 130 -230 230 -230 {
+lab=Vg3}
+N 230 -280 230 -230 {
+lab=Vg3}
+N 260 -220 310 -220 {
+lab=VSS}
+N 260 -280 310 -280 {
+lab=Vg3}
 C {sky130_fd_pr/res_xhigh_po_5p73.sym} -210 -310 0 0 {name=R1
-L=29
+L=10
 model=res_xhigh_po_5p73
 spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po_5p73.sym} -210 -200 0 0 {name=R2
-L=35
+L=20
 model=res_xhigh_po_5p73
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/nfet_01v8.sym} -80 -250 0 0 {name=M1
+C {sky130_fd_pr/nfet_01v8.sym} -80 -240 0 0 {name=M1
 L=1
-W=20
+W=75
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -102,8 +106,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -40 -100 0 1 {name=M2
-L=.5
-W=2
+L=1
+W=10
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -116,8 +120,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 40 -100 0 0 {name=M3
-L=.5
-W=2
+L=1
+W=7
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -130,8 +134,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 20 -280 0 0 {name=M4
-L=4
-W=1
+L=1
+W=40
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -144,8 +148,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 190 -280 0 1 {name=M5
-L=4
-W=1
+L=1
+W=40
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -159,7 +163,7 @@ spiceprefix=X
 }
 C {devices/iopin.sym} 280 -70 0 0 {name=p1 lab=VSS}
 C {sky130_fd_pr/res_xhigh_po_5p73.sym} -60 -330 0 0 {name=R3
-L=63
+L=12
 model=res_xhigh_po_5p73
 spiceprefix=X
 mult=1}
@@ -167,11 +171,6 @@ C {devices/iopin.sym} 300 -420 0 0 {name=p2 lab=VDD}
 C {devices/iopin.sym} 170 -330 2 1 {name=p3 lab=Voutp}
 C {devices/iopin.sym} 40 -330 2 0 {name=p4 lab=Voutn}
 C {devices/iopin.sym} 0 -100 3 0 {name=p5 lab=Vref}
-C {sky130_fd_pr/res_xhigh_po_5p73.sym} 100 -230 1 0 {name=R4
-L=60
-model=res_xhigh_po_5p73
-spiceprefix=X
-mult=1}
 C {devices/iopin.sym} -60 -180 0 0 {name=p6 lab=Vin}
 C {devices/lab_pin.sym} -230 -310 0 0 {name=p7 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -230 -200 0 0 {name=p9 sig_type=std_logic lab=VSS}
@@ -179,17 +178,15 @@ C {devices/lab_pin.sym} 100 -250 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 -330 0 0 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -60 -100 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 60 -100 0 1 {name=p13 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -60 -250 0 1 {name=p14 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -60 -240 0 1 {name=p14 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 170 -280 0 0 {name=p17 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 40 -280 0 1 {name=p18 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -150 -250 0 0 {name=p19 sig_type=std_logic lab=Vg}
+C {devices/lab_pin.sym} -150 -240 0 0 {name=p19 sig_type=std_logic lab=Vg}
 C {devices/lab_pin.sym} -10 -280 0 0 {name=p8 sig_type=std_logic lab=Vg2}
-C {devices/ammeter.sym} 60 -180 0 0 {name=VID savecurrent=true spice_ignore=0}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 260 -250 0 0 {name=C1 model=cap_mim_m3_2 W=1 L=1 MF=1 spiceprefix=X}
 C {devices/lab_pin.sym} 160 -220 0 0 {name=p20 sig_type=std_logic lab=Vs}
 C {sky130_fd_pr/pfet_01v8.sym} 150 -370 0 0 {name=M8
 L=1
-W=4
+W=40
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -203,7 +200,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 60 -370 0 1 {name=M6
 L=1
-W=4
+W=40
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -216,3 +213,10 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 250 -280 0 0 {name=p15 sig_type=std_logic lab=Vg3}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 260 -250 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 310 -250 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/res_high_po_0p35.sym} 100 -230 1 0 {name=R5
+L=220
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}

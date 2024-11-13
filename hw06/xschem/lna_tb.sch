@@ -28,7 +28,7 @@ C {devices/launcher.sym} -140 20 0 0 {name=h1
 descr="Annotate OP" 
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
-C {devices/code_shown.sym} -590 -710 0 0 {name=NGSPICE
+C {devices/code_shown.sym} -590 -720 0 0 {name=NGSPICE
 only_toplevel=true
 value="
 .param VDD=1.8
