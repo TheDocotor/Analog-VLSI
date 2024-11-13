@@ -1,0 +1,27 @@
+magic
+tech sky130A
+timestamp 1731518228
+<< locali >>
+rect 200 -450 700 -350
+use n40x1  n40x1_0
+timestamp 1731517815
+transform 1 0 425 0 1 450
+box -1325 -950 0 250
+use n40x1  n40x1_1
+timestamp 1731517815
+transform -1 0 400 0 1 450
+box -1325 -950 0 250
+<< labels >>
+flabel space -200 600 -200 600 0 FreeSans 800 0 0 0 DL
+port 0 nsew
+flabel space -850 150 -850 150 0 FreeSans 800 0 0 0 GL
+port 1 nsew
+flabel space 150 -400 150 -400 0 FreeSans 800 0 0 0 S
+port 2 nsew
+flabel space -800 650 -800 650 0 FreeSans 800 0 0 0 B
+port 3 nsew
+flabel space 1000 600 1000 600 0 FreeSans 800 0 0 0 DR
+port 4 nsew
+flabel space 1650 100 1650 100 0 FreeSans 800 0 0 0 GR
+port 5 nsew
+<< end >>
