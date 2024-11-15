@@ -31,16 +31,19 @@ only_toplevel=false
 value= "
 VVDD VDD 0 1.8
 VVSS VSS 0 0
-VVREF Vref VSS .7
+VVREF Vref VSS 1.07
 VRF RFp RFn SINE(0 6m 1k)
 VLO LOp LOn SINE(0 5m 1.1k)
+
+.option wnflag=1
+.option savecurrents
 .control
 save all
 op
+write gilbert_tb.raw
 set color0=white
 set color1=blue
 tran 10u 20m
-write gilbert_tb.raw
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
 let IF = V(IFp, IFn)
