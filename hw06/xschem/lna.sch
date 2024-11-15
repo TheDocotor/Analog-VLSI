@@ -214,9 +214,9 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 250 -280 0 0 {name=p15 sig_type=std_logic lab=Vg3}
 C {sky130_fd_pr/cap_mim_m3_1.sym} 260 -250 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
-C {sky130_fd_pr/res_high_po_0p35.sym} 100 -230 1 0 {name=R5
-L=200
-model=res_high_po_0p35
+C {sky130_fd_pr/cap_mim_m3_1.sym} 310 -250 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} 100 -230 1 0 {name=R4
+L=39.26
+model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 310 -250 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=30 MF=1 spiceprefix=X}

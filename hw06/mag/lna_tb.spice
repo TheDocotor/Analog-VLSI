@@ -1,0 +1,56 @@
+** sch_path: /home/renslow/Documents/ece5120/hw06/mag/lna_tb.sch
+**.subckt lna_tb VDD Voutn Voutp Vin Vref VSS
+*.iopin VDD
+*.iopin Voutn
+*.iopin Voutp
+*.iopin Vin
+*.iopin Vref
+*.iopin VSS
+x1 VDD Voutn Voutp Vs1 Vref VSS lna
+C1 Vs1 Vattn 10u m=1
+R1 Vin Vattn 300 m=1
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+.param VDD=1.8
+VVDD VDD 0 {VDD}
+VVSS VSS 0 0
+VVREF Vref VSS 1.07
+VVIN VIN 0 AC 1 SINE(0 10u 1Meg)
+.include /home/renslow/Documents/ece5120/hw06/mag/lna.spice
+
+.option wnfloag=1
+.option savecurrents
+.control
+save all
+op
+write lna_tb.raw
+
+set color0=white
+set color1=blue
+tran 10n 10u 5u
+plot VIN Vattn
+let Vout = V(Voutp, Voutn)
+plot Vin Vout
+*noise v(Vout vvin dec 1000 1 1e8
+*setplot noise1
+*plot inoise_spectrum ylog
+ac dec 100 100k 10Meg
+let Vout = V(Voutp, Voutn)
+let mag_vout = db(vout)
+let mag_cg = db(x1.vg2)
+plot mag_cg mag_vout
+.endc
+
+
+**** end user architecture code
+**.ends
+.end

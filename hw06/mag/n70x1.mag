@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1731516743
+timestamp 1731632322
 << pwell >>
 rect -900 -1100 900 600
 << nmos >>
@@ -131,4 +131,6 @@ flabel ndiffc 100 -950 100 -950 0 FreeSans 400 0 0 0 S
 port 2 nsew
 flabel pwell -775 500 -775 500 0 FreeSans 400 0 0 0 B
 port 3 nsew
+<< properties >>
+string n70x1 parameters
 << end >>

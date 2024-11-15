@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1731518900
+timestamp 1731631080
 << nwell >>
 rect -1400 -1200 3200 1000
 << nsubdiff >>
@@ -22,7 +22,8 @@ rect 100 -1150 1900 -1050
 rect -1350 800 0 900
 rect 1700 800 3150 900
 rect -1350 550 -1250 800
-rect 700 550 1050 650
+rect 700 550 780 650
+rect 840 550 1050 650
 rect -1350 -1050 -1250 -900
 rect 3050 500 3150 800
 rect 3050 -1050 3150 -850
@@ -47,4 +48,6 @@ flabel nwell 2050 -900 2050 -900 0 FreeSans 1600 0 0 0 LS
 port 3 nsew
 flabel nwell -1050 850 -1050 850 0 FreeSans 1600 0 0 0 B
 port 4 nsew
+<< properties >>
+string diff_pair_p parameters
 << end >>
