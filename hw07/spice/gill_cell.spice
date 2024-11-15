@@ -1,0 +1,83 @@
+** sch_path: /home/renslow/Documents/ece5120/hw03/xschem/gill_cell.sch
+**.subckt gill_cell VDD IFp IFn LOp LOn RFp RFn VSS
+*.iopin IFp
+*.iopin IFn
+*.iopin LOp
+*.iopin LOn
+*.iopin RFp
+*.iopin RFn
+*.iopin VDD
+*.iopin VSS
+XR1 IF++ VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
+XR3 IF-- VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
+XR2 VM VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.11 mult=1 m=1
+XR10 VDD LOp VSS sky130_fd_pr__res_xhigh_po_0p69 L=1.38 mult=1 m=1
+XR11 LOp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR6 VDD RFn VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR7 RFn VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR8 VDD RFp VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR9 RFp VSS VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XR12 LOn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=1.38 mult=1 m=1
+XR13 VSS LOn VSS sky130_fd_pr__res_xhigh_po_0p69 L=3.45 mult=1 m=1
+XM2 net2 VM VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 Vmid RFp net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 IF++ LOp Vmid VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM7 IF++ LOn Vmid2 VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 VM VM VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Vmid2 RFn net1 VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 IF-- LOp Vmid2 VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 IF-- LOn Vmid VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM9 Vamp VM VSS VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 IFn IF-- Vamp VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 IFp IF++ Vamp VSS sky130_fd_pr__nfet_01v8 L=1 W=40 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XR14 IFp VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=9.67 mult=1 m=1
+XR15 IFn VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=9.67 mult=1 m=1
+Vmeas net1 net2 0
+.save i(vmeas)
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+
+VVDD VDD 0 1.8
+VVSS VSS 0 0
+VRF RFp RFn SINE(0 5m 1k)
+VLO LOp LOn SINE(0 5m 1.1k)
+.control
+save all
+set color0=white
+set color1=blue
+tran 10u 20m
+write gilbert_tb.raw
+let RF = V(RFp, RFn)
+let LO = V(LOp,LOn)
+let IF = V(IFp, IFn)
+plot LO RF
+plot IF
+spec 10 3k 100 LO RF IF
+plot mag(LO) mag(RF)
+plot mag(IF)
+.endc
+
+
+**** end user architecture code
+**.ends
+.end

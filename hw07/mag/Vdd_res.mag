@@ -1,0 +1,14 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1729706186
+use sky130_fd_pr__res_xhigh_po_0p69_LZXZX3  sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0
+timestamp 1729559727
+transform 1 0 69 0 1 1106
+box -69 -1106 69 1106
+<< labels >>
+flabel space 60 2000 60 2000 0 FreeSans 1600 0 0 0 P
+port 0 nsew
+flabel space 60 200 60 200 0 FreeSans 1600 0 0 0 N
+port 1 nsew
+<< end >>

@@ -1,0 +1,644 @@
+timestamp 1729704761
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use CS_res CS_res_0 1 0 773 0 1 -2757
+use Gilbert Gilbert_0 0 1 4800 -1 0 -100
+use LOp_resistor LOp_resistor_0 1 0 -1400 0 1 -1000
+use LOp_resistor LOp_resistor_1 1 0 -1100 0 1 -1000
+use nmos_40 nmos_40_1 0 1 -1000 -1 0 -4200
+use Rf_res Rf_res_0 1 0 -1558 0 1 -440
+use Rf_res Rf_res_1 1 0 -1258 0 1 -440
+use Vdd_res Vdd_res_0 0 1 2300 -1 0 138
+use Gilbert Gilbert_1 0 1 9380 -1 0 -100
+use Gilbert Gilbert_2 0 1 7100 -1 0 -1440
+use nmos_40 nmos_40_0 0 -1 8520 -1 0 -4160
+use Vdd_res Vdd_res_1 0 1 5600 -1 0 138
+use Gilbert Gilbert_3 0 1 15800 -1 0 0
+use if_res if_res_0 0 1 12940 -1 0 -162
+use if_res if_res_1 0 1 16000 -1 0 -152
+use nmos_40 nmos_40_2 0 -1 17200 -1 0 -4200
+port "RFn" 4 -500 -600 -500 -600 v
+port "RFp" 5 -800 -700 -800 -700 v
+port "LOp" 3 -1200 -100 -1200 -100 v
+port "LOn" 2 -1500 -200 -1500 -200 v
+port "IFn" 7 16192 172 16194 174 v0
+port "IFp" 6 15500 200 15500 200 v0
+port "VDD" 0 3000 1100 3000 1100 m1
+port "VSS" 1 -700 -4900 -700 -4900 m1
+node "m1_15820_n2960#" 5 1072.56 15820 -2960 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 152400 5200 0 0 0 0 0 0 0 0 0 0
+node "VM" 995 14529.7 1520 -4000 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 117600 6120 14056400 28680 0 0 0 0 0 0 0 0 0 0
+node "Vamp" 414 920.217 15820 -2940 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 116400 4000 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vbottom" 694 1006.72 6140 -2928 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 106792 4900 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_n610_n2990#" 173 1320.24 -610 -2990 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 405720 5036 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vmid2" 429 1138.88 7378 -1600 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 187648 5164 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vmid" 555 1139.87 4820 -1576 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 156000 5320 0 0 0 0 0 0 0 0 0 0 0 0
+node "RFn" 358 3646 -500 -600 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 84000 3096 86500 3196 1094800 23580 0 0 0 0 0 0 0 0
+node "RFp" 345 3090.04 -800 -700 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 82400 3056 106000 3240 1355988 15692 0 0 0 0 0 0 0 0
+node "LOp" 678 5917.61 -1200 -100 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 123848 5168 198700 5760 2909600 29440 0 0 0 0 0 0 0 0
+node "LOn" 349 3528.57 -1500 -200 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 82448 3068 86948 3128 2194400 22460 0 0 0 0 0 0 0 0
+node "IFn" 711 1797.08 16192 172 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108722 4994 221696 4790 0 0 0 0 0 0 0 0 0 0
+node "IFp" 711 1776.13 15500 200 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108722 4994 204814 4744 0 0 0 0 0 0 0 0 0 0
+node "IF--" 414 6256.75 5020 -260 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1037679 11828 1364422 19968 0 0 0 0 0 0 0 0 0 0
+node "IF++" 868 8574.58 2720 -269 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 471322 11284 383422 11244 1861200 34320 0 0 0 0 0 0 0 0
+node "VDD" 667 24329.9 3000 1100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 379242 9058 26703976 52736 0 0 0 0 0 0 0 0 0 0
+node "a_9480_n1860#" 193 59.5152 9480 -1860 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1600 200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VSS" 13 98136.2 -700 -4900 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 49949980 244940 38184380 123260 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VDD" "IFp" 195.917
+cap "VSS" "LOp" 28.3022
+cap "VSS" "IF++" 50.5422
+cap "VM" "RFn" 29.2748
+cap "VDD" "li_n610_n2990#" 5.30292
+cap "VSS" "IFp" 6.30773
+cap "VDD" "Vmid2" 0.024102
+cap "LOn" "IF--" 81.8161
+cap "VSS" "li_n610_n2990#" 55.2849
+cap "IF--" "RFn" 1.09317
+cap "IF++" "m1_15820_n2960#" 4.49633
+cap "VSS" "Vmid2" 2.24811
+cap "LOn" "RFp" 0.0455618
+cap "RFp" "RFn" 1566.85
+cap "Vamp" "IF++" 0.139716
+cap "Vmid" "Vbottom" 16.2273
+cap "LOp" "Vmid" 135.287
+cap "Vmid" "IF++" 0.237465
+cap "LOn" "VDD" 4179.87
+cap "VDD" "RFn" 227.708
+cap "LOn" "VSS" 62.8121
+cap "LOp" "Vbottom" 0.110073
+cap "Vmid2" "Vmid" 3.59155
+cap "VSS" "RFn" 890.7
+cap "LOp" "IF++" 258.083
+cap "IFp" "IF++" 392.548
+cap "VM" "RFp" 61.0955
+cap "LOp" "li_n610_n2990#" 0.57338
+cap "Vmid2" "Vbottom" 13.9864
+cap "LOp" "Vmid2" 146.762
+cap "Vmid2" "IF++" 37.813
+cap "LOp" "a_9480_n1860#" 0.116685
+cap "IF++" "a_9480_n1860#" 0.00215421
+cap "IFn" "VDD" 204.739
+cap "LOn" "Vmid" 11.1083
+cap "VM" "VSS" 2488.42
+cap "Vmid" "RFn" 72.9972
+cap "IFn" "VSS" 6.35343
+cap "IF--" "VDD" 1294.81
+cap "LOn" "Vbottom" 0.873288
+cap "LOn" "LOp" 1462.8
+cap "LOn" "IF++" 515.507
+cap "RFp" "VDD" 18.0019
+cap "Vbottom" "RFn" 6.99346
+cap "LOp" "RFn" 974.771
+cap "IF++" "RFn" 0.062581
+cap "VSS" "RFp" 1889.57
+cap "li_n610_n2990#" "RFn" 2.65967
+cap "Vmid2" "RFn" 87.8962
+cap "VM" "Vmid" 2.77408
+cap "VSS" "VDD" 4796.64
+cap "a_9480_n1860#" "RFn" 8.56931
+cap "IF--" "Vmid" 38.7821
+cap "VM" "Vbottom" 257.332
+cap "VDD" "m1_15820_n2960#" 3.03448
+cap "IFn" "IF++" 415.458
+cap "RFp" "Vmid" 9.78826
+cap "IFn" "IFp" 56.5568
+cap "VSS" "m1_15820_n2960#" 1.77731
+cap "LOn" "RFn" 0.0248545
+cap "IF--" "LOp" 67.2255
+cap "VM" "li_n610_n2990#" 40.1521
+cap "IF--" "IF++" 4913.64
+cap "IF--" "IFp" 8.8
+cap "VM" "Vmid2" 2.39109
+cap "Vamp" "VDD" 0.0516345
+cap "RFp" "LOp" 80.6223
+cap "VM" "a_9480_n1860#" 0.0581498
+cap "VDD" "Vmid" 0.0654296
+cap "VSS" "Vamp" 1.02823
+cap "IF--" "Vmid2" 0.532668
+cap "RFp" "li_n610_n2990#" 53.3139
+cap "Vamp" "m1_15820_n2960#" 343.227
+cap "VDD" "LOp" 906.581
+cap "VDD" "IF++" 653.351
+cap "VSS" "Vbottom" 33.354
+cap "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#" "nmos_40_1/D" -2.12735
+cap "nmos_40_1/G" "nmos_40_1/D" 0.414574
+cap "nmos_40_1/S" "nmos_40_1/D" 53.6197
+cap "nmos_40_1/G" "nmos_40_1/D" 0.664137
+cap "nmos_40_1/D" "nmos_40_1/S" 0.00414924
+cap "nmos_40_1/G" "nmos_40_1/D" 65.3527
+cap "nmos_40_1/D" "nmos_40_1/G" 6.41577
+cap "nmos_40_1/D" "nmos_40_1/G" 269.953
+cap "VSS" "nmos_40_1/D" 0.00241016
+cap "nmos_40_1/D" "nmos_40_1/G" 3.09576
+cap "VSS" "nmos_40_1/D" 0.00874268
+cap "VSS" "nmos_40_1/G" 91.0519
+cap "VSS" "Gilbert_2/nmos_40_1/D" 27.4745
+cap "Gilbert_2/nmos_40_1/D" "nmos_40_0/D" -0.867
+cap "nmos_40_0/D" "nmos_40_0/G" 27.1765
+cap "nmos_40_0/D" "nmos_40_0/G" 95.6472
+cap "nmos_40_2/S" "nmos_40_2/G" 45.815
+cap "VSS" "nmos_40_2/S" 47.8192
+cap "VSS" "nmos_40_2/G" 6.30849
+cap "nmos_40_2/D" "nmos_40_2/S" -1.3215
+cap "nmos_40_2/D" "nmos_40_2/G" 6.31968
+cap "VSS" "nmos_40_2/D" 0.00241016
+cap "nmos_40_2/D" "VSS" 0.00874268
+cap "nmos_40_2/D" "nmos_40_2/S" 282.824
+cap "nmos_40_2/G" "nmos_40_2/D" 0.416191
+cap "nmos_40_2/G" "nmos_40_2/D" 60.1286
+cap "nmos_40_2/S" "nmos_40_2/D" 0.00414924
+cap "nmos_40_2/S" "nmos_40_2/D" 93.2854
+cap "nmos_40_2/G" "nmos_40_2/D" 0.664137
+cap "nmos_40_2/S" "nmos_40_2/D" 0.00157211
+cap "nmos_40_2/G" "nmos_40_2/D" 9.44155
+cap "nmos_40_1/G" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 1.79144
+cap "nmos_40_1/G" "nmos_40_1/D" 2.40688
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/G" 2.72469
+cap "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#" "nmos_40_1/G" 8.32594
+cap "nmos_40_1/G" "nmos_40_1/D" 7.89825
+cap "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" -0.424683
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/G" 0.507558
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/G" 4.36014
+cap "nmos_40_1/S" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 0.185683
+cap "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#" "nmos_40_1/D" 14.7908
+cap "nmos_40_1/D" "nmos_40_1/G" 0.257258
+cap "nmos_40_1/D" "nmos_40_1/G" 1.78592
+cap "nmos_40_1/S" "nmos_40_1/D" 1.41928
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/D" 0.839886
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/D" 2.91483
+cap "nmos_40_1/G" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 0.982797
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/G" 68.5813
+cap "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_295#" "nmos_40_1/G" 3.73397
+cap "nmos_40_1/G" "nmos_40_1/D" -10.7845
+cap "nmos_40_1/G" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 0.561287
+cap "nmos_40_1/D" "RFp" 0.598474
+cap "VSS" "nmos_40_1/G" -4.25591
+cap "nmos_40_1/D" "RFp" 0.246186
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "nmos_40_1/G" 0.438556
+cap "nmos_40_1/G" "RFp" 16.5529
+cap "nmos_40_1/D" "nmos_40_1/G" 3.58526
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_2/nmos_40_1/G" -1.74283
+cap "Gilbert_2/nmos_40_1/D" "nmos_40_0/G" 0.00258282
+cap "Gilbert_0/nmos_40_1/D" "nmos_40_0/G" 38.002
+cap "Gilbert_2/nmos_40_1/G" "nmos_40_0/G" 11.0785
+cap "Gilbert_2/nmos_40_1/D" "nmos_40_0/G" 0.00998491
+cap "RFn" "nmos_40_0/G" -0.131297
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_1/D" 350.772
+cap "VSS" "Gilbert_2/nmos_40_1/D" -3.91
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_0/S" 0.0332057
+cap "Gilbert_2/nmos_40_1/D" "RFn" -1.33103
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_0/S" 0.0405499
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" 0.00605806
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_1/nmos_40_1/S" 0.328038
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_2/nmos_40_1/D" 1.85415
+cap "Gilbert_2/nmos_40_1/D" "LOp" -0.0951943
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_2/nmos_40_1/D" 0.907726
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_0/G" 0.495199
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_1/nmos_40_1/D" 267.508
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/G" 0.532027
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" -3.85278
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_0/G" 74.3358
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" -3.20755
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/G" 73.5756
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" 162.514
+cap "Gilbert_2/nmos_40_1/D" "nmos_40_0/D" 20.8213
+cap "nmos_40_0/G" "nmos_40_0/D" 46.9727
+cap "Gilbert_1/nmos_40_1/D" "nmos_40_0/D" 212.516
+cap "nmos_40_0/G" "nmos_40_0/D" 21.329
+cap "nmos_40_0/G" "Gilbert_1/nmos_40_1/S" 0.0184476
+cap "Gilbert_2/nmos_40_1/D" "nmos_40_0/G" -8.82772
+cap "Gilbert_2/nmos_40_0/G" "nmos_40_0/D" 4.85796
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_1/D" 44.3665
+cap "Gilbert_1/nmos_40_1/D" "nmos_40_0/G" 6.20942
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/D" -0.123368
+cap "nmos_40_0/G" "nmos_40_0/D" 48.5056
+cap "Gilbert_2/nmos_40_0/G" "nmos_40_0/G" 0.0656436
+cap "nmos_40_0/D" "Gilbert_1/nmos_40_1/D" -0.0130943
+cap "nmos_40_0/D" "Gilbert_2/nmos_40_0/G" 6.67918
+cap "Gilbert_3/nmos_40_1/D" "nmos_40_2/D" -1.3215
+cap "Gilbert_3/nmos_40_1/D" "nmos_40_2/G" 52.5917
+cap "nmos_40_2/D" "nmos_40_2/G" 6.31968
+cap "Gilbert_3/nmos_40_1/D" "nmos_40_2/D" -1.40002
+cap "nmos_40_2/D" "nmos_40_2/S" 2.31438
+cap "nmos_40_2/D" "nmos_40_2/G" 11.3133
+cap "nmos_40_2/D" "nmos_40_2/G" 3.08543
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -0.311367
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" 0.0982143
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 3.40965
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 2.95394
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 3.89397
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -5.29783
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" 0.0152262
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" -5.68046
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 3.81211
+cap "nmos_40_1/G" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 3.3449
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" -0.000813792
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 0.101411
+cap "RFn" "Gilbert_0/nmos_40_1/G" 7.79766
+cap "Gilbert_0/nmos_40_1/S" "Gilbert_0/nmos_40_1/G" 298.283
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_1/G" 0.694323
+cap "RFn" "Gilbert_0/nmos_40_1/S" 19.8307
+cap "LOn" "Gilbert_0/nmos_40_1/G" -0.173241
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_1/G" 411.075
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_1/G" 0.431666
+cap "Gilbert_0/nmos_40_1/S" "Gilbert_2/nmos_40_1/G" 7.65719
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/D" 87.9291
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/D" -1.77294
+cap "LOn" "Gilbert_0/nmos_40_1/D" 1.25656
+cap "Gilbert_0/nmos_40_0/S" "RFn" 1.25751
+cap "Gilbert_0/nmos_40_1/D" "RFn" 29.6186
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_1/D" 44.5773
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_1/G" 0.0231371
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/S" -3.20755
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_1/S" 11.6844
+cap "LOn" "Gilbert_2/nmos_40_1/G" 0.165989
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_0/G" 61.669
+cap "RFn" "Gilbert_2/nmos_40_1/D" 0.721197
+cap "Gilbert_2/nmos_40_1/G" "RFn" 110.906
+cap "RFn" "Gilbert_0/nmos_40_1/S" 15.2468
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_1/S" 6.10442
+cap "RFn" "Gilbert_0/nmos_40_0/G" 1.69993
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/G" 45.6278
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_0/G" 5.71429
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_1/G" 491.637
+cap "LOn" "Gilbert_0/nmos_40_0/G" 0.167305
+cap "LOn" "Gilbert_0/nmos_40_1/G" 0.167305
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_1/G" 9.07947
+cap "RFn" "Gilbert_0/nmos_40_1/G" 5.95938
+cap "Gilbert_0/nmos_40_1/D" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" -0.024102
+cap "Gilbert_0/nmos_40_1/S" "Gilbert_0/nmos_40_1/G" 211.147
+cap "Gilbert_0/nmos_40_1/D" "nmos_40_0/G" -0.231682
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_1/G" 37.6195
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_1/G" 18.5653
+cap "Gilbert_2/nmos_40_1/D" "RFn" 57.3367
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/G" 1.5517
+cap "Gilbert_2/nmos_40_1/G" "RFn" 278.712
+cap "RFn" "Gilbert_2/nmos_40_1/D" 389.954
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_1/D" -6.71937
+cap "Gilbert_0/nmos_40_0/G" "LOp" 258.533
+cap "LOp" "Gilbert_0/nmos_40_1/D" 492.43
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/D" 496.24
+cap "Gilbert_0/nmos_40_0/G" "RFn" 7.933
+cap "Gilbert_0/nmos_40_0/S" "LOp" 327.935
+cap "RFn" "Gilbert_0/nmos_40_1/D" 50.4103
+cap "Gilbert_2/nmos_40_1/G" "LOp" 36.9567
+cap "RFn" "Gilbert_0/nmos_40_0/S" 8.57261
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_1/D" -5.57992
+cap "Gilbert_2/nmos_40_0/G" "LOp" 21.2789
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_0/nmos_40_0/G" 6.52672
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_1/D" 3.91906
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_1/D" -6.00795
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_0/G" 5.71429
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_2/nmos_40_1/S" -0.0126204
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_1/G" 2.89501
+cap "LOp" "Gilbert_2/nmos_40_1/S" -7.15566
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/S" 10.0141
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/S" 4.39702
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_1/nmos_40_1/S" 17.0609
+cap "Gilbert_0/nmos_40_0/G" "LOp" 388.626
+cap "Gilbert_0/nmos_40_0/S" "LOp" 131.14
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_0/nmos_40_0/G" 12.5883
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_0/G" 3.64921
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_1/nmos_40_1/S" 267.136
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/S" 0.702431
+cap "Gilbert_1/nmos_40_1/D" "LOp" 260.327
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_2/nmos_40_1/D" 5.34018
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/G" 30.8851
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_0/G" 27.4602
+cap "Gilbert_2/nmos_40_1/D" "LOp" 0.455525
+cap "LOp" "Gilbert_0/nmos_40_0/D" 151.185
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/D" 340.528
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/G" 16.9677
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_2/nmos_40_1/S" -1.80069
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_1/S" 142.229
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_2/nmos_40_0/G" 8.88959
+cap "Gilbert_2/nmos_40_1/G" "LOp" 13.1988
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" -1.61007
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_2/nmos_40_0/G" 43.4828
+cap "Gilbert_1/nmos_40_1/S" "LOp" 210.66
+cap "Gilbert_2/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" -3.67045
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_2/nmos_40_0/G" 11.0711
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_1/D" -0.985227
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_0/S" -1.60377
+cap "Gilbert_2/nmos_40_0/G" "LOp" 36.0619
+cap "Gilbert_2/nmos_40_0/G" "nmos_40_0/D" -8.88178e-16
+cap "Gilbert_1/nmos_40_1/D" "LOp" 468.18
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_1/D" 75.5782
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_2/nmos_40_1/D" 0.0380835
+cap "Gilbert_1/nmos_40_1/D" "nmos_40_0/D" -2.19041
+cap "Gilbert_1/nmos_40_1/S" "LOp" 303.451
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_2/nmos_40_0/G" 7.88315
+cap "Gilbert_0/nmos_40_0/G" "LOp" 326.986
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_1/D" 507.261
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_2/nmos_40_0/G" 12.4396
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 0.00764299
+cap "nmos_40_0/G" "Gilbert_2/nmos_40_0/G" 0.505666
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_1/nmos_40_1/D" 30.7775
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_1/nmos_40_1/D" 0.227516
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_1/D" 363.264
+cap "nmos_40_0/D" "Gilbert_2/nmos_40_0/G" -0.184874
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_0/G" 289.245
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_1/D" -0.113827
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_1/D" 11.695
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_0/G" 3.52288
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_1/D" 25.9843
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_1/S" -1.60377
+cap "nmos_40_0/D" "Gilbert_1/nmos_40_1/D" -1.73472e-18
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_1/S" 0.0791268
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_2/nmos_40_0/G" 0.319498
+cap "Gilbert_1/nmos_40_0/G" "Gilbert_1/nmos_40_1/D" 535.143
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_2/nmos_40_0/D" 2.39489
+cap "VDD" "Gilbert_1/nmos_40_1/D" -0.024102
+cap "Gilbert_1/nmos_40_0/G" "Gilbert_1/nmos_40_0/S" 226.592
+cap "IF++" "Gilbert_1/nmos_40_0/G" -0.0215393
+cap "Gilbert_1/nmos_40_0/G" "Gilbert_1/nmos_40_1/D" 295.023
+cap "Gilbert_1/nmos_40_0/G" "Gilbert_1/nmos_40_0/S" 0.105217
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_3/nmos_40_1/D" -8.46451
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_3/nmos_40_1/S" -26.0832
+cap "Gilbert_3/nmos_40_1/G" "Gilbert_3/nmos_40_1/S" 4.66183
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_1/G" 0.185549
+cap "Gilbert_3/nmos_40_0/G" "Gilbert_3/nmos_40_1/D" 31.9507
+cap "IF++" "Gilbert_3/nmos_40_1/D" -0.139716
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_0/G" 99.8891
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_0/S" 24.6998
+cap "Gilbert_3/nmos_40_1/D" "VDD" -0.0516345
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_1/G" 131.84
+cap "Gilbert_3/nmos_40_1/S" "Gilbert_3/nmos_40_1/D" 24.6998
+cap "Gilbert_3/nmos_40_1/S" "Gilbert_3/nmos_40_0/S" -9.56224
+cap "Gilbert_3/nmos_40_0/G" "Gilbert_3/nmos_40_0/S" 8.75116
+cap "Gilbert_3/nmos_40_0/G" "Gilbert_3/nmos_40_0/D" 7.28992
+cap "Gilbert_3/nmos_40_0/G" "VSS" 1.08514
+cap "Gilbert_3/nmos_40_0/S" "VSS" 0.411822
+cap "VSS" "Gilbert_3/nmos_40_0/G" 0.872642
+cap "VSS" "Gilbert_3/nmos_40_0/S" 0.436363
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 5.35092
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 3.90001
+cap "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -0.441688
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -3.16552
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" 6.05257
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 3.91334
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" 40.4924
+cap "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" -17.4969
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -8.36464
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" -10.9814
+cap "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 4.94204
+cap "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -5.34653
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" 0.925608
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" 82.1889
+cap "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 85.4583
+cap "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" -9.51344
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" 0.436307
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" -0.298553
+cap "LOn" "Gilbert_0/nmos_40_1/G" 1.86177
+cap "LOn" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 0.0264531
+cap "Gilbert_0/nmos_40_1/D" "LOn" 0.123821
+cap "LOn" "Gilbert_0/nmos_40_1/S" 0.377619
+cap "Gilbert_0/nmos_40_1/D" "LOn" 249.634
+cap "Gilbert_0/nmos_40_1/G" "LOn" 333.559
+cap "RFn" "Gilbert_0/nmos_40_1/S" -0.00508908
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_1/S" 11.8692
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_1/S" 14.1725
+cap "Gilbert_0/nmos_40_1/D" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 0.0151786
+cap "Gilbert_0/nmos_40_1/S" "LOn" 343.689
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "LOn" -0.0994553
+cap "Gilbert_0/nmos_40_1/G" "Gilbert_0/nmos_40_1/S" 78.7239
+cap "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_1/G" 14.5699
+cap "Gilbert_0/nmos_40_1/S" "LOn" 253.713
+cap "LOn" "Gilbert_0/nmos_40_0/S" -3.61412
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 0.191816
+cap "Gilbert_0/nmos_40_1/S" "Gilbert_0/nmos_40_0/S" 19.8959
+cap "Gilbert_0/nmos_40_1/G" "LOn" 179.257
+cap "Gilbert_0/nmos_40_1/G" "Gilbert_0/nmos_40_1/S" 71.7412
+cap "Gilbert_0/nmos_40_1/G" "Gilbert_0/nmos_40_0/S" -1.08166
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/S" 0.00204718
+cap "Gilbert_0/nmos_40_1/D" "LOn" 318.18
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 0.111025
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_1/S" 18.5659
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_0/G" 0.313918
+cap "Gilbert_0/nmos_40_1/D" "Gilbert_0/nmos_40_0/S" -1.73441
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_1/S" 2.74271
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_0/S" 0.230383
+cap "Gilbert_0/nmos_40_0/G" "LOn" 37.3953
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_1/S" 1.9208
+cap "RFn" "Gilbert_0/nmos_40_1/S" -0.00508908
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 0.40027
+cap "Gilbert_0/nmos_40_1/G" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 3.16598
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_0/S" 0.0213949
+cap "Gilbert_0/nmos_40_0/G" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 0.0855795
+cap "Gilbert_0/nmos_40_0/G" "LOn" 16.7143
+cap "Gilbert_0/nmos_40_0/S" "LOn" 58.8665
+cap "Gilbert_0/nmos_40_1/D" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 2.10459
+cap "Gilbert_0/nmos_40_1/S" "Gilbert_0/nmos_40_0/G" 17.111
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/S" 0.00648601
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 1.29152
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_0/G" 0.493616
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_0/G" 1.82935
+cap "Gilbert_1/nmos_40_1/S" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 2.40056
+cap "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Gilbert_0/nmos_40_0/S" 29.2108
+cap "Gilbert_0/nmos_40_0/S" "LOp" -8.11723
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_0/S" 156.836
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_1/D" 10.6426
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_1/D" -14.2894
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_0/G" 85.4971
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 358.385
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_1/D" 317.344
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_0/G" 0.0855795
+cap "Gilbert_0/nmos_40_0/G" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 2.97977
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_2/nmos_40_1/S" -3.68212
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_1/nmos_40_1/S" 90.1272
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_2/nmos_40_0/G" -0.0474076
+cap "LOp" "Gilbert_0/nmos_40_0/G" -0.253386
+cap "Gilbert_0/nmos_40_0/S" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" -1.69921
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_0/nmos_40_0/D" 90.9626
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/G" 151.257
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/D" 0.00335921
+cap "Gilbert_1/nmos_40_1/S" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" 0.499914
+cap "Gilbert_0/nmos_40_0/S" "LOp" -2.22035
+cap "Gilbert_2/nmos_40_1/G" "Gilbert_0/nmos_40_0/S" 0.106974
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_2/nmos_40_0/G" -0.0165697
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_1/nmos_40_1/D" 0.0206171
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_2/nmos_40_1/D" 0.0496735
+cap "Gilbert_0/nmos_40_0/G" "Gilbert_1/nmos_40_1/S" 128.184
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/D" 0.0172579
+cap "LOp" "Gilbert_1/nmos_40_1/S" -2.82811
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_1/nmos_40_1/S" 0.860237
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_0/D" 3.0799
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_0/nmos_40_0/S" 0.0641846
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_0/G" 145.577
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_0/nmos_40_0/S" 1.49147
+cap "Gilbert_1/nmos_40_1/D" "VDD" 0.524032
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_0/nmos_40_0/S" 15.7672
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_1/S" -0.000898885
+cap "VDD" "Gilbert_1/nmos_40_1/S" 0.230383
+cap "LOp" "Gilbert_0/nmos_40_0/S" -0.133061
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_1/nmos_40_1/S" 2.75938
+cap "Gilbert_1/nmos_40_1/S" "LOp" -5.0545
+cap "Gilbert_0/nmos_40_0/S" "Gilbert_0/nmos_40_0/G" 10.3777
+cap "VDD" "Gilbert_0/nmos_40_0/G" 0.948398
+cap "Gilbert_1/nmos_40_0/S" "VDD" 0.230383
+cap "Gilbert_2/nmos_40_0/G" "Gilbert_1/nmos_40_0/S" 0.318597
+cap "Gilbert_1/nmos_40_1/D" "VDD" 0.79744
+cap "VDD" "Gilbert_1/nmos_40_0/G" 0.948398
+cap "Gilbert_1/nmos_40_1/D" "Gilbert_1/nmos_40_0/S" 2.86716
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_0/G" 3.28776
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_0/S" 229.502
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_1/D" 19.0405
+cap "Gilbert_1/nmos_40_1/S" "Gilbert_1/nmos_40_0/G" 139.281
+cap "Gilbert_1/nmos_40_0/S" "if_res_0/a_n400_0#" 0.921533
+cap "Gilbert_1/nmos_40_0/G" "if_res_0/a_n400_0#" 2.03137
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_0/G" 11.6183
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_1/D" 0.0206171
+cap "Gilbert_1/nmos_40_0/S" "IF++" 157.576
+cap "Gilbert_1/nmos_40_0/G" "IF++" 99.8975
+cap "Gilbert_1/nmos_40_1/D" "IF++" 7.69584
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_1/nmos_40_0/S" -8.46451
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_1/nmos_40_0/G" 0.776843
+cap "if_res_0/a_n400_0#" "VSS" 0.316296
+cap "IF++" "Gilbert_1/nmos_40_0/S" 1.08766
+cap "IF++" "if_res_0/a_n400_0#" 0.0597376
+cap "Gilbert_1/nmos_40_0/S" "if_res_0/a_n400_0#" 1.58451
+cap "Gilbert_1/nmos_40_0/S" "Gilbert_3/nmos_40_1/S" -50.2337
+cap "Gilbert_3/nmos_40_1/G" "IF++" 194.899
+cap "IF++" "Gilbert_3/nmos_40_1/S" 255.478
+cap "if_res_0/a_n400_0#" "Gilbert_3/nmos_40_1/D" 0.00647455
+cap "Gilbert_3/nmos_40_1/G" "if_res_0/a_n400_0#" 2.94037
+cap "Gilbert_3/nmos_40_1/G" "Gilbert_3/nmos_40_1/D" 0.185549
+cap "if_res_0/a_n400_0#" "Gilbert_3/nmos_40_1/S" 21.4959
+cap "Gilbert_3/nmos_40_1/G" "Gilbert_3/nmos_40_1/S" 17.1842
+cap "if_res_0/a_n400_0#" "IF++" -0.565639
+cap "IF++" "Gilbert_3/nmos_40_1/D" 35.3556
+cap "Gilbert_3/nmos_40_1/S" "if_res_1/a_n400_0#" 8.14657
+cap "Gilbert_3/nmos_40_1/S" "Gilbert_3/nmos_40_0/S" -6.35469
+cap "Gilbert_3/nmos_40_0/G" "IF++" 10.1281
+cap "Gilbert_3/nmos_40_0/G" "VDD" 0.745447
+cap "Gilbert_3/nmos_40_1/S" "Gilbert_3/nmos_40_1/D" -1.81545
+cap "Gilbert_3/nmos_40_0/G" "m1_15820_n2960#" 43.9323
+cap "Gilbert_3/nmos_40_1/S" "VSS" 0.310413
+cap "IF++" "Gilbert_3/nmos_40_1/G" 115.267
+cap "if_res_1/a_n400_0#" "VDD" 3.39013
+cap "Gilbert_3/nmos_40_1/S" "IF++" 100.965
+cap "Gilbert_3/nmos_40_0/G" "VDD" 0.257258
+cap "VDD" "Gilbert_3/nmos_40_0/S" 0.00267619
+cap "Gilbert_3/nmos_40_0/G" "VDD" 2.63176
+cap "m1_15820_n2960#" "Gilbert_3/nmos_40_0/S" 14.4725
+cap "VDD" "Gilbert_3/nmos_40_1/D" 2.15708
+cap "Gilbert_3/nmos_40_1/D" "m1_15820_n2960#" 111.641
+cap "Gilbert_3/nmos_40_0/G" "IF++" 19.6098
+cap "Gilbert_3/nmos_40_1/S" "Gilbert_3/nmos_40_1/G" 0.444965
+cap "VDD" "IF++" -0.183968
+cap "IF++" "Gilbert_3/nmos_40_0/S" 0.459881
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_0/S" -1.87999
+cap "if_res_1/a_n400_0#" "VSS" 0.187954
+cap "Gilbert_3/nmos_40_0/G" "VDD" 0.456117
+cap "if_res_1/a_n400_0#" "IF++" 34.5937
+cap "Gilbert_3/nmos_40_0/G" "IF++" 5.76379
+cap "IF++" "Gilbert_3/nmos_40_0/S" 1.72021
+cap "Gilbert_3/nmos_40_0/G" "m1_15820_n2960#" 11.9815
+cap "Gilbert_3/nmos_40_0/G" "IF++" 36.8558
+cap "Gilbert_3/nmos_40_1/D" "IF++" 38.9719
+cap "VDD" "Gilbert_3/nmos_40_1/G" 3.91805
+cap "Gilbert_3/nmos_40_1/S" "VDD" 14.4394
+cap "Gilbert_3/nmos_40_1/G" "m1_15820_n2960#" 55.9138
+cap "Gilbert_3/nmos_40_1/S" "m1_15820_n2960#" 14.4725
+cap "Gilbert_3/nmos_40_0/G" "if_res_1/a_n400_2334#" -0.570728
+cap "Gilbert_3/nmos_40_0/S" "if_res_1/a_n400_2334#" 21.5127
+cap "Gilbert_3/nmos_40_0/S" "Gilbert_3/nmos_40_0/G" 243.766
+cap "Gilbert_3/nmos_40_0/S" "VSS" 0.130568
+cap "Gilbert_3/nmos_40_1/D" "Gilbert_3/nmos_40_0/G" 37.9703
+cap "VSS" "if_res_1/a_n400_2334#" 2.46948
+cap "Gilbert_3/nmos_40_0/D" "Gilbert_3/nmos_40_0/G" 12.4052
+cap "Gilbert_3/nmos_40_0/S" "Gilbert_3/nmos_40_0/G" 85.968
+cap "Gilbert_3/nmos_40_0/D" "Gilbert_3/nmos_40_0/G" 0.406481
+cap "VSS" "Gilbert_3/nmos_40_0/S" 0.411822
+cap "if_res_1/a_n400_2334#" "Gilbert_3/nmos_40_0/D" 0.00476431
+cap "if_res_1/a_n400_2334#" "Gilbert_3/nmos_40_0/S" 6.18505
+cap "if_res_1/a_n400_2334#" "Gilbert_3/nmos_40_0/D" 0.00171024
+cap "VSS" "Gilbert_3/nmos_40_0/G" 1.05808
+cap "if_res_1/a_n400_2334#" "Gilbert_3/nmos_40_0/G" 4.65749
+cap "VSS" "Gilbert_3/nmos_40_0/S" 0.436363
+cap "if_res_1/a_n400_2334#" "VSS" 2.01092
+cap "VSS" "Gilbert_3/nmos_40_0/G" 0.680125
+cap "VSS" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" 1.28314
+cap "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "VSS" -0.0510147
+cap "VSS" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" 9.46923
+cap "if_res_0/a_n400_0#" "VSS" 0.283541
+cap "if_res_0/a_n400_2334#" "VSS" 0.310161
+cap "if_res_1/a_n400_0#" "VSS" 0.17002
+cap "if_res_1/a_n400_0#" "VSS" 0.130175
+cap "VSS" "if_res_1/a_n400_2334#" 7.10543e-15
+cap "if_res_1/a_n400_2334#" "VSS" 0.283552
+merge "Gilbert_1/nmos_40_1/S" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" -8345.74 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -236122 -11044 -189122 -7234 -700000 -14000 0 0 0 0 0 0 0 0
+merge "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" "Gilbert_0/nmos_40_1/S"
+merge "Gilbert_0/nmos_40_1/S" "Gilbert_3/nmos_40_0/G"
+merge "Gilbert_3/nmos_40_0/G" "IF++"
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Gilbert_1/nmos_40_0/G" -4335.72 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -121648 -5108 -133576 -5260 -840000 -8400 0 0 0 0 0 0 0 0
+merge "Gilbert_1/nmos_40_0/G" "Gilbert_0/nmos_40_1/G"
+merge "Gilbert_0/nmos_40_1/G" "LOp"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Gilbert_1/nmos_40_1/G" -6230.42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -84800 -2280 0 0 -124848 -5268 -147848 -5348 -1100000 -15100 0 0 0 0 0 0 0 0
+merge "Gilbert_1/nmos_40_1/G" "Gilbert_0/nmos_40_0/G"
+merge "Gilbert_0/nmos_40_0/G" "LOn"
+merge "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" -52216.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15177124 -126808 -13368120 -89789 0 0 0 0 0 0 0 0 0 0
+merge "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_n761#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#"
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#" "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#" "nmos_40_2/D"
+merge "nmos_40_2/D" "nmos_40_2/G"
+merge "nmos_40_2/G" "Gilbert_2/nmos_40_1/D"
+merge "Gilbert_2/nmos_40_1/D" "nmos_40_1/D"
+merge "nmos_40_1/D" "VSS"
+merge "VSS" "nmos_40_0/S"
+merge "nmos_40_0/S" "Vbottom"
+merge "Vbottom" "nmos_40_0/D"
+merge "nmos_40_0/D" "nmos_40_0/G"
+merge "nmos_40_0/G" "nmos_40_1/G"
+merge "nmos_40_1/G" "VM"
+merge "VM" "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#"
+merge "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_n727#" "nmos_40_1/S"
+merge "nmos_40_1/S" "li_n610_n2990#"
+merge "if_res_1/VSUBS" "if_res_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "if_res_0/VSUBS" "Vdd_res_1/VSUBS"
+merge "Vdd_res_1/VSUBS" "Vdd_res_0/VSUBS"
+merge "Vdd_res_0/VSUBS" "Gilbert_3/VSUBS"
+merge "Gilbert_3/VSUBS" "Gilbert_1/VSUBS"
+merge "Gilbert_1/VSUBS" "Gilbert_0/VSUBS"
+merge "Gilbert_0/VSUBS" "Rf_res_1/VSUBS"
+merge "Rf_res_1/VSUBS" "Rf_res_0/VSUBS"
+merge "Rf_res_0/VSUBS" "LOp_resistor_1/VSUBS"
+merge "LOp_resistor_1/VSUBS" "LOp_resistor_0/VSUBS"
+merge "LOp_resistor_0/VSUBS" "nmos_40_2/B"
+merge "nmos_40_2/B" "nmos_40_0/B"
+merge "nmos_40_0/B" "Gilbert_2/VSUBS"
+merge "Gilbert_2/VSUBS" "CS_res_0/VSUBS"
+merge "CS_res_0/VSUBS" "nmos_40_1/B"
+merge "nmos_40_1/B" "VSUBS"
+merge "if_res_1/a_n400_2334#" "if_res_0/a_n400_0#" -8777.33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -379242 -9058 -5495218 -18114 0 0 0 0 0 0 0 0 0 0
+merge "if_res_0/a_n400_0#" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#"
+merge "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#"
+merge "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#"
+merge "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#"
+merge "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_0/a_n69_329#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#"
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_295#"
+merge "CS_res_0/sky130_fd_pr__res_xhigh_po_0p69_C432MY_0/a_n69_295#" "VDD"
+merge "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_0/S" -1988.66 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -58220 -4214 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_2/nmos_40_0/S" "Vmid2"
+merge "Gilbert_3/nmos_40_1/D" "nmos_40_2/S" -895.182 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1200 -280 -24900 -1010 0 0 0 0 0 0 0 0 0 0
+merge "nmos_40_2/S" "m1_15820_n2960#"
+merge "m1_15820_n2960#" "Vamp"
+merge "if_res_1/a_n400_0#" "Gilbert_3/nmos_40_0/S" -2226.75 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -108722 -4994 -125346 -5140 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_3/nmos_40_0/S" "IFn"
+merge "Gilbert_1/nmos_40_0/S" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" -5092.95 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -252479 -11178 -123478 -3738 0 0 0 0 0 0 0 0 0 0
+merge "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" "Gilbert_0/nmos_40_0/S"
+merge "Gilbert_0/nmos_40_0/S" "Gilbert_3/nmos_40_1/G"
+merge "Gilbert_3/nmos_40_1/G" "IF--"
+merge "Gilbert_2/nmos_40_1/S" "Gilbert_0/nmos_40_1/D" -1795.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -71880 -4350 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_0/nmos_40_1/D" "Vmid"
+merge "Rf_res_1/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "a_9480_n1860#" -3008.44 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 -82400 -3056 -83200 -3136 -336000 -8400 0 0 0 0 0 0 0 0
+merge "a_9480_n1860#" "Gilbert_2/nmos_40_0/G"
+merge "Gilbert_2/nmos_40_0/G" "RFn"
+merge "Rf_res_0/sky130_fd_pr__res_xhigh_po_0p69_2LTKQM_1/a_n69_329#" "Gilbert_2/nmos_40_1/G" -2048.77 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -82400 -3056 -93474 -3278 -226800 -2800 0 0 0 0 0 0 0 0
+merge "Gilbert_2/nmos_40_1/G" "RFp"
+merge "if_res_0/a_n400_2334#" "Gilbert_3/nmos_40_1/S" -2225.57 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -108722 -4994 -119314 -5054 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_3/nmos_40_1/S" "IFp"

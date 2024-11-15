@@ -1,0 +1,41 @@
+** sch_path: /home/renslow/Documents/ece5120/hw03/mag/diff_pair_d_tb.sch
+**.subckt diff_pair_d_tb
+x1 VDD GND LOn LOp RFn RFp IFp IFn diff_pair_d
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+
+.include /home/renslow/Documents/ece5120/hw03/mag/diff_pair_d.spice
+VVDD VDD 0 1.8
+VVSS VSS 0 0
+VRF RFp RFn SINE(0 5m 1k)
+VLO LOp LOn SINE(0 5m 1.1k)
+.control
+save all
+set color0=white
+set color1=blue
+tran 10u 20m
+write diff_pair_d_tb.raw
+let RF = V(RFp, RFn)
+let LO = V(LOp,LOn)
+let IF = V(IFp, IFn)
+plot LO RF
+plot IF
+spec 10 3k 100 LO RF IF
+plot mag(LO) mag(RF)
+plot mag(IF)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

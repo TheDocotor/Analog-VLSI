@@ -1,0 +1,73 @@
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p69 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p69 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p69 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__res_xhigh_po_0p69 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_xhigh_po_0p69 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p69 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_xhigh_po_0p69 and sky130_fd_pr__res_xhigh_po_0p69 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell nmos_40 in circuit gill_cell (0)(3 instances)
+Flattening unmatched subcell Rf_res in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_2LTKQM in circuit gill_cell (0)(4 instances)
+Flattening unmatched subcell CS_res in circuit gill_cell (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_C432MY in circuit gill_cell (0)(1 instance)
+Flattening unmatched subcell if_res in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell Vdd_res in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_LZXZX3 in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell LOp_resistor in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_P8UVGE in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell Gilbert in circuit gill_cell (0)(4 instances)
+Flattening unmatched subcell nmos_40 in circuit gill_cell (0)(8 instances)
+
+Class gill_cell (0):  Merged 33 parallel devices.
+Subcircuit summary:
+Circuit 1: gill_cell                       |Circuit 2: gill_cell                       
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (44->11)           |sky130_fd_pr__nfet_01v8 (11)               
+sky130_fd_pr__res_xhigh_po_0p69 (13)       |sky130_fd_pr__res_xhigh_po_0p69 (13)       
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 15                         |Number of nets: 15                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: gill_cell                       |Circuit 2: gill_cell                       
+-------------------------------------------|-------------------------------------------
+LOp                                        |LOp                                        
+LOn                                        |LOn                                        
+IFn                                        |IFn                                        
+IFp                                        |IFp                                        
+VDD                                        |VDD                                        
+RFn                                        |RFn                                        
+RFp                                        |RFp                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes gill_cell and gill_cell are equivalent.
+
+Final result: Circuits match uniquely.
+.

@@ -1,0 +1,39 @@
+Flattening unmatched subcell nmos_40 in circuit diff_pair_d (0)(3 instances)
+Flattening unmatched subcell Rf_res in circuit diff_pair_d (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_2LTKQM in circuit diff_pair_d (0)(4 instances)
+Flattening unmatched subcell CS_res in circuit diff_pair_d (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_C432MY in circuit diff_pair_d (0)(1 instance)
+Flattening unmatched subcell Vdd_res in circuit diff_pair_d (0)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_LZXZX3 in circuit diff_pair_d (0)(4 instances)
+Flattening unmatched subcell LOp_resistor in circuit diff_pair_d (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_P8UVGE in circuit diff_pair_d (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV in circuit diff_pair_d (0)(2 instances)
+Flattening unmatched subcell Gilbert in circuit diff_pair_d (0)(4 instances)
+Flattening unmatched subcell nmos_40 in circuit diff_pair_d (0)(8 instances)
+
+Cell diff_pair_d (1) disconnected node: VDD
+Cell diff_pair_d (1) disconnected node: VSS
+Cell diff_pair_d (1) disconnected node: LOn
+Cell diff_pair_d (1) disconnected node: LOp
+Cell diff_pair_d (1) disconnected node: RFn
+Cell diff_pair_d (1) disconnected node: RFp
+Cell diff_pair_d (1) disconnected node: IFp
+Cell diff_pair_d (1) disconnected node: IFn
+Class diff_pair_d (0):  Merged 34 parallel devices.
+
+Subcircuit pins:
+Circuit 1: diff_pair_d                     |Circuit 2: diff_pair_d                     
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+LOn                                        |LOn                                        
+LOp                                        |LOp                                        
+RFn                                        |RFn                                        
+RFp                                        |RFp                                        
+IFp                                        |IFp                                        
+IFn                                        |IFn                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes diff_pair_d and diff_pair_d are equivalent.
+
+Final result: Verify:  cell /home/renslow/Documents/ece5120/hw03/diff_pair_d.sch.spc has no elements and/or nodes.  Not checked.

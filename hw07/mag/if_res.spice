@@ -1,0 +1,6 @@
+* SPICE3 file created from if_res.ext - technology: sky130A
+
+.subckt if_res
+X0 a_n400_2334# a_n400_0# VSUBS sky130_fd_pr__res_xhigh_po_0p69 l=9.67
+.ends
+

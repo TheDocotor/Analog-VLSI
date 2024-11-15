@@ -1,0 +1,25 @@
+magic
+tech sky130A
+timestamp 1729706331
+use nmos_40  nmos_40_0
+timestamp 1729559727
+transform 1 0 700 0 1 -100
+box -700 100 0 1300
+use nmos_40  nmos_40_1
+timestamp 1729559727
+transform 1 0 700 0 -1 150
+box -700 100 0 1300
+<< labels >>
+flabel space 360 1170 360 1170 0 FreeSans 800 0 0 0 LG
+port 0 nsew
+flabel space 330 -1120 330 -1120 0 FreeSans 800 0 0 0 RG
+port 1 nsew
+flabel space 640 1120 640 1120 0 FreeSans 800 0 0 0 LS
+port 2 nsew
+flabel space 630 -1080 630 -1080 0 FreeSans 800 0 0 0 RS
+port 3 nsew
+flabel space 400 30 400 30 0 FreeSans 800 0 0 0 D
+port 4 nsew
+flabel space 660 30 660 30 0 FreeSans 800 0 0 0 B
+port 5 nsew
+<< end >>
