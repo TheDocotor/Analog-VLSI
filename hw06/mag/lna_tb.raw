@@ -1,11 +1,11 @@
 Title: ** sch_path: /home/renslow/documents/ece5120/hw06/mag/lna_tb.sch
-Date: Thu Nov 14 18:55:55  2024
+Date: Wed Nov 20 11:18:56  2024
 Plotname: Operating Point
 Flags: real
 No. Variables: 278
 No. Points: 1
 Variables:
-	0	v(x1.vg3)	voltage
+	0	v(vss)	voltage
 	1	i(@b.x1.xsky130_fd_pr__res_xhigh_po_0p35_bb2zh9_0.x0.xsky130_fd_pr__res_xhigh_po_0p35.brbody[i])	current
 	2	i(@b.x1.xsky130_fd_pr__res_xhigh_po_0p35_bb2zh9_0.x0.xsky130_fd_pr__res_xhigh_po_0p35.brend[i])	current
 	3	i(@b.x1.xsky130_fd_pr__res_xhigh_po_5p73_7d764l_0.x0.xsky130_fd_pr__res_xhigh_po_5p73.brbody[i])	current
@@ -160,14 +160,14 @@ Variables:
 	152	i(@m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8[id])	current
 	153	i(@m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8[ig])	current dims=0
 	154	i(@m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8[is])	current dims=0
-	155	i(@m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8[ib])	current dims=0
-	156	i(@m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8[id])	current
-	157	i(@m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8[ig])	current dims=0
-	158	i(@m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8[is])	current dims=0
-	159	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[ib])	current dims=0
-	160	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[id])	current
-	161	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[ig])	current dims=0
-	162	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[is])	current dims=0
+	155	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[ib])	current dims=0
+	156	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[id])	current
+	157	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[ig])	current dims=0
+	158	i(@m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8[is])	current dims=0
+	159	i(@m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8[ib])	current dims=0
+	160	i(@m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8[id])	current
+	161	i(@m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8[ig])	current dims=0
+	162	i(@m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8[is])	current dims=0
 	163	i(@r.x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_0.x0.rs1[i])	current
 	164	i(@r.x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_0.x0.rs2[i])	current
 	165	i(@r.x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_1.x0.rs1[i])	current
@@ -254,12 +254,12 @@ Variables:
 	246	v(m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8#body)	voltage
 	247	v(m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8#dbody)	voltage
 	248	v(m.x1.xn70x1_0.x6.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	249	v(m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8#body)	voltage
-	250	v(m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	251	v(m.x1.xsky130_fd_pr__nfet_01v8_7amggk_0.x0.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	252	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#body)	voltage
-	253	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	254	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	249	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#body)	voltage
+	250	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	251	v(m.x1.xsky130_fd_pr__nfet_01v8_7jy9fk_0.x0.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	252	v(m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8#body)	voltage
+	253	v(m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	254	v(m.x1.xsky130_fd_pr__nfet_01v8_qx7bc3_0.x0.msky130_fd_pr__nfet_01v8#sbody)	voltage
 	255	v(vattn)	voltage
 	256	v(vdd)	voltage
 	257	v(vin)	voltage
@@ -267,14 +267,14 @@ Variables:
 	259	v(voutp)	voltage
 	260	v(vref)	voltage
 	261	v(vs1)	voltage
-	262	v(vss)	voltage
-	263	i(vvdd)	current
-	264	i(vvin)	current
-	265	i(vvref)	current
-	266	i(vvss)	current
-	267	v(x1.diff_pair_n_0/n40x1_1/s)	voltage
-	268	v(x1.vg)	voltage
-	269	v(x1.vg2)	voltage
+	262	i(vvdd)	current
+	263	i(vvin)	current
+	264	i(vvref)	current
+	265	i(vvss)	current
+	266	v(x1.diff_pair_n_0/n40x1_1/s)	voltage
+	267	v(x1.vg)	voltage
+	268	v(x1.vg2)	voltage
+	269	v(x1.vg3)	voltage
 	270	v(x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_0.x0.a)	voltage
 	271	v(x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_0.x0.b1)	voltage
 	272	v(x1.xsky130_fd_pr__cap_mim_m3_1_lj5jlg_1.x0.a)	voltage
@@ -284,7 +284,4 @@ Variables:
 	276	v(x1.xsky130_fd_pr__res_xhigh_po_5p73_f3ynpn_0.x0.xsky130_fd_pr__res_xhigh_po_5p73.ra)	voltage
 	277	v(x1.xsky130_fd_pr__res_xhigh_po_5p73_g7vz5e_0.x0.xsky130_fd_pr__res_xhigh_po_5p73.ra)	voltage
 Binary:
-ËtõÜüä?0A1jù;GŒh©Šß<Šˆ –@“1?¬W –@“1?¨&œ£©5&?'œ£©5&?±&œ£©5&?¹&œ£©5&?                                                                                                                                                                                                                                                                                                                        Éû a¼¨­>                        Éû a¼¨­>                        Œ¡a¼¨­>                        H¡a¼¨­>                        Éû a¼¨­>                        ş a¼¨­>                        ş a¼¨­>                        à¡a¼¨­>                        “¡a¼¨­>                        ş a¼¨­>                        Îë»¨­>                        Îë»¨­>                        Îë»¨­>                        À$Îë»¨­>                        Îë»¨­>                        ÷Îë»¨­>                        ÷Îë»¨­>                        ÷Îë»¨­>                        ¯'Îë»¨­>                        ÷Îë»¨­>                        @e¬ ?                        '…e¬ ?                        @e¬ ?                        '…e¬ ?                        '…e¬ ?                        '…e¬ ?                        '…e¬ ?                        Ûİ•u‰â>                        ®q@“1?                                                        :|¢YÉ°¨=ì‡AÓ!¼=¢
-+oÎ¡=:|¢YÉ°¨=¢
-+oÎ¡=ì‡AÓ!¼=`Ì¢ ©=Šû‹…¼=ÛÊ¿“òõ¡=jÉ_pû¨=·¼}4¼=š’‹ş°ˆ¢=:|¢YÉ°¨=¢
-+oÎ¡=ì‡AÓ!¼=9*¢YÉ°¨=“±†AÓ!¼=¡á*oÎ¡=9*¢YÉ°¨=¡á*oÎ¡=“±†AÓ!¼=a³Ë¢ ©=0Ÿú‹…¼=Ü¡¿“òõ¡=jÅÈ_pû¨=^V}4¼=ši‹ş°ˆ¢=9*¢YÉ°¨=¡á*oÎ¡=“±†AÓ!¼=ĞîËÌÌÌü?Ï]ÌÌÌÌü?Ú¡ÊÌÌÌü?ĞîËÌÌÌü?Ú¡ÊÌÌÌü?Ï]ÌÌÌÌü?ĞîËÌÌÌü?Ï]ÌÌÌÌü?Ú¡ÊÌÌÌü?ÆíËÌÌÌü?@ŸÊÌÌÌü?J]ÌÌÌÌü?ÑîËÌÌÌü?Ú¡ÊÌÌÌü?Ï]ÌÌÌÌü?ÑîËÌÌÌü?Ğ]ÌÌÌÌü?Ú¡ÊÌÌÌü?ÑîËÌÌÌü?Ú¡ÊÌÌÌü?Ğ]ÌÌÌÌü?ÑîËÌÌÌü?Ğ]ÌÌÌÌü?Ú¡ÊÌÌÌü?ÇíËÌÌÌü?AŸÊÌÌÌü?J]ÌÌÌÌü?ÏîËÌÌÌü?Ù¡ÊÌÌÌü?Î]ÌÌÌÌü?6%>Éè+­=ñiªÊ˜¹=­È½MÔ)²=K>èìÈ¬=]eRq®±=àò”I¹=fAN*é+­=kyTôû¹=|ã«µ×Æ±=I>èìÈ¬=ßò”I¹=\eRq®±=I>èìÈ¬=\eRq®±=ßò”I¹=I>èìÈ¬=\eRq®±=ßò”I¹=K>èìÈ¬=àò”I¹=]eRq®±=OhòÎot=GÓeòÎod=PÃ®Â‹‰=¶@Hx÷”=¾‡œU5ª=»UEx÷„=        ÍÌÌÌÌÌü?        Éx<¥¿Né?€<¥¿Né?…ëQ¸ñ?¡­WÆ×?        "…aB=¿                @'…aB=?5è €·?³%ZéÓ ó?tõÜüä?                                ÊtõÜüä?A;G‘ rü?ÏZñ´à•ü?¼•Ø‡<çò?
+        G·@N}©¼        `Eà1“+?±_Eà1“+?&œ£©5&?J&œ£©5&?¿&œ£©5&?·&œ£©5&?                                                                                                                                                                                                                                                                                                                        ¾¾İoèÓ>                        ¾¾İoèÓ>                        q¾İoèÓ>                        q¾İoèÓ>                        ¾¾İoèÓ>                        ¬1±İoèÓ>                        ¬1±İoèÓ>                        Y>±İoèÓ>                        Y>±İoèÓ>                        ¬1±İoèÓ>                        «È3¿oèÓ>                        «È3¿oèÓ>                        «È3¿oèÓ>                        dÍ3¿oèÓ>                        «È3¿oèÓ>                        “6¿oèÓ>                        “6¿oèÓ>                        “6¿oèÓ>                        8˜6¿oèÓ>                        “6¿oèÓ>                         >§¦ƒÿ>                        ø/§¦ƒÿ>                         >§¦ƒÿ>                        ø/§¦ƒÿ>                        ø/§¦ƒÿ>                        ø/§¦ƒÿ>                        ø/§¦ƒÿ>                        éÌË1“+?                        ïª#¾‹â?                                                        4f[é_©=Şì®cÛ6¹=fùå8²©=4f[é_©=fùå8²©=Şì®cÛ6¹=fÀ¤¯¯©=Ğ] ?“š¹=	»y]èÙ©=ÎO¸™¯©=Š$ézÇJ¹=Ì?,!>yª=4f[é_©=fùå8²©=Şì®cÛ6¹=á–ÙZé_©=Æ'ÿbÛ6¹=ªŸ8²©=á–ÙZé_©=ªŸ8²©=Æ'ÿbÛ6¹=º"¤¯¯©=º˜p>“š¹=3l3]èÙ©= ~Â·™¯©=r_9zÇJ¹=ôğå >yª=á–ÙZé_©=ªŸ8²©=Æ'ÿbÛ6¹=ÖËÌÌÌü?tQÌÌÌÌü?dÊÌÌÌü?ÖËÌÌÌü?dÊÌÌÌü?tQÌÌÌÌü?ÖËÌÌÌü?tQÌÌÌÌü?dÊÌÌÌü?ÕËÌÌÌü?yaÊÌÌÌü?ïPÌÌÌÌü?ÖËÌÌÌü?dÊÌÌÌü?rQÌÌÌÌü?ÖËÌÌÌü?tQÌÌÌÌü?dÊÌÌÌü?ÖËÌÌÌü?dÊÌÌÌü?tQÌÌÌÌü?ÖËÌÌÌü?tQÌÌÌÌü?dÊÌÌÌü?ÕËÌÌÌü?yaÊÌÌÌü?ïPÌÌÌÌü?ÖËÌÌÌü?dÊÌÌÌü?sQÌÌÌÌü?QÌlk´?²=Œ+5EqÁ=Ô ˆ:Š´=ÿ3‹ı5²=\!Üu~´=ÌÆ¼©Á=%¹@†´?²=®ŸÔïKÁ=Fá6º='´=ÿ3‹ı5²=ÌÆ¼©Á=\!Üu~´=ÿ3‹ı5²=\!Üu~´=ÌÆ¼©Á=ÿ3‹ı5²=\!Üu~´=ÌÆ¼©Á= 4‹ı5²=ÌÆ¼©Á=\!Üu~´=ÉàáQ„–=ı6MÄ$’«=øÎŞQ„†=3í +ëz‰=ï+ëzy=¢¼*ğ¥ÙŸ=        ÍÌÌÌÌÌü?        N*;ï1¶å?€w—î1¶å?      ğ?‘3a1Ù?p”)D¿ <¿                ’)D¿ <?º:ozğBÍ?¿%ZéÓ ó?Ì‡ªûÍáì?ˆ†ªûÍáì?                                ˆ†ªûÍáì?vİ¤ó†ü?ÑZñ´à•ü?È•Ø‡<çò?

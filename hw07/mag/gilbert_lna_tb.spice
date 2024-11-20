@@ -1,0 +1,56 @@
+** sch_path: /home/renslow/Documents/ece5120/hw07/mag/gilbert_lna_tb.sch
+**.subckt gilbert_lna_tb VDD Vin Vref VSS
+*.iopin VDD
+*.iopin Vin
+*.iopin Vref
+*.iopin VSS
+x1 VDD IFp IFn LOp LOn RFp RFn Vref GND gill_cell
+C1 Vs1 Vattn 10u m=1
+R1 Vin Vattn 300 m=1
+x2 VDD RFn RFp Vs1 Vref VSS lna
+**** begin user architecture code
+
+
+
+VVIN VIN 0 AC 1 SINE(0 10u 1Meg)
+VVDD VDD 0 1.8
+VVSS VSS 0 0
+VVREF Vref VSS 1.07
+*VVRFDC RFp 0 0.75991
+*VRF RFp RFn SINE(0 6m 1Meg)
+VLO LOp LOn SINE(0 5m 1.455Meg)
+
+.include /home/renslow/Documents/ece5120/hw07/mag/lna.spice
+.include /home/renslow/Documents/ece5120/hw07/mag/gill_cell.spice
+.option wnflag=1
+.option savecurrents
+.control
+save all
+op
+write gilbert_lna_tb.raw
+set color0=white
+set color1=blue
+tran 10n 20u
+let RF = V(RFp, RFn)
+let LO = V(LOp,LOn)
+let IF = V(IFp, IFn)
+plot LO RF
+plot IF
+spec 1000 2Meg 51k LO RF IF
+plot mag(LO) mag(RF)
+plot mag(IF)
+.endc
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

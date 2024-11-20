@@ -25,23 +25,36 @@ N 270 -30 300 -30 {
 lab=RFn}
 N 270 -10 300 -10 {
 lab=Vref}
+N 260 -220 360 -220 {
+lab=Vs1}
+N 420 -220 470 -220 {
+lab=Vattn}
+N 530 -220 550 -220 {
+lab=Vin}
+N 260 -240 290 -240 {
+lab=RFp}
+N 260 -260 290 -260 {
+lab=RFn}
 C {devices/simulator_commands_shown.sym} -380 -600 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value= "
+VVIN VIN 0 AC 1 SINE(0 10u 1Meg)
 VVDD VDD 0 1.8
 VVSS VSS 0 0
 VVREF Vref VSS 1.07
-VVRFDC RFp 0 0.75991
-VRF RFp RFn SINE(0 6m 1Meg)
+*VVRFDC RFp 0 0.75991
+*VRF RFp RFn SINE(0 6m 1Meg)
 VLO LOp LOn SINE(0 5m 1.455Meg)
 
+.include /home/renslow/Documents/ece5120/hw07/mag/lna.spice
+.include /home/renslow/Documents/ece5120/hw07/mag/gill_cell.spice
 .option wnflag=1
 .option savecurrents
 .control
 save all
 op
-write gilbert_tb.raw
+write gilbert_lna_tb.raw
 set color0=white
 set color1=blue
 tran 10n 20u
@@ -72,3 +85,22 @@ descr="Annotate OP"
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
 C {devices/lab_wire.sym} 300 -10 0 1 {name=p8 sig_type=std_logic lab=Vref}
+C {devices/iopin.sym} 260 -280 0 0 {name=p9 lab=VDD}
+C {devices/iopin.sym} 550 -220 0 0 {name=p12 lab=Vin}
+C {devices/iopin.sym} 260 -200 0 0 {name=p13 lab=Vref}
+C {devices/iopin.sym} 260 -180 0 0 {name=p14 lab=VSS}
+C {devices/capa.sym} 390 -220 3 0 {name=C1
+m=1
+value=10u
+footprint=1206
+device="ceramic capacitor"}
+C {devices/res.sym} 500 -220 1 0 {name=R1
+value=300
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_pin.sym} 340 -220 0 0 {name=p15 sig_type=std_logic lab=Vs1}
+C {devices/lab_pin.sym} 460 -220 0 0 {name=p16 sig_type=std_logic lab=Vattn}
+C {devices/lab_wire.sym} 290 -240 0 1 {name=p10 sig_type=std_logic lab=RFp}
+C {devices/lab_wire.sym} 290 -260 0 1 {name=p11 sig_type=std_logic lab=RFn}
+C {lna.sym} 110 -230 0 0 {name=x2}

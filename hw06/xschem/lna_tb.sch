@@ -34,7 +34,7 @@ value="
 .param VDD=1.8
 VVDD VDD 0 \{VDD\}
 VVSS VSS 0 0
-VVREF Vref VSS 1
+VVREF Vref VSS 1.07
 VVIN VIN 0 AC 1 SINE(0 10u 1Meg)
 
 .option wnfloag=1

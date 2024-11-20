@@ -1,5 +1,9 @@
 * NGSPICE file created from lna.ext - technology: sky130A
 
+.subckt sky130_fd_pr__nfet_01v8_QX7BC3 a_n100_n357# a_100_n269# a_n158_n269# VSUBS
+X0 a_100_n269# a_n100_n357# a_n158_n269# VSUBS sky130_fd_pr__nfet_01v8 ad=0.87 pd=6.58 as=0.87 ps=6.58 w=3 l=1
+.ends
+
 .subckt sky130_fd_pr__cap_mim_m3_1_LJ5JLG m3_n3186_n3040# c1_n3146_n3000#
 X0 c1_n3146_n3000# m3_n3186_n3040# sky130_fd_pr__cap_mim_m3_1 l=30 w=30
 .ends
@@ -16,10 +20,6 @@ X3 D G S B sky130_fd_pr__nfet_01v8 ad=5 pd=11 as=5 ps=11 w=10 l=1
 X4 S G D B sky130_fd_pr__nfet_01v8 ad=5 pd=11 as=5 ps=11 w=10 l=1
 X5 S G D B sky130_fd_pr__nfet_01v8 ad=5 pd=11 as=5 ps=11 w=10 l=1
 X6 D G S B sky130_fd_pr__nfet_01v8 ad=5 pd=11 as=5 ps=11 w=10 l=1
-.ends
-
-.subckt sky130_fd_pr__nfet_01v8_7AMGGK a_n100_n157# a_n158_n69# a_100_n69# VSUBS
-X0 a_100_n69# a_n100_n157# a_n158_n69# VSUBS sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
 .ends
 
 .subckt sky130_fd_pr__res_xhigh_po_5p73_F3YNPN a_n573_984# a_n573_n1416# VSUBS
@@ -65,11 +65,11 @@ Xn40x1_1 n40x1_1/D n40x1_1/G n40x1_1/S VSUBS n40x1
 .ends
 
 .subckt lna VDD Voutn Voutp Vin Vref VSS
+Xsky130_fd_pr__nfet_01v8_QX7BC3_0 Vref VSS diff_pair_n_0/n40x1_1/S VSS sky130_fd_pr__nfet_01v8_QX7BC3
 Xsky130_fd_pr__cap_mim_m3_1_LJ5JLG_0 VSS Vg3 sky130_fd_pr__cap_mim_m3_1_LJ5JLG
 Xsky130_fd_pr__nfet_01v8_7JY9FK_0 Vin Vref VSS VSS sky130_fd_pr__nfet_01v8_7JY9FK
 Xsky130_fd_pr__cap_mim_m3_1_LJ5JLG_1 VSS Vg3 sky130_fd_pr__cap_mim_m3_1_LJ5JLG
 Xn70x1_0 Vg2 Vg Vin VSS n70x1
-Xsky130_fd_pr__nfet_01v8_7AMGGK_0 Vref diff_pair_n_0/n40x1_1/S VSS VSS sky130_fd_pr__nfet_01v8_7AMGGK
 Xsky130_fd_pr__res_xhigh_po_5p73_F3YNPN_0 VDD Vg VSS sky130_fd_pr__res_xhigh_po_5p73_F3YNPN
 Xsky130_fd_pr__res_xhigh_po_5p73_G7VZ5E_0 Vg VSS VSS sky130_fd_pr__res_xhigh_po_5p73_G7VZ5E
 Xsky130_fd_pr__res_xhigh_po_5p73_7D764L_0 VDD Vg2 VSS sky130_fd_pr__res_xhigh_po_5p73_7D764L

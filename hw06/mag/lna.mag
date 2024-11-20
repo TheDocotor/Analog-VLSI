@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1731633208
+timestamp 1732120016
 << pwell >>
 rect -5600 5066 18400 6800
 rect -5600 2866 162 5066
@@ -169,7 +169,7 @@ rect 120 350 200 360
 rect -70 120 -50 160
 rect 70 120 90 160
 rect -70 110 90 120
-rect 370 -400 480 340
+rect 370 -400 480 322
 rect 4870 -150 5110 860
 rect 3030 -180 5110 -150
 rect 3030 -220 3090 -180
@@ -281,17 +281,17 @@ use sky130_fd_pr__cap_mim_m3_1_LJ5JLG  sky130_fd_pr__cap_mim_m3_1_LJ5JLG_1
 timestamp 1731631080
 transform 0 1 14640 -1 0 2986
 box -3186 -3040 3186 3040
-use sky130_fd_pr__nfet_01v8_7AMGGK  sky130_fd_pr__nfet_01v8_7AMGGK_0
-timestamp 1731631080
-transform 0 1 297 -1 0 448
-box -158 -157 158 157
 use sky130_fd_pr__nfet_01v8_7JY9FK  sky130_fd_pr__nfet_01v8_7JY9FK_0
 timestamp 1731632322
 transform -1 0 -322 0 1 1367
 box -158 -1057 158 1057
+use sky130_fd_pr__nfet_01v8_QX7BC3  sky130_fd_pr__nfet_01v8_QX7BC3_0
+timestamp 1732120016
+transform 0 1 501 -1 0 428
+box -158 -357 158 357
 use sky130_fd_pr__res_xhigh_po_0p35_BB2ZH9  sky130_fd_pr__res_xhigh_po_0p35_BB2ZH9_0
-timestamp 1731631080
-transform 0 1 1666 -1 0 -29
+timestamp 1732120016
+transform 0 1 1670 -1 0 -47
 box -201 -1796 201 1796
 use sky130_fd_pr__res_xhigh_po_5p73_7D764L  sky130_fd_pr__res_xhigh_po_5p73_7D764L_0
 timestamp 1731631080

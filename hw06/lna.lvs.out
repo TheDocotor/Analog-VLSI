@@ -69,10 +69,10 @@ Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_p
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_QX7BC3 in circuit lna (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_LJ5JLG in circuit lna (0)(2 instances)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_7JY9FK in circuit lna (0)(1 instance)
 Flattening unmatched subcell n70x1 in circuit lna (0)(1 instance)
-Flattening unmatched subcell sky130_fd_pr__nfet_01v8_7AMGGK in circuit lna (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_5p73_F3YNPN in circuit lna (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_5p73_G7VZ5E in circuit lna (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_5p73_7D764L in circuit lna (0)(1 instance)
@@ -87,8 +87,8 @@ Class lna (1):  Merged 1 parallel devices.
 Subcircuit summary:
 Circuit 1: lna                             |Circuit 2: lna                             
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__cap_mim_m3_1 (2->1)          |sky130_fd_pr__cap_mim_m3_1 (2->1)          
 sky130_fd_pr__nfet_01v8 (19->5)            |sky130_fd_pr__nfet_01v8 (5)                
+sky130_fd_pr__cap_mim_m3_1 (2->1)          |sky130_fd_pr__cap_mim_m3_1 (2->1)          
 sky130_fd_pr__res_xhigh_po_5p73 (3)        |sky130_fd_pr__res_xhigh_po_5p73 (3)        
 sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)        
 sky130_fd_pr__pfet_01v8 (10->2)            |sky130_fd_pr__pfet_01v8 (2)                
@@ -102,10 +102,10 @@ Circuit 1: lna                             |Circuit 2: lna
 -------------------------------------------|-------------------------------------------
 VDD                                        |VDD                                        
 Voutn                                      |Voutn                                      
+VSS                                        |VSS                                        
 Vin                                        |Vin                                        
 Vref                                       |Vref                                       
 Voutp                                      |Voutp                                      
-VSS                                        |VSS                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes lna and lna are equivalent.
