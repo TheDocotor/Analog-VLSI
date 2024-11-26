@@ -515,3 +515,4 @@ C {devices/lab_pin.sym} 1140 -270 0 0 {name=p33 sig_type=std_logic lab=VDD}
 C {devices/iopin.sym} -450 -250 0 0 {name=p38 lab=IF}
 C {devices/lab_pin.sym} 1100 -70 0 0 {name=p39 sig_type=std_logic lab=IFp}
 C {devices/lab_pin.sym} 1260 -130 0 1 {name=p40 sig_type=std_logic lab=IF}
+C {devices/iopin.sym} -450 -100 0 0 {name=p22 lab=VM}
