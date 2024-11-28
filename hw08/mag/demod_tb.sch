@@ -27,6 +27,7 @@ VVDD VDD 0 \{VDD\}
 VVSS VSS 0 0
 VVREF Vref VSS 0.73574
 VVIN VINp 0 AM(800u 1.5 10k 455k)
+.include /home/renslow/Documents/ece5120/hw08/mag/demod.spice
 
 .option wnfloag=1
 .option savecurrents

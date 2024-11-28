@@ -91,10 +91,6 @@ N 80 -680 410 -680 {
 lab=Vdo}
 N 470 -680 560 -680 {
 lab=Vout}
-N 440 -640 500 -640 {
-lab=Vout}
-N 500 -680 500 -640 {
-lab=Vout}
 N -540 -1020 -540 -1000 {
 lab=Vinp}
 N -540 -1110 -540 -1080 {
@@ -167,6 +163,10 @@ N 40 -720 40 -630 {
 lab=Vg}
 N -70 -720 40 -720 {
 lab=Vg}
+N 380 -640 440 -640 {
+lab=Vdo}
+N 380 -680 380 -640 {
+lab=Vdo}
 C {devices/iopin.sym} -710 -450 2 0 {name=p8 lab=Vref}
 C {sky130_fd_pr/nfet_01v8.sym} -490 -650 0 0 {name=M1
 L=1
@@ -305,11 +305,6 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -550 -650 0 0 {name=p14 sig_type=std_logic lab=Vinp}
-C {sky130_fd_pr/pnp_05v5.sym} 440 -660 3 0 {name=Q1
-model=pnp_05v5_W3p40L3p40
-m=25
-spiceprefix=X
-}
 C {devices/iopin.sym} 560 -680 2 1 {name=p20 lab=Vout}
 C {devices/lab_pin.sym} 80 -630 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/res_xhigh_po_0p35.sym} -540 -970 0 0 {name=R1
@@ -425,3 +420,8 @@ C {devices/lab_pin.sym} -130 -450 0 1 {name=p37 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -170 -450 0 0 {name=p38 sig_type=std_logic lab=Vref}
 C {devices/lab_pin.sym} -130 -570 0 1 {name=p42 sig_type=std_logic lab=Vdiff2}
 C {devices/lab_pin.sym} -290 -650 0 1 {name=p19 sig_type=std_logic lab=Vinn}
+C {sky130_fd_pr/npn_05v5.sym} 440 -660 3 0 {name=Q1
+model=npn_05v5_w1p00l1p00
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 440 -680 0 1 {name=p4 sig_type=std_logic lab=VSS}

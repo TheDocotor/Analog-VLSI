@@ -5,58 +5,34 @@ K {}
 V {}
 S {}
 E {}
-N 190 -50 230 -50 {
-lab=VDD}
-N 190 -10 220 -10 {
-lab=LOp}
-N 190 10 220 10 {
-lab=LOn}
-N 190 50 220 50 {
-lab=RFn}
-N 190 90 220 90 {
-lab=Vref}
-N 180 -160 280 -160 {
+N 170 -80 270 -80 {
 lab=Vs1}
-N 340 -160 390 -160 {
+N 330 -80 380 -80 {
 lab=Vattn}
-N 450 -160 470 -160 {
+N 440 -80 460 -80 {
 lab=RF}
-N 180 -200 210 -200 {
-lab=RFn}
-N 520 10 570 10 {
-lab=IF_out}
-N 190 -30 520 -30 {
-lab=IF_out}
-N 520 -30 520 10 {
-lab=IF_out}
-N 710 20 970 20 {
-lab=IF_filtered}
-N 970 -140 970 20 {
-lab=IF_filtered}
-N 910 -140 970 -140 {
-lab=IF_filtered}
-N 910 -180 1200 -180 {
+N 170 -260 460 -260 {
 lab=Vout}
-N 1080 -120 1080 -100 {
+N 340 -200 340 -180 {
 lab=VSS}
-N 1080 -100 1130 -100 {
+N 340 -180 390 -180 {
 lab=VSS}
-N 1130 -120 1130 -100 {
+N 390 -200 390 -180 {
 lab=VSS}
-N 190 30 260 30 {
-lab=LNA_out}
-N 260 -180 260 30 {
-lab=LNA_out}
-N 180 -180 260 -180 {
-lab=LNA_out}
-N 180 210 270 210 {
+N 170 40 260 40 {
 lab=Vref}
-N 190 70 940 70 {
-lab=#net1}
-N 940 -100 940 70 {
-lab=#net1}
-N 910 -100 940 -100 {
-lab=#net1}
+N 170 -40 580 -40 {
+lab=IF_out}
+N 630 -40 630 -20 {
+lab=IF_out}
+N 580 -40 630 -40 {
+lab=IF_out}
+N 770 -60 770 -10 {
+lab=IF_filtered}
+N 170 -60 770 -60 {
+lab=IF_filtered}
+N 170 -260 170 -100 {
+lab=Vout}
 C {devices/simulator_commands_shown.sym} -460 -540 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
@@ -82,68 +58,54 @@ if $TRANS=1
  tran 100n 2m 1m
  plot RF
  plot IF_filtered
- plot LNA_out
+ plot x1.LNA_out
  plot Vout
 end
 .endc
 "}
-C {devices/lab_wire.sym} 230 -50 0 1 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 220 -10 0 1 {name=p4 sig_type=std_logic lab=LOp}
-C {devices/lab_wire.sym} 220 10 0 1 {name=p5 sig_type=std_logic lab=LOn}
-C {devices/lab_wire.sym} 220 50 0 1 {name=p7 sig_type=std_logic lab=RFn}
-C {sky130_fd_pr/corner.sym} -130 -360 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {gill_cell.sym} 40 30 0 0 {name=x1}
-C {devices/lab_wire.sym} 220 90 0 1 {name=p8 sig_type=std_logic lab=Vref}
-C {devices/iopin.sym} 180 190 0 0 {name=p9 lab=VDD}
-C {devices/iopin.sym} 470 -160 0 0 {name=p12 lab=RF}
-C {devices/iopin.sym} 180 230 0 0 {name=p14 lab=VSS}
-C {devices/capa.sym} 310 -160 3 0 {name=C1
+C {sky130_fd_pr/corner.sym} -110 -520 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {devices/iopin.sym} 170 20 0 0 {name=p9 lab=VDD}
+C {devices/iopin.sym} 460 -80 0 0 {name=p12 lab=RF}
+C {devices/iopin.sym} 170 60 0 0 {name=p14 lab=VSS}
+C {devices/capa.sym} 300 -80 3 0 {name=C1
 m=1
 value=10u
 footprint=1206
 device="ceramic capacitor"}
-C {devices/res.sym} 420 -160 1 0 {name=R1
+C {devices/res.sym} 410 -80 1 0 {name=R1
 value=300
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_pin.sym} 250 -160 0 0 {name=p15 sig_type=std_logic lab=Vs1}
-C {devices/lab_pin.sym} 380 -160 0 0 {name=p16 sig_type=std_logic lab=Vattn}
-C {/home/renslow/Documents/ece5120/hw06/xschem/lna.sym} 30 -170 0 0 {name=x2}
-C {devices/lab_wire.sym} 210 -200 0 1 {name=p11 sig_type=std_logic lab=RFn}
-C {devices/lab_wire.sym} 190 110 0 1 {name=p17 sig_type=std_logic lab=VSS}
-C {455_crystal.sym} 720 20 0 0 {name=x3}
-C {devices/lab_wire.sym} 570 30 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 240 -80 0 0 {name=p15 sig_type=std_logic lab=Vs1}
+C {devices/lab_pin.sym} 370 -80 0 0 {name=p16 sig_type=std_logic lab=Vattn}
+C {455_crystal.sym} 780 -10 0 0 {name=x3}
+C {devices/lab_wire.sym} 630 0 0 0 {name=p19 sig_type=std_logic lab=VSS}
 C {devices/launcher.sym} -270 170 0 0 {name=h15
 descr="Annotate OP" 
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
-C {demod.sym} 760 -140 0 0 {name=x4}
-C {devices/lab_wire.sym} 910 -120 0 1 {name=p13 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 910 -160 0 1 {name=p20 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 1200 -180 0 1 {name=p21 sig_type=std_logic lab=Vout}
-C {devices/res.sym} 1080 -150 2 0 {name=R2
+C {devices/lab_wire.sym} 460 -260 0 1 {name=p21 sig_type=std_logic lab=Vout}
+C {devices/res.sym} 340 -230 2 0 {name=R2
 value=1Meg
 footprint=1206
 device=resistor
 m=1}
-C {devices/capa.sym} 1130 -150 0 0 {name=C2
+C {devices/capa.sym} 390 -230 0 0 {name=C2
 m=1
 value=100p
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_wire.sym} 1100 -100 0 1 {name=p22 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 970 0 0 1 {name=p23 sig_type=std_logic lab=IF_filtered}
-C {devices/lab_wire.sym} 500 -30 0 1 {name=p24 sig_type=std_logic lab=IF_out}
-C {devices/lab_wire.sym} 260 0 0 1 {name=p6 sig_type=std_logic lab=LNA_out}
-C {bandgap.sym} 30 210 0 0 {name=x5}
-C {devices/lab_wire.sym} 180 -140 0 1 {name=p10 sig_type=std_logic lab=Vref}
-C {devices/lab_wire.sym} 270 210 0 1 {name=p2 sig_type=std_logic lab=Vref}
-C {devices/lab_wire.sym} 180 -220 0 1 {name=p18 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 180 -120 0 1 {name=p25 sig_type=std_logic lab=VSS}
-C {devices/capa.sym} 240 240 0 0 {name=C3
+C {devices/lab_wire.sym} 360 -180 0 1 {name=p22 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 770 -60 0 1 {name=p23 sig_type=std_logic lab=IF_filtered}
+C {devices/lab_wire.sym} 510 -40 0 1 {name=p24 sig_type=std_logic lab=IF_out}
+C {devices/lab_wire.sym} 260 40 0 1 {name=p2 sig_type=std_logic lab=Vref}
+C {devices/capa.sym} 230 70 0 0 {name=C3
 m=1
 value=10u
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_wire.sym} 240 270 0 1 {name=p26 sig_type=std_logic lab=VSS}
+C {radio.sym} 20 -20 0 0 {name=x6}
+C {devices/iopin.sym} 170 -20 0 0 {name=p3 lab=Lop}
+C {devices/iopin.sym} 170 0 0 0 {name=p27 lab=Lon}
+C {devices/lab_wire.sym} 230 100 0 0 {name=p1 sig_type=std_logic lab=VSS}

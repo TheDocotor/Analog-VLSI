@@ -1,0 +1,43 @@
+** sch_path: /home/renslow/Documents/ece5120/hw08/mag/demod_tb.sch
+**.subckt demod_tb
+x1 Vout VDD net1 VSS Vref demod
+R1 Vout VSS 1Meg m=1
+C1 Vout VSS 100p m=1
+C2 Vinp net1 1u m=1
+**** begin user architecture code
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+
+
+.param VDD=1.8
+VVDD VDD 0 {VDD}
+VVSS VSS 0 0
+VVREF Vref VSS 0.73574
+VVIN VINp 0 AM(800u 1.5 10k 455k)
+.include /home/renslow/Documents/ece5120/hw08/mag/demod.spice
+
+.option wnfloag=1
+.option savecurrents
+.control
+save all
+op
+write demod_tb.raw
+
+set color0=white
+set color1=blue
+tran 10n 400u 200u
+plot Vinp
+plot Vout
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.end

@@ -1,0 +1,31 @@
+magic
+tech sky130A
+timestamp 1732735234
+<< nwell >>
+rect 120 80 800 160
+rect 390 -940 610 -840
+<< locali >>
+rect 120 80 800 160
+rect 390 -940 610 -840
+use p1x30  p1x30_0
+timestamp 1732727299
+transform -1 0 40 0 -1 -740
+box -500 -1000 600 300
+use p1x30  p1x30_1
+timestamp 1732727299
+transform 1 0 840 0 -1 -740
+box -500 -1000 600 300
+<< labels >>
+flabel space -50 -900 -50 -900 0 FreeSans 800 0 0 0 DL
+port 0 nsew
+flabel space 940 -890 940 -890 0 FreeSans 800 0 0 0 DR
+port 1 nsew
+flabel space 430 -400 430 -400 0 FreeSans 800 0 0 0 G
+port 2 nsew
+flabel space -90 110 -90 110 0 FreeSans 800 0 0 0 SL
+port 3 nsew
+flabel space 950 110 950 110 0 FreeSans 800 0 0 0 SR
+port 4 nsew
+flabel space -480 170 -480 170 0 FreeSans 800 0 0 0 B
+port 5 nsew
+<< end >>

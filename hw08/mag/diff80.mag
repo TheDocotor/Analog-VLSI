@@ -1,0 +1,17 @@
+magic
+tech sky130A
+timestamp 1732736100
+<< nwell >>
+rect -1780 0 1900 420
+<< locali >>
+rect -1660 360 1880 400
+rect -20 20 60 60
+use p1_80x1  p1_80x1_0
+timestamp 1732735281
+transform 1 0 2240 0 -1 20
+box -2240 -380 -340 20
+use p1_80x1  p1_80x1_1
+timestamp 1732735281
+transform -1 0 -2120 0 -1 20
+box -2240 -380 -340 20
+<< end >>
