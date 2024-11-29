@@ -1,6 +1,6 @@
 ** sch_path: /home/renslow/Documents/ece5120/hw07/xschem/gill_cell.sch
-.subckt gill_cell VDD IFp IFn LOp LOn RFp RFn Vref VSS
-*.PININFO IFp:B IFn:B LOp:B LOn:B RFp:B RFn:B VDD:B VSS:B Vref:B
+.subckt gill_cell VDD IF LOp LOn RFp RFn VM Vref VSS
+*.PININFO IF:B LOp:B LOn:B RFp:B RFn:B VDD:B VSS:B Vref:B VM:B
 XR1 IF++ VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
 XR3 IF-- VDD VSS sky130_fd_pr__res_xhigh_po_0p69 L=6.9 mult=1 m=1
 XR10 VDD LOp VSS sky130_fd_pr__res_xhigh_po_0p69 L=1.38 mult=1 m=1
@@ -23,5 +23,7 @@ XM1 net2 Vref VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=5 nf=1 m=1
 XM12 VM VM VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=10 nf=1 m=1
 XM15 VM net2 VDD VDD sky130_fd_pr__pfet_01v8 L=8 W=5 nf=1 m=1
 XM13 net2 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=8 W=5 nf=1 m=1
+XM14 IF IFn VSS VSS sky130_fd_pr__nfet_01v8 L=1.1 W=40 nf=1 m=1
+XM16 VDD Vref IF VSS sky130_fd_pr__nfet_01v8 L=1.1 W=40 nf=1 m=1
 .ends
 .end

@@ -58,7 +58,7 @@ if $TRANS=1
  tran 100n 2m 1m
  plot RF
  plot IF_filtered
- plot x1.LNA_out
+ plot x6.LNA_out
  plot Vout
 end
 .endc

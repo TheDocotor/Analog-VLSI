@@ -29,14 +29,17 @@ only_toplevel=false
 value= "
 VVDD VDD 0 1.8
 VVSS VSS 0 0
-VRF RFp RFn SINE(0 5m 1k)
+VRF RFp RFn SINE(0 6m 1k)
 VLO LOp LOn SINE(0 5m 1.1k)
+.option wnflag =1
+.option savecurrents
 .control
 save all
+op
+write gilbert_tb.raw
 set color0=white
 set color1=blue
 tran 10u 20m
-write gilbert_tb.raw
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
 let IF = V(IFp, IFn)
@@ -59,3 +62,7 @@ C {devices/lab_wire.sym} 300 -50 0 1 {name=p6 sig_type=std_logic lab=RFp}
 C {devices/lab_wire.sym} 300 -30 0 1 {name=p7 sig_type=std_logic lab=RFn}
 C {sky130_fd_pr/corner.sym} -50 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {gill_cell.sym} 120 -80 0 0 {name=x1}
+C {devices/launcher.sym} 50 100 0 0 {name=h1
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}

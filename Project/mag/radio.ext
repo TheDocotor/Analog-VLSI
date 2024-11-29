@@ -1,0 +1,508 @@
+timestamp 1732923339
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use demod demod_0 1 0 -5460 0 1 13840
+use gill_cell gill_cell_0 1 0 1540 0 1 22520
+use lna lna_0 1 0 3940 0 1 26120
+use bandgap bandgap_0 1 0 -15746 0 1 19418
+port "RC" 0 24600 12500 24600 12500 m1
+port "IF_in" 2 -1200 13800 -1200 13800 m1
+port "IF_out" 3 20860 19940 20860 19940 m1
+port "LOp" 4 300 22520 300 22520 m1
+port "LOn" 5 0 22280 0 22280 m1
+port "ANT" 1 2800 25600 2800 25600 m1
+port "VSS" 8 -21900 26400 -21900 26400 m1
+port "Vref" 7 -7060 25720 -7060 25720 v
+port "VDD" 6 -14000 25200 -14000 25200 m1
+node "RC" 0 348.44 24600 12500 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 100000 1400 0 0 0 0 0 0 0 0 0 0
+node "IF_in" 0 207.705 -1200 13800 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 45600 1000 0 0 0 0 0 0 0 0 0 0
+node "IF_out" 0 123.908 20860 19940 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 16000 560 0 0 0 0 0 0 0 0 0 0
+node "LOp" 0 178.074 300 22520 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43248 1028 0 0 0 0 0 0 0 0 0 0
+node "LOn" 0 177.733 0 22280 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 43248 1028 0 0 0 0 0 0 0 0 0 0
+node "ANT" 0 229.539 2800 25600 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 54000 960 0 0 0 0 0 0 0 0 0 0
+node "VSS" 0 693.08 -21900 26400 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 2400 0 0 0 0 0 0 0 0 0 0
+node "RFn" 361 2859.29 7440 16880 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 53200 2520 116000 2720 127200 2880 248800 5760 0 0 0 0 0 0
+node "li_14700_16000#" 81 6441.38 14700 16000 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 120000 2000 120000 2000 400000 3600 4680000 16800 0 0 0 0 0 0
+node "li_n2400_1800#" 25 40989.9 -2400 1800 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22427200 99680 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vref" 104 13308.2 -7060 25720 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 183212 2724 183212 2724 6720612 53316 0 0 0 0 0 0 0 0
+node "li_656_21727#" 98 6735.7 656 21727 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50400 1376 50400 1376 59200 1536 2983200 30240 0 0 0 0 0 0
+node "li_956_21727#" 109 5356.97 956 21727 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63200 1616 63200 1616 63200 1616 2725600 23400 0 0 0 0 0 0
+node "VDD" 157 23357 -14000 25200 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 220000 3400 5000000 19600 5020000 43800 5070000 25400 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "Vref" "li_n2400_1800#" 976.543
+cap "li_656_21727#" "li_956_21727#" 1779.03
+cap "VDD" "li_n2400_1800#" 984.816
+cap "RFn" "li_n2400_1800#" 53.5108
+cap "LOp" "li_656_21727#" 5.43236
+cap "li_956_21727#" "ANT" 0.172515
+cap "Vref" "VDD" 1150.7
+cap "li_656_21727#" "LOn" 0.906783
+cap "LOp" "li_956_21727#" 8.31349
+cap "li_14700_16000#" "li_n2400_1800#" 134.684
+cap "li_956_21727#" "LOn" 2.04923
+cap "Vref" "ANT" 3.16094
+cap "LOp" "LOn" 73.5738
+cap "Vref" "li_956_21727#" 0.50226
+cap "li_n2400_1800#" "IF_in" 14.1904
+cap "LOn" "li_n2400_1800#" 0.188742
+cap "VDD" "li_956_21727#" 26.6994
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 438.066
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" -2.27374e-13
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 466.52
+cap "demod_0/VSS" "demod_0/sky130_fd_pr__nfet_01v8_QX7BC3_1/a_n100_n357#" 0.133989
+cap "demod_0/VSS" "demod_0/n1x15_diff_pair_0/n1x15_0/G" 1.22864
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 466.52
+cap "demod_0/VSS" "demod_0/Vinp" 0.674494
+cap "demod_0/VSS" "demod_0/n1x15_diff_pair_0/n1x15_0/D" 2.37562
+cap "demod_0/VSS" "demod_0/n1x15_diff_pair_0/n1x15_0/G" 2.86683
+cap "demod_0/Vinp" "demod_0/VSS" -2.44104
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/Vinp" "demod_0/Vdiff" -2.30649
+cap "demod_0/Vdiff" "demod_0/n1x15_diff_pair_0/n1x15_0/D" 0.678749
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 466.52
+cap "demod_0/Vdiff" "demod_0/sky130_fd_pr__res_xhigh_po_0p35_Y6F53N_0/a_n35_54#" 7.37025
+cap "demod_0/Vdiff" "demod_0/sky130_fd_pr__nfet_01v8_QX7BC3_0/a_n100_n357#" 0.375791
+cap "demod_0/Vdiff" "demod_0/Vinp" 2.02348
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 466.52
+cap "demod_0/Vref" "demod_0/VDD" 34.0836
+cap "demod_0/Vref" "gill_cell_0/Vref" 4.15935
+cap "demod_0/Vref" "demod_0/m1_3800_n12000#" 10.3074
+cap "demod_0/Vref" "demod_0/VSS" 9.9128
+cap "demod_0/Vref" "demod_0/VDD" 266.283
+cap "demod_0/VSS" "demod_0/VDD" 2.11225
+cap "demod_0/VDD" "demod_0/m1_3800_n12000#" 1.48002
+cap "Vref" "demod_0/VSS" 330.187
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 154.536
+cap "demod_0/VSS" "Vref" 923.058
+cap "Vref" "demod_0/m1_3800_n12000#" 1.24872
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 15.3352
+cap "gill_cell_0/Vref" "demod_0/VSS" 920.219
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/Vref" "demod_0/Vref" 2.23325
+cap "gill_cell_0/Vref" "demod_0/VSS" 336.583
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.32862
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 670.126
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.31652
+cap "demod_0/VSS" "gill_cell_0/Vref" 10.2866
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.30878
+cap "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" "demod_0/Vref" 0.0368383
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" 0.0891025
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.74989
+cap "demod_0/VDD" "gill_cell_0/Vref" 0.0918892
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.25565
+cap "demod_0/VDD" "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" 0.00891482
+cap "gill_cell_0/Vref" "demod_0/VSS" 9.16655
+cap "demod_0/VSS" "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" 0.301578
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "demod_0/Vref" "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" 0.124684
+cap "gill_cell_0/Vref" "demod_0/VDD" 1.12846
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.16655
+cap "demod_0/VDD" "gill_cell_0/Vref" 1.12846
+cap "demod_0/m1_3800_n12000#" "gill_cell_0/Vref" 7.38977
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "demod_0/Vref" "gill_cell_0/Vref" 3.2162
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.16655
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "demod_0/VDD" "gill_cell_0/Vref" 0.983376
+cap "gill_cell_0/Vref" "demod_0/Vref" 203.663
+cap "demod_0/Vref" "demod_0/m1_3800_n12000#" 117.017
+cap "gill_cell_0/nmos_40_0/S" "demod_0/Vref" 0.591803
+cap "demod_0/VSS" "demod_0/VDD" -1.39547
+cap "demod_0/VSS" "demod_0/Vref" 335.24
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "gill_cell_0/Vref" "demod_0/VSS" 9.16655
+cap "demod_0/VDD" "gill_cell_0/Vref" 1.12846
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "demod_0/VSS" "gill_cell_0/nmos_40_0/G" 0.184245
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "gill_cell_0/nmos_40_0/G" "demod_0/Vref" 0.0588384
+cap "gill_cell_0/Vref" "demod_0/VDD" 1.12846
+cap "gill_cell_0/Vref" "demod_0/VSS" 9.16655
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.16655
+cap "gill_cell_0/Vref" "demod_0/VDD" 1.12846
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/Vref" "demod_0/VDD" 1.12846
+cap "demod_0/m1_3800_n12000#" "demod_0/VSS" 670.126
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "gill_cell_0/Vref" "demod_0/VSS" 9.16655
+cap "demod_0/VSS" "demod_0/VDD" 1.77636e-15
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.16655
+cap "demod_0/VDD" "gill_cell_0/nmos_40_2/G" 233.148
+cap "demod_0/VDD" "demod_0/m1_3800_n12000#" 245.284
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "demod_0/Vref" "gill_cell_0/Vref" 3.2162
+cap "demod_0/m1_3800_n12000#" "gill_cell_0/Vref" 7.38977
+cap "demod_0/VSS" "demod_0/VDD" 582.556
+cap "demod_0/VDD" "gill_cell_0/Vref" 594.667
+cap "demod_0/VDD" "gill_cell_0/nmos_40_2/S" 1.01357
+cap "demod_0/VSS" "gill_cell_0/nmos_40_2/G" 0.35636
+cap "gill_cell_0/Vref" "demod_0/VDD" 1.12846
+cap "gill_cell_0/Vref" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "demod_0/VDD" 1.77636e-15
+cap "gill_cell_0/Vref" "demod_0/Vref" 3.2162
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/nmos_40_2/G" "demod_0/Vref" 0.145046
+cap "demod_0/VSS" "gill_cell_0/Vref" 9.16655
+cap "gill_cell_0/nmos_40_2/S" "demod_0/VDD" 0.400047
+cap "gill_cell_0/nmos_40_1/G" "demod_0/VDD" 1.12846
+cap "gill_cell_0/nmos_40_1/G" "demod_0/m1_3800_n12000#" 7.38977
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/nmos_40_1/G" "demod_0/Vref" 3.2162
+cap "gill_cell_0/nmos_40_1/G" "demod_0/VSS" 9.16655
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/nmos_40_1/G" "demod_0/m1_3800_n12000#" 3.99257
+cap "gill_cell_0/nmos_40_1/G" "demod_0/VSS" 5.38209
+cap "demod_0/VSS" "gill_cell_0/nmos_40_2/G" 0.197978
+cap "gill_cell_0/nmos_40_1/G" "demod_0/Vref" 1.94486
+cap "gill_cell_0/nmos_40_2/G" "demod_0/Vref" 0.0805814
+cap "gill_cell_0/nmos_40_1/G" "demod_0/VDD" 0.60131
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 670.126
+cap "gill_cell_0/nmos_40_1/G" "demod_0/Vref" 0.112176
+cap "demod_0/VSS" "gill_cell_0/nmos_40_1/G" 0.239879
+cap "demod_0/VSS" "demod_0/m1_3800_n12000#" 424.094
+cap "gill_cell_0/VDD" "gill_cell_0/Vref" 7.10543e-15
+cap "gill_cell_0/sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" "demod_0/VSS" 0.00600127
+cap "gill_cell_0/Vref" "gill_cell_0/sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" 3.55271e-15
+cap "gill_cell_0/sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" "gill_cell_0/Vref" -1.42109e-14
+cap "gill_cell_0/sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" "demod_0/VSS" 0.0690146
+cap "demod_0/VSS" "demod_0/Vref" -0.477528
+cap "gill_cell_0/Gilbert_2/nmos_40_1/D" "demod_0/Vref" 1.88907
+cap "gill_cell_0/RFn" "demod_0/Vref" 0.187331
+cap "demod_0/Vref" "gill_cell_0/Gilbert_0/nmos_40_0/S" 0.0447027
+cap "demod_0/Vref" "gill_cell_0/Gilbert_2/nmos_40_1/G" 19.1492
+cap "demod_0/Vref" "gill_cell_0/Gilbert_2/nmos_40_1/S" 3.36301
+cap "gill_cell_0/nmos_40_2/D" "li_14700_16000#" 0.803894
+cap "gill_cell_0/nmos_40_2/D" "li_14700_16000#" 0.803894
+cap "gill_cell_0/nmos_40_2/G" "li_14700_16000#" 2073.28
+cap "gill_cell_0/nmos_40_2/S" "li_14700_16000#" 2.87391
+cap "li_14700_16000#" "gill_cell_0/nmos_40_2/S" 0.617424
+cap "li_14700_16000#" "gill_cell_0/nmos_40_2/G" 0.448733
+cap "gill_cell_0/RFn" "gill_cell_0/VSS" 1.93605
+cap "gill_cell_0/RFp" "gill_cell_0/RFn" 0.912496
+cap "gill_cell_0/RFp" "gill_cell_0/VSS" 8.71212
+cap "gill_cell_0/RFp" "gill_cell_0/RFn" 4.23717
+cap "gill_cell_0/sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" "gill_cell_0/RFp" 0.192101
+cap "gill_cell_0/VDD" "gill_cell_0/RFp" 9.3298
+cap "gill_cell_0/RFn" "gill_cell_0/Gilbert_2/nmos_40_1/D" 1.13687e-13
+cap "gill_cell_0/RFn" "gill_cell_0/VM" 0.0104452
+cap "li_14700_16000#" "gill_cell_0/Gilbert_1/nmos_40_0/S" 0.153538
+cap "li_14700_16000#" "gill_cell_0/Gilbert_1/nmos_40_0/G" 1.24271
+cap "gill_cell_0/Gilbert_3/nmos_40_1/S" "li_14700_16000#" 24.196
+cap "li_14700_16000#" "gill_cell_0/Gilbert_1/nmos_40_0/S" 103.837
+cap "li_14700_16000#" "gill_cell_0/Gilbert_1/nmos_40_0/G" 1.02902
+cap "bandgap_0/VSS" "gill_cell_0/LOn" -0.069526
+cap "gill_cell_0/RFp" "gill_cell_0/VSS" 33.2986
+cap "gill_cell_0/RFp" "gill_cell_0/LOp" 33.9012
+cap "gill_cell_0/RFp" "gill_cell_0/LOn" 2.2806
+cap "gill_cell_0/RFn" "gill_cell_0/LOp" 270.568
+cap "gill_cell_0/RFn" "gill_cell_0/LOn" 2.15142
+cap "gill_cell_0/RFp" "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" 8.28948
+cap "gill_cell_0/RFp" "gill_cell_0/RFn" 75.0167
+cap "gill_cell_0/LOn" "gill_cell_0/LOp" -73.5738
+cap "gill_cell_0/LOn" "gill_cell_0/VSS" 0.0135844
+cap "gill_cell_0/sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" "gill_cell_0/RFp" 0.718189
+cap "gill_cell_0/VDD" "gill_cell_0/RFp" 89.8764
+cap "gill_cell_0/LOp" "gill_cell_0/RFp" 408.318
+cap "gill_cell_0/RFp" "gill_cell_0/LOn" 7.30526
+cap "gill_cell_0/VDD" "gill_cell_0/RFn" 1.36897
+cap "gill_cell_0/LOp" "gill_cell_0/RFn" 0.740231
+cap "gill_cell_0/RFp" "gill_cell_0/RFn" 3.72082
+cap "gill_cell_0/RFn" "gill_cell_0/LOn" 0.0874222
+cap "li_656_21727#" "gill_cell_0/LOn" 2.08803
+cap "li_956_21727#" "gill_cell_0/Gilbert_0/nmos_40_1/S" 2.80608
+cap "li_656_21727#" "gill_cell_0/LOn" 0.337112
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_1/S" 4.0984
+cap "gill_cell_0/Gilbert_0/nmos_40_1/S" "li_656_21727#" 7.90548
+cap "gill_cell_0/Gilbert_1/nmos_40_1/S" "li_656_21727#" 5.2128
+cap "gill_cell_0/IF++" "gill_cell_0/if_res_0/N" 3.55271e-15
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_1/nmos_40_0/G" 1.02326
+cap "gill_cell_0/Gilbert_1/nmos_40_0/S" "gill_cell_0/if_res_0/N" 0.0525211
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_1/nmos_40_0/D" 0.110796
+cap "gill_cell_0/Gilbert_1/nmos_40_0/S" "gill_cell_0/IF++" -1.13687e-13
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_1/nmos_40_0/S" 799.616
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_1/nmos_40_0/G" 9.03594
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/IF++" 455.035
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_3/nmos_40_1/D" 13.3121
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_3/nmos_40_1/S" 37.5544
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_1/nmos_40_0/D" 0.169191
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_3/nmos_40_1/D" 13.3121
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/IF++" 3.55271e-15
+cap "gill_cell_0/VDD" "gill_cell_0/IF++" 3.55271e-15
+cap "bandgap_0/sky130_fd_pr__nfet_01v8_6EEDFX_0/a_n158_n500#" "bandgap_0/VDD" 1.15283
+cap "bandgap_0/Vref" "bandgap_0/VDD" 0.816087
+cap "bandgap_0/VDD" "bandgap_0/Vdm2" 3.99257
+cap "bandgap_0/Vref" "bandgap_0/VDD" 0.0228596
+cap "bandgap_0/Vdm2" "bandgap_0/VDD" 2.98115
+cap "bandgap_0/Vdiff" "bandgap_0/VDD" 1.0611
+cap "bandgap_0/VDD" "bandgap_0/p20x05_0/G" 3.47801
+cap "bandgap_0/p20x05_0/D" "bandgap_0/p20x05_0/G" 3.47801
+cap "bandgap_0/p20x05_0/S" "bandgap_0/p20x05_0/D" 8.66899
+cap "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "bandgap_0/VSS" 192.223
+cap "gill_cell_0/VSS" "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" 618.675
+cap "gill_cell_0/RFp" "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" 3.92911
+cap "gill_cell_0/LOp" "gill_cell_0/RFn" 0.569134
+cap "gill_cell_0/RFn" "gill_cell_0/VSS" 24.8518
+cap "gill_cell_0/RFp" "gill_cell_0/LOn" 0.430345
+cap "gill_cell_0/RFn" "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" 581.651
+cap "gill_cell_0/RFn" "gill_cell_0/LOn" 294.952
+cap "gill_cell_0/RFn" "gill_cell_0/VSS" 98.2839
+cap "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "gill_cell_0/RFp" 501.117
+cap "gill_cell_0/RFp" "gill_cell_0/LOp" 5.47566
+cap "gill_cell_0/RFp" "gill_cell_0/LOn" 659.744
+cap "gill_cell_0/RFn" "gill_cell_0/LOp" 0.909136
+cap "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "gill_cell_0/RFn" 685.225
+cap "gill_cell_0/RFn" "gill_cell_0/LOn" 30.7321
+cap "gill_cell_0/VDD" "gill_cell_0/RFn" 669.03
+cap "li_656_21727#" "gill_cell_0/VDD" 571.511
+cap "gill_cell_0/LOn" "gill_cell_0/RFn" 3.34955
+cap "gill_cell_0/LOn" "li_656_21727#" 103.518
+cap "gill_cell_0/VSS" "gill_cell_0/RFn" 100.267
+cap "li_956_21727#" "gill_cell_0/VSS" 82.3277
+cap "li_656_21727#" "gill_cell_0/VDD" 591.82
+cap "gill_cell_0/Gilbert_0/nmos_40_1/D" "li_656_21727#" 2.57689
+cap "li_656_21727#" "gill_cell_0/VSS" 1.18581
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_1/S" 6.18917
+cap "li_656_21727#" "gill_cell_0/LOn" 3.78561
+cap "li_956_21727#" "gill_cell_0/VDD" 848.494
+cap "gill_cell_0/Gilbert_0/nmos_40_1/G" "li_656_21727#" 44.6036
+cap "gill_cell_0/Gilbert_0/nmos_40_0/G" "li_656_21727#" 1.33399
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_1/S" 15.0362
+cap "gill_cell_0/Gilbert_0/nmos_40_0/G" "li_656_21727#" 9.3757
+cap "gill_cell_0/LOn" "li_656_21727#" 3.78561
+cap "gill_cell_0/Gilbert_0/nmos_40_0/S" "li_656_21727#" 2.92853
+cap "li_656_21727#" "gill_cell_0/VDD" 719.804
+cap "gill_cell_0/Gilbert_0/nmos_40_0/S" "li_656_21727#" 0.296123
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_0/G" 1.8942
+cap "gill_cell_0/Gilbert_0/nmos_40_1/D" "li_656_21727#" 3.256
+cap "gill_cell_0/VSS" "li_656_21727#" 30.7432
+cap "gill_cell_0/Gilbert_0/nmos_40_1/G" "li_656_21727#" 29.0479
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_0/S" 8.70261
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_0/G" 31.7615
+cap "li_656_21727#" "gill_cell_0/Gilbert_1/nmos_40_1/S" 3.35209
+cap "gill_cell_0/Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "li_656_21727#" 954.777
+cap "li_656_21727#" "gill_cell_0/Gilbert_0/nmos_40_1/D" 1.78988
+cap "gill_cell_0/VSS" "li_656_21727#" 14.1858
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/IF++" 13.2979
+cap "gill_cell_0/Gilbert_1/nmos_40_0/S" "gill_cell_0/if_res_0/N" 0.556928
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/Gilbert_3/nmos_40_1/B" 39.0247
+cap "bandgap_0/VSS" "bandgap_0/VDD" 16.5521
+cap "bandgap_0/VDD" "bandgap_0/sky130_fd_pr__nfet_01v8_6EEDFX_0/a_n158_n500#" 1.09877
+cap "bandgap_0/Vpgates" "bandgap_0/VDD" 0.65257
+cap "bandgap_0/VSS" "bandgap_0/VDD" 24.2902
+cap "bandgap_0/Vpgates" "bandgap_0/VDD" 1.08204
+cap "bandgap_0/VDD" "bandgap_0/VSS" 24.2902
+cap "bandgap_0/VSS" "bandgap_0/VDD" 24.2902
+cap "bandgap_0/VSS" "bandgap_0/p20x05_0/D" 24.2902
+cap "bandgap_0/p20x05_0/D" "bandgap_0/p20x05_0/G" 0.491933
+cap "bandgap_0/p20x05_0/G" "bandgap_0/p20x05_0/D" 88.4524
+cap "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_0/a_n573_7984#" "bandgap_0/p20x05_0/D" 13.2275
+cap "bandgap_0/VSS" "bandgap_0/p20x05_0/D" 30.7899
+cap "bandgap_0/p20x05_0/D" "bandgap_0/p20x05_0/S" 41.3313
+cap "bandgap_0/p20x05_0/D" "bandgap_0/VSS" 8.00264
+cap "bandgap_0/Vref" "bandgap_0/p20x05_0/D" 478.352
+cap "bandgap_0/VSS" "VDD" 5.46952
+cap "bandgap_0/Vref" "VDD" 137.077
+cap "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" "VDD" 50.86
+cap "bandgap_0/VSS" "VDD" 5.46952
+cap "bandgap_0/VSS" "VDD" 5.46952
+cap "bandgap_0/VSS" "VDD" 241.696
+cap "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "bandgap_0/VSS" 892.031
+cap "gill_cell_0/VSS" "Vref" 1.84445
+cap "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "gill_cell_0/VSS" 24.6863
+cap "Vref" "gill_cell_0/VSS" 1.5364
+cap "li_956_21727#" "gill_cell_0/VSS" 0.067721
+cap "gill_cell_0/VSS" "gill_cell_0/LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" -2.84217e-14
+cap "gill_cell_0/VSS" "li_656_21727#" 0.373498
+cap "gill_cell_0/VSS" "lna_0/Vref" 1.72411
+cap "lna_0/Vin" "li_956_21727#" -0.0101667
+cap "li_956_21727#" "lna_0/Vin" -0.0463149
+cap "gill_cell_0/VSS" "lna_0/Vref" 0.884095
+cap "gill_cell_0/VSS" "li_956_21727#" 719.744
+cap "gill_cell_0/VSS" "li_656_21727#" 702.272
+cap "gill_cell_0/VSS" "gill_cell_0/if_res_0/N" -2.84217e-14
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/VSS" 2.66322
+cap "gill_cell_0/if_res_0/N" "gill_cell_0/VSS" 9.71453
+cap "bandgap_0/VDD" "bandgap_0/VSS" 18.3534
+cap "bandgap_0/VDD" "bandgap_0/VSS" 26.9337
+cap "bandgap_0/VDD" "bandgap_0/VSS" 26.9337
+cap "bandgap_0/VDD" "bandgap_0/VSS" 26.9337
+cap "bandgap_0/VSS" "bandgap_0/p20x05_0/D" 26.9337
+cap "bandgap_0/p20x05_0/D" "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_0/a_n573_7984#" 8.20251
+cap "bandgap_0/VSS" "bandgap_0/p20x05_0/D" 601.837
+cap "bandgap_0/VSS" "bandgap_0/p20x05_0/D" 4.80194
+cap "bandgap_0/p20x05_0/D" "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" 24.9712
+cap "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" "bandgap_0/VSS" 2.32253
+cap "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" "VDD" 18.327
+cap "bandgap_0/VSS" "VDD" 2.07806
+cap "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" "VDD" 2.87677
+cap "bandgap_0/VSS" "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" 50.0302
+cap "bandgap_0/VSS" "VDD" 3.09237
+cap "bandgap_0/VSS" "VDD" 3.22355
+cap "bandgap_0/VSS" "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" 68.8357
+cap "bandgap_0/VSS" "VDD" 4.29807
+cap "bandgap_0/VSS" "Vref" 272.99
+cap "bandgap_0/VSS" "Vref" 669.95
+cap "gill_cell_0/VSS" "Vref" 343.655
+cap "Vref" "lna_0/n70x1_0/S" 6.0731
+cap "Vref" "lna_0/Vin" 1.97097
+cap "Vref" "lna_0/n70x1_0/D" 114.097
+cap "Vref" "gill_cell_0/VSS" 32.5243
+cap "lna_0/n70x1_0/S" "Vref" 0.526658
+cap "lna_0/n70x1_0/G" "gill_cell_0/VSS" 2.24581
+cap "Vref" "lna_0/n70x1_0/G" 179.201
+cap "lna_0/n70x1_0/G" "lna_0/Vref" 256.14
+cap "lna_0/Vref" "lna_0/Vin" 161.483
+cap "lna_0/Vref" "gill_cell_0/VSS" 11.3636
+cap "lna_0/Vref" "lna_0/n70x1_0/D" 207.005
+cap "lna_0/n70x1_0/G" "lna_0/Vref" 27.6033
+cap "lna_0/Vref" "lna_0/n70x1_0/D" 78.2718
+cap "lna_0/Vref" "lna_0/Vin" 190.203
+cap "lna_0/Vref" "lna_0/n70x1_0/G" 8.0618
+cap "lna_0/Vref" "lna_0/n70x1_0/G" 1.032
+cap "lna_0/n70x1_0/G" "lna_0/Vref" 19.7452
+cap "lna_0/Vref" "gill_cell_0/VSS" 59.0835
+cap "lna_0/Vref" "li_956_21727#" -0.0137066
+cap "lna_0/Vref" "lna_0/n70x1_0/G" 65.6776
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "li_956_21727#" 0.728545
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Vref" 12.6028
+cap "lna_0/Vref" "lna_0/n70x1_0/G" 4.0725
+cap "lna_0/n70x1_0/G" "gill_cell_0/VSS" 0.748605
+cap "lna_0/Vref" "li_956_21727#" 30.5175
+cap "gill_cell_0/VSS" "li_956_21727#" 24.2341
+cap "lna_0/diff_pair_n_0/n40x1_0/S" "li_956_21727#" 111.718
+cap "gill_cell_0/VSS" "lna_0/Vref" 0.135709
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "li_956_21727#" 36.1108
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "li_956_21727#" 1.23748
+cap "li_956_21727#" "lna_0/sky130_fd_pr__res_xhigh_po_0p35_BB2ZH9_0/a_131_1364#" 0.0588705
+cap "li_656_21727#" "lna_0/diff_pair_n_0/n40x1_1/G" 130.97
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "li_656_21727#" 108.355
+cap "li_956_21727#" "lna_0/diff_pair_n_0/n40x1_1/G" 0.0227319
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "li_656_21727#" 1.18581
+cap "gill_cell_0/VSS" "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_0/m3_n3186_n3040#" 13.4521
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "li_656_21727#" 3.10001
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "li_656_21727#" 0.258773
+cap "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_0/m3_n3186_n3040#" "gill_cell_0/VSS" 61.3631
+cap "gill_cell_0/VSS" "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_0/m3_n3186_n3040#" 61.3631
+cap "gill_cell_0/VSS" "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_1/m3_n3186_n3040#" 61.3631
+cap "gill_cell_0/VSS" "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_1/m3_n3186_n3040#" 61.3631
+cap "lna_0/sky130_fd_pr__cap_mim_m3_1_LJ5JLG_1/m3_n3186_n3040#" "gill_cell_0/VSS" 33.2636
+cap "VDD" "bandgap_0/VSS" 1415.56
+cap "bandgap_0/VSS" "VDD" 348.508
+cap "VDD" "bandgap_0/VSS" 348.508
+cap "VDD" "bandgap_0/VSS" 348.508
+cap "bandgap_0/VSS" "VDD" 348.508
+cap "VDD" "bandgap_0/VSS" 250.195
+cap "Vref" "lna_0/n70x1_0/G" 0.0437964
+cap "lna_0/sky130_fd_pr__nfet_01v8_7JY9FK_0/a_n158_n969#" "lna_0/Voutn" 2.29059
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Voutn" 0.291418
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_1/G" 3.67959
+cap "lna_0/Voutn" "lna_0/sky130_fd_pr__nfet_01v8_7JY9FK_0/a_n158_n969#" 2.09286
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "lna_0/Voutn" 2.88745
+cap "lna_0/Voutn" "lna_0/Vref" 11.0758
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_1/S" 1.02801
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_1/S" 0.308403
+cap "lna_0/diff_pair_n_0/n40x1_1/D" "lna_0/Voutn" 15.4826
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_0/S" 136.969
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "lna_0/Voutn" 3.67959
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_1/G" 3.67959
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Voutn" 404.834
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Voutp" 3.51303
+cap "lna_0/Voutp" "lna_0/diff_pair_n_0/n40x1_0/G" 2.76688
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Voutp" 3.51303
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "lna_0/Voutp" 411.54
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "lna_0/Voutp" 134.215
+cap "lna_0/Voutn" "lna_0/Voutp" 15.1641
+cap "lna_0/Voutp" "lna_0/diff_pair_n_0/n40x1_0/G" 3.51303
+cap "lna_0/diff_pair_n_0/n40x1_0/S" "lna_0/Voutp" 0.964779
+cap "lna_0/diff_pair_n_0/n40x1_0/S" "lna_0/Voutp" 0.289434
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "lna_0/Voutp" 3.19154
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "lna_0/Voutp" 6.77712
+cap "lna_0/sky130_fd_pr__nfet_01v8_7JY9FK_0/a_n158_n969#" "lna_0/Voutn" 0.313635
+cap "lna_0/diff_pair_n_0/n40x1_1/G" "lna_0/Voutn" 3.67959
+cap "lna_0/sky130_fd_pr__nfet_01v8_7JY9FK_0/a_n100_n1057#" "lna_0/Voutn" 1.50413
+cap "lna_0/diff_pair_n_0/n40x1_0/S" "lna_0/Voutn" 64.5151
+cap "lna_0/diff_pair_n_0/n40x1_0/G" "lna_0/Voutn" 123.003
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "lna_0/Voutn" 0.719608
+cap "lna_0/sky130_fd_pr__nfet_01v8_7JY9FK_0/a_n158_n969#" "lna_0/Voutn" 0.270245
+cap "lna_0/diff_pair_n_0/n40x1_1/D" "lna_0/Voutn" 3.4421
+cap "lna_0/diff_pair_p_0/D" "lna_0/Voutn" 7.08202
+cap "lna_0/Voutn" "lna_0/diff_pair_n_0/n40x1_0/G" 1.0271
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "lna_0/Voutn" 0.315719
+cap "lna_0/diff_pair_p_0/D" "lna_0/Voutn" 0.447145
+cap "lna_0/Voutn" "lna_0/Voutp" 3.17277
+cap "lna_0/Voutp" "lna_0/diff_pair_n_0/n40x1_1/G" 111.665
+cap "lna_0/Voutp" "lna_0/Voutn" 22.7648
+cap "lna_0/diff_pair_n_0/n40x1_1/S" "lna_0/Voutp" 61.7413
+cap "lna_0/VDD" "lna_0/Voutp" 3.16229
+cap "lna_0/Voutp" "lna_0/diff_pair_n_0/n40x1_0/G" 3.51303
+cap "lna_0/Voutp" "lna_0/diff_pair_p_0/D" 1.33086
+cap "lna_0/diff_pair_p_0/p40x1_1/S" "lna_0/Voutp" 2.04845
+cap "lna_0/diff_pair_n_0/n40x1_0/S" "lna_0/Voutp" 0.675346
+cap "lna_0/Voutp" "lna_0/diff_pair_n_0/n40x1_1/G" 0.539573
+cap "lna_0/VSS" "VDD" 215.299
+cap "lna_0/VSS" "VDD" 1830.86
+cap "lna_0/VSS" "lna_0/sky130_fd_pr__res_xhigh_po_5p73_F3YNPN_0/a_n573_984#" 1830.86
+cap "lna_0/VSS" "lna_0/sky130_fd_pr__res_xhigh_po_5p73_F3YNPN_0/a_n573_984#" 208.234
+cap "lna_0/VSS" "lna_0/VDD" -0.256927
+merge "lna_0/Voutn" "gill_cell_0/RFn" -4599.49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -63200 -1616 -63200 -1616 -63200 -1616 -1011800 -8872 0 0 0 0 0 0
+merge "gill_cell_0/RFn" "li_956_21727#"
+merge "lna_0/n70x1_0/B" "lna_0/VSS" -75272 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2922600 -243068 -320000 -49200 0 0 0 0 0 0 0 0 0 0
+merge "lna_0/VSS" "VSS"
+merge "VSS" "gill_cell_0/nmos_40_3/S"
+merge "gill_cell_0/nmos_40_3/S" "gill_cell_0/Gilbert_1/nmos_40_0/B"
+merge "gill_cell_0/Gilbert_1/nmos_40_0/B" "gill_cell_0/Gilbert_0/nmos_40_1/B"
+merge "gill_cell_0/Gilbert_0/nmos_40_1/B" "gill_cell_0/nmos_40_1/B"
+merge "gill_cell_0/nmos_40_1/B" "gill_cell_0/nmos_40_2/D"
+merge "gill_cell_0/nmos_40_2/D" "gill_cell_0/Gilbert_2/nmos_40_0/B"
+merge "gill_cell_0/Gilbert_2/nmos_40_0/B" "gill_cell_0/Gilbert_2/nmos_40_1/B"
+merge "gill_cell_0/Gilbert_2/nmos_40_1/B" "gill_cell_0/nmos_40_2/B"
+merge "gill_cell_0/nmos_40_2/B" "gill_cell_0/nmos_40_0/B"
+merge "gill_cell_0/nmos_40_0/B" "gill_cell_0/VSS"
+merge "gill_cell_0/VSS" "demod_0/Vdiff"
+merge "demod_0/Vdiff" "demod_0/VSS"
+merge "demod_0/VSS" "li_n2400_1800#"
+merge "li_n2400_1800#" "bandgap_0/VSS"
+merge "bandgap_0/VSS" "VSUBS"
+merge "lna_0/VDD" "bandgap_0/p20x05_0/D" -24104.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -140000 -2200 -1539800 -20716 -3884200 -36722 -5728400 -25492 0 0 0 0 0 0
+merge "bandgap_0/p20x05_0/D" "bandgap_0/VDD"
+merge "bandgap_0/VDD" "gill_cell_0/VDD"
+merge "gill_cell_0/VDD" "VDD"
+merge "VDD" "gill_cell_0/if_res_0/N"
+merge "gill_cell_0/if_res_0/N" "demod_0/VDD"
+merge "demod_0/VDD" "li_14700_16000#"
+merge "gill_cell_0/VM" "gill_cell_0/nmos_40_0/G" -2408.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -39200 -2040 -114800 -2780 -100000 -2200 0 0 0 0 0 0 0 0
+merge "gill_cell_0/nmos_40_0/G" "demod_0/Vref"
+merge "demod_0/Vref" "RFn"
+merge "gill_cell_0/IF" "IF_out" -123.908 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16000 -560 0 0 0 0 0 0 0 0 0 0
+merge "lna_0/Vref" "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" -12024.1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -183212 -2724 -183212 -2724 -5650412 -40160 0 0 0 0 0 0 0 0
+merge "bandgap_0/sky130_fd_pr__res_xhigh_po_5p73_J2MYFK_1/a_n573_7984#" "bandgap_0/Vref"
+merge "bandgap_0/Vref" "gill_cell_0/Vref"
+merge "gill_cell_0/Vref" "Vref"
+merge "lna_0/Voutp" "gill_cell_0/RFp" -5677.97 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -50400 -1376 -50400 -1376 -59200 -1536 -1717200 -17172 0 0 0 0 0 0
+merge "gill_cell_0/RFp" "li_656_21727#"
+merge "gill_cell_0/LOn" "LOn" -177.945 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43248 -1028 0 0 0 0 0 0 0 0 0 0
+merge "demod_0/sky130_fd_pr__rf_npn_05v5_W1p00L1p00_0/dw_80_80#" "demod_0/Vout" -348.44 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -100000 -1400 0 0 0 0 0 0 0 0 0 0
+merge "demod_0/Vout" "RC"
+merge "gill_cell_0/LOp" "LOp" -178.074 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43248 -1028 0 0 0 0 0 0 0 0 0 0
+merge "demod_0/Vinp" "IF_in" -207.705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -45600 -1000 0 0 0 0 0 0 0 0 0 0
+merge "lna_0/Vin" "ANT" -229.539 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -54000 -960 0 0 0 0 0 0 0 0 0 0

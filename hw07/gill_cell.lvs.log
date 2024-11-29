@@ -86,36 +86,36 @@ Circuit sky130_fd_pr__nfet_01v8 contains no devices.
 Circuit sky130_fd_pr__pfet_01v8 contains no devices.
 
 Contents of circuit 1:  Circuit: 'gill_cell'
-Circuit gill_cell contains 52 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:  42
+Circuit gill_cell contains 60 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:  50
   Class: sky130_fd_pr__res_xhigh_po_0p69 instances:   8
   Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 17 nets.
+Circuit contains 18 nets.
 Contents of circuit 2:  Circuit: 'gill_cell'
-Circuit gill_cell contains 22 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:  12
+Circuit gill_cell contains 24 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:  14
   Class: sky130_fd_pr__res_xhigh_po_0p69 instances:   8
   Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 17 nets.
+Circuit contains 18 nets.
 
 Circuit was modified by parallel/series device merging.
 New circuit summary:
 
 Contents of circuit 1:  Circuit: 'gill_cell'
-Circuit gill_cell contains 22 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:  12
+Circuit gill_cell contains 24 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:  14
   Class: sky130_fd_pr__res_xhigh_po_0p69 instances:   8
   Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 17 nets.
+Circuit contains 18 nets.
 Contents of circuit 2:  Circuit: 'gill_cell'
-Circuit gill_cell contains 22 device instances.
-  Class: sky130_fd_pr__nfet_01v8 instances:  12
+Circuit gill_cell contains 24 device instances.
+  Class: sky130_fd_pr__nfet_01v8 instances:  14
   Class: sky130_fd_pr__res_xhigh_po_0p69 instances:   8
   Class: sky130_fd_pr__pfet_01v8 instances:   2
-Circuit contains 17 nets.
+Circuit contains 18 nets.
 
-Circuit 1 contains 22 devices, Circuit 2 contains 22 devices.
-Circuit 1 contains 17 nets,    Circuit 2 contains 17 nets.
+Circuit 1 contains 24 devices, Circuit 2 contains 24 devices.
+Circuit 1 contains 18 nets,    Circuit 2 contains 18 nets.
 
 
 Final result: 

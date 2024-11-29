@@ -46,7 +46,7 @@ lab=Vpgates}
 N -320 -430 -320 -360 {
 lab=Vpgates}
 N -160 -450 -160 -400 {
-lab=P20G}
+lab=Vl}
 N -280 -330 360 -330 {
 lab=Vref}
 N 180 -370 180 -330 {
@@ -60,7 +60,7 @@ lab=VDD}
 N 180 -440 190 -440 {
 lab=VDD}
 N -160 -400 140 -400 {
-lab=P20G}
+lab=Vl}
 N -320 -180 -320 -150 {
 lab=#net1}
 N -320 -300 -320 -240 {
@@ -100,7 +100,7 @@ lab=#net2}
 N 30 -120 80 -120 {
 lab=#net2}
 N -230 -410 -160 -410 {
-lab=P20G}
+lab=Vl}
 N -240 -30 -230 -30 {
 lab=Vss}
 N -160 -340 -160 -180 {
@@ -126,15 +126,15 @@ lab=Vss}
 N -230 -100 -230 -90 {
 lab=#net5}
 N -190 -60 -180 -60 {
-lab=P20G}
+lab=Vl}
 N -180 -180 -180 -60 {
-lab=P20G}
+lab=Vl}
 N -230 -180 -180 -180 {
-lab=P20G}
+lab=Vl}
 N -230 -410 -230 -160 {
-lab=P20G}
+lab=Vl}
 N -190 -130 -180 -130 {
-lab=P20G}
+lab=Vl}
 N -30 -80 -20 -80 {
 lab=Vss}
 N -30 -80 -30 -50 {
@@ -402,11 +402,9 @@ model=pnp_05v5_W3p40L3p40
 m=24
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 90 -400 0 0 {name=p13 sig_type=std_logic lab=P20G}
 C {devices/lab_pin.sym} -230 -290 0 0 {name=p15 sig_type=std_logic lab=Vl}
 C {devices/lab_pin.sym} -270 -430 0 0 {name=p14 sig_type=std_logic lab=Vpgates}
 C {devices/lab_pin.sym} 10 -300 0 0 {name=p16 sig_type=std_logic lab=Vdiff}
 C {devices/lab_pin.sym} -320 -280 0 0 {name=p17 sig_type=std_logic lab=Vres}
-C {devices/lab_pin.sym} -230 -380 0 0 {name=p18 sig_type=std_logic lab=Vdm2}
 C {devices/lab_pin.sym} 130 -170 0 0 {name=p19 sig_type=std_logic lab=diffg1}
 C {devices/lab_pin.sym} 250 -210 0 0 {name=p20 sig_type=std_logic lab=diffg2}

@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1730769774
+timestamp 1732920865
 << nwell >>
 rect -2200 5359 6000 5360
 rect -2202 4400 6000 5359
@@ -691,7 +691,7 @@ transform 1 0 8673 0 1 -1884
 box -573 -8416 573 8416
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
 array 0 4 1288 0 4 1288
-timestamp 1730769459
+timestamp 1704896540
 transform 1 0 3716 0 1 -16896
 box 0 0 1340 1340
 << labels >>

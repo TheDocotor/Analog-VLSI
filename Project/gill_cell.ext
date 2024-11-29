@@ -1,0 +1,135 @@
+timestamp 1732920865
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use Vdd_res Vdd_res_1 0 1 5600 -1 0 138
+use Vdd_res Vdd_res_0 0 1 2300 -1 0 138
+use sky130_fd_pr__pfet_01v8_GXDZBM sky130_fd_pr__pfet_01v8_GXDZBM_1 0 1 700 -1 0 -2706
+use sky130_fd_pr__pfet_01v8_AXDRNP sky130_fd_pr__pfet_01v8_AXDRNP_0 0 -1 1864 -1 0 -2706
+use sky130_fd_pr__nfet_01v8_P82RFK sky130_fd_pr__nfet_01v8_P82RFK_0 0 1 2397 -1 0 -4102
+use sky130_fd_pr__nfet_01v8_8WUFR5 sky130_fd_pr__nfet_01v8_8WUFR5_0 0 -1 617 -1 0 -4102
+use nmos_40 nmos_40_3 -1 0 18340 0 1 -2580
+use nmos_40 nmos_40_2 0 -1 17200 -1 0 -4200
+use nmos_40 nmos_40_1 0 -1 19780 1 0 -2920
+use nmos_40 nmos_40_0 0 -1 8520 -1 0 -4160
+use LOp_resistor LOp_resistor_1 1 0 -1100 0 1 -1000
+use LOp_resistor LOp_resistor_0 1 0 -1400 0 1 -1000
+use if_res if_res_1 0 1 16000 -1 0 -152
+use if_res if_res_0 0 1 12940 -1 0 -162
+use Gilbert Gilbert_3 0 1 15800 -1 0 0
+use Gilbert Gilbert_2 0 1 7100 -1 0 -1440
+use Gilbert Gilbert_1 0 1 9380 -1 0 -100
+use Gilbert Gilbert_0 0 1 4800 -1 0 -100
+port "Vref" 7 -140 -4100 -140 -4100 m1
+port "IF" 1 19320 -2580 19320 -2580 m1
+port "VM" 6 5980 -3520 5980 -3520 v
+port "RFn" 5 -500 -600 -500 -600 v
+port "RFp" 4 -800 -700 -800 -700 v
+port "LOp" 2 -1200 -100 -1200 -100 m1
+port "LOn" 3 -1520 -240 -1520 -240 m1
+port "VDD" 0 3000 1100 3000 1100 m1
+port "VSS" 8 -700 -4900 -700 -4900 m1
+node "Vref" 0 0 -140 -4100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_3360_n3890#" 0 0 3360 -3890 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_19280_n2940#" 0 0 19280 -2940 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IF" 0 0 19320 -2580 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vamp" 0 0 15820 -2940 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vbottom" 0 0 6140 -2928 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VM" 0 0 5980 -3520 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_160_n3890#" 0 0 160 -3890 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vmid2" 0 0 7378 -1600 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "Vmid" 0 0 4820 -1576 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RFn" 0 0 -500 -600 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "RFp" 0 0 -800 -700 v 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOp" 0 0 -1200 -100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "LOn" 0 0 -1520 -240 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFn" 0 0 16019 124 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IFp" 0 0 13720 -169 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IF--" 0 0 5020 -260 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "IF++" 0 0 2720 -269 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_9480_n1860#" 0 0 9480 -1860 p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "VDD" 0 0 3000 1100 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "VSS" 0 0 -700 -4900 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Gilbert_1/nmos_40_0/G" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_1/nmos_40_0/G" "Gilbert_0/nmos_40_1/G"
+merge "Gilbert_0/nmos_40_1/G" "LOp"
+merge "if_res_1/VSUBS" "if_res_0/VSUBS" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "if_res_0/VSUBS" "Vdd_res_1/VSUBS"
+merge "Vdd_res_1/VSUBS" "Vdd_res_0/VSUBS"
+merge "Vdd_res_0/VSUBS" "nmos_40_3/S"
+merge "nmos_40_3/S" "Gilbert_3/VSUBS"
+merge "Gilbert_3/VSUBS" "Gilbert_1/VSUBS"
+merge "Gilbert_1/VSUBS" "Gilbert_0/VSUBS"
+merge "Gilbert_0/VSUBS" "LOp_resistor_1/VSUBS"
+merge "LOp_resistor_1/VSUBS" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#"
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#" "LOp_resistor_0/VSUBS"
+merge "LOp_resistor_0/VSUBS" "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_n761#" "nmos_40_3/B"
+merge "nmos_40_3/B" "Gilbert_2/VSUBS"
+merge "Gilbert_2/VSUBS" "nmos_40_2/D"
+merge "nmos_40_2/D" "nmos_40_1/B"
+merge "nmos_40_1/B" "nmos_40_2/B"
+merge "nmos_40_2/B" "nmos_40_0/D"
+merge "nmos_40_0/D" "nmos_40_0/B"
+merge "nmos_40_0/B" "sky130_fd_pr__pfet_01v8_AXDRNP_0/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_AXDRNP_0/VSUBS" "sky130_fd_pr__nfet_01v8_P82RFK_0/VSUBS"
+merge "sky130_fd_pr__nfet_01v8_P82RFK_0/VSUBS" "sky130_fd_pr__nfet_01v8_P82RFK_0/a_200_n1031#"
+merge "sky130_fd_pr__nfet_01v8_P82RFK_0/a_200_n1031#" "sky130_fd_pr__pfet_01v8_GXDZBM_1/VSUBS"
+merge "sky130_fd_pr__pfet_01v8_GXDZBM_1/VSUBS" "sky130_fd_pr__nfet_01v8_8WUFR5_0/VSUBS"
+merge "sky130_fd_pr__nfet_01v8_8WUFR5_0/VSUBS" "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_200_n531#"
+merge "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_200_n531#" "VSS"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_Z9GMGV_0/a_n69_329#" "Gilbert_1/nmos_40_1/G" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_1/nmos_40_1/G" "Gilbert_0/nmos_40_0/G"
+merge "Gilbert_0/nmos_40_0/G" "LOn"
+merge "Gilbert_1/nmos_40_1/S" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" "Gilbert_0/nmos_40_1/S"
+merge "Gilbert_0/nmos_40_1/S" "Gilbert_3/nmos_40_0/G"
+merge "Gilbert_3/nmos_40_0/G" "IF++"
+merge "if_res_1/P" "if_res_0/N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "if_res_0/N" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#"
+merge "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#"
+merge "Vdd_res_0/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_n1106#" "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#"
+merge "LOp_resistor_1/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#"
+merge "LOp_resistor_0/sky130_fd_pr__res_xhigh_po_0p69_P8UVGE_0/a_n69_122#" "sky130_fd_pr__pfet_01v8_AXDRNP_0/a_n858_n536#"
+merge "sky130_fd_pr__pfet_01v8_AXDRNP_0/a_n858_n536#" "sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n858_n536#"
+merge "sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n858_n536#" "nmos_40_1/S"
+merge "nmos_40_1/S" "sky130_fd_pr__pfet_01v8_AXDRNP_0/w_n894_n598#"
+merge "sky130_fd_pr__pfet_01v8_AXDRNP_0/w_n894_n598#" "sky130_fd_pr__pfet_01v8_GXDZBM_1/w_n894_n598#"
+merge "sky130_fd_pr__pfet_01v8_GXDZBM_1/w_n894_n598#" "VDD"
+merge "sky130_fd_pr__pfet_01v8_AXDRNP_0/a_800_n536#" "nmos_40_2/G" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_40_2/G" "nmos_40_0/G"
+merge "nmos_40_0/G" "sky130_fd_pr__nfet_01v8_P82RFK_0/a_n258_n1031#"
+merge "sky130_fd_pr__nfet_01v8_P82RFK_0/a_n258_n1031#" "VM"
+merge "VM" "sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#"
+merge "sky130_fd_pr__nfet_01v8_P82RFK_0/a_n200_n1057#" "li_3360_n3890#"
+merge "Gilbert_1/nmos_40_1/D" "Gilbert_2/nmos_40_0/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_2/nmos_40_0/S" "Vmid2"
+merge "nmos_40_1/G" "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_n200_n557#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_n200_n557#" "Vref"
+merge "sky130_fd_pr__pfet_01v8_GXDZBM_1/a_n800_n562#" "sky130_fd_pr__pfet_01v8_AXDRNP_0/a_n800_n562#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "sky130_fd_pr__pfet_01v8_AXDRNP_0/a_n800_n562#" "sky130_fd_pr__pfet_01v8_GXDZBM_1/a_800_n536#"
+merge "sky130_fd_pr__pfet_01v8_GXDZBM_1/a_800_n536#" "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_n258_n531#"
+merge "sky130_fd_pr__nfet_01v8_8WUFR5_0/a_n258_n531#" "li_160_n3890#"
+merge "nmos_40_3/G" "if_res_1/N" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "if_res_1/N" "Gilbert_3/nmos_40_0/S"
+merge "Gilbert_3/nmos_40_0/S" "IFn"
+merge "nmos_40_3/D" "li_19280_n2940#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "li_19280_n2940#" "nmos_40_1/D"
+merge "nmos_40_1/D" "IF"
+merge "Gilbert_3/nmos_40_1/D" "nmos_40_2/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_40_2/S" "Vamp"
+merge "Gilbert_1/nmos_40_0/S" "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Vdd_res_1/sky130_fd_pr__res_xhigh_po_0p69_LZXZX3_0/a_n69_674#" "Gilbert_0/nmos_40_0/S"
+merge "Gilbert_0/nmos_40_0/S" "Gilbert_3/nmos_40_1/G"
+merge "Gilbert_3/nmos_40_1/G" "IF--"
+merge "Gilbert_2/nmos_40_1/D" "nmos_40_0/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nmos_40_0/S" "Vbottom"
+merge "Gilbert_0/nmos_40_1/D" "Gilbert_2/nmos_40_1/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_2/nmos_40_1/S" "Vmid"
+merge "Gilbert_2/nmos_40_1/G" "RFp" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "if_res_0/P" "Gilbert_3/nmos_40_1/S" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "Gilbert_3/nmos_40_1/S" "IFp"
+merge "Gilbert_2/nmos_40_0/G" "a_9480_n1860#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "a_9480_n1860#" "RFn"

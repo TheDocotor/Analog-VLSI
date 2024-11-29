@@ -185,6 +185,12 @@ N -270 160 -270 200 {
 lab=VM}
 N -270 160 -230 160 {
 lab=VM}
+N 1100 -130 1100 -60 {
+lab=IF}
+N 1100 -230 1100 -190 {
+lab=VDD}
+N 1100 -90 1220 -90 {
+lab=IF}
 C {sky130_fd_pr/res_xhigh_po_0p69.sym} -120 -460 0 0 {name=R1
 L=6.9
 model=res_xhigh_po_0p69
@@ -196,8 +202,7 @@ model=res_xhigh_po_0p69
 spiceprefix=X
 mult=1}
 C {devices/lab_wire.sym} 120 -270 2 0 {name=p15 sig_type=std_logic lab=LOn}
-C {devices/iopin.sym} -450 -280 0 0 {name=p22 lab=IFp}
-C {devices/iopin.sym} -450 -250 0 0 {name=p23 lab=IFn}
+C {devices/iopin.sym} -450 -250 0 0 {name=p23 lab=IF}
 C {devices/iopin.sym} -450 -220 0 0 {name=p24 lab=LOp}
 C {devices/iopin.sym} -450 -190 0 0 {name=p25 lab=LOn}
 C {devices/iopin.sym} -450 -160 0 0 {name=p5 lab=RFp}
@@ -475,3 +480,39 @@ spiceprefix=X
 C {devices/lab_pin.sym} -280 0 0 0 {name=p36 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -110 160 0 0 {name=p41 sig_type=std_logic lab=VM}
 C {devices/lab_pin.sym} -270 160 0 0 {name=p42 sig_type=std_logic lab=VM}
+C {sky130_fd_pr/nfet_01v8.sym} 1080 -30 0 0 {name=M14
+L=1.1
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1100 0 0 0 {name=p27 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1100 -30 0 1 {name=p29 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/nfet_01v8.sym} 1080 -160 0 0 {name=M16
+L=1.1
+W=40
+nf=1 
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 1100 -160 0 1 {name=p31 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1060 -160 0 0 {name=p30 sig_type=std_logic lab=Vref}
+C {devices/lab_pin.sym} 1100 -230 0 0 {name=p33 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 1060 -30 0 0 {name=p39 sig_type=std_logic lab=IFn}
+C {devices/lab_pin.sym} 1220 -90 0 1 {name=p40 sig_type=std_logic lab=IF}
+C {devices/iopin.sym} -450 -100 0 0 {name=p22 lab=VM}

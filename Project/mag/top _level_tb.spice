@@ -1,0 +1,102 @@
+** sch_path: /home/renslow/Documents/ece5120/Project/mag/top _level_tb.sch
+**.subckt top _level_tb VDD RF VSS Lop Lon
+*.iopin VDD
+*.iopin RF
+*.iopin VSS
+*.iopin Lop
+*.iopin Lon
+C1 Vs1 Vattn 10u m=1
+R1 RF Vattn 300 m=1
+x3 IF_out IF_filtered VSS 455_crystal
+R2 VSS Vout 1Meg m=1
+C2 Vout VSS 100p m=1
+C3 Vref VSS 10u m=1
+x6 Vout Vs1 IF_filtered IF_out Lop Lon VDD Vref VSS radio
+**** begin user architecture code
+
+
+
+.param VDD=1.8
+VVDD VDD 0 {VDD}
+VVSS VSS 0 0
+*VVREF Vref 0 1.07
+VAM RF 0 AM(10u 1.5 1k 1000k)
+VLO LOp LOn sine(0 5m 1455k)
+.include /home/renslow/Documents/ece5120/Project/mag/radio.spice
+.option savecurrents
+.control
+set BIAS=1
+if $BIAS
+ save all
+ op
+ write top_level_tb.raw
+end
+set color0=white
+set color1=blue
+set TRANS=1
+if $TRANS=1
+ tran 100n 2m 1m
+ plot RF
+ plot IF_filtered
+ plot x6.LNA_out
+ plot Vout
+end
+.endc
+
+
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice
+.include /usr/magic/pdk/sky130A/libs.tech/ngspice/corners/tt/specialized_cells.spice
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  455_crystal.sym # of pins=3
+** sym_path: /home/renslow/Documents/ece5120/Project/mag/455_crystal.sym
+** sch_path: /home/renslow/Documents/ece5120/Project/mag/455_crystal.sch
+.subckt 455_crystal In Out VSS
+*.iopin Out
+*.iopin In
+*.iopin VSS
+**** begin user architecture code
+
+
+
+* ngspice commands
+.param Rser=250 Rpar=250 Lser=7.45m Lpar=7.55m C0Ser=272.761p C0par=272.761p
+
+
+**** end user architecture code
+R1 net2 net1 {Rser} m=1
+L1 In net3 {Lser} m=1
+C1 net3 net2 16.7421p m=1
+C0 In net1 {C0Ser} m=1
+R2 net4 VSS {Rpar} m=1
+L2 net1 net5 {Lpar} m=1
+C2 net5 net4 16.7421p m=1
+C3 net1 VSS {C0Par} m=1
+R3 net7 net6 {Rser} m=1
+L4 net1 net8 {Lser} m=1
+C4 net8 net7 16.7421p m=1
+C5 net1 net6 {C0Ser} m=1
+R4 net9 VSS {Rpar} m=1
+L5 net6 net10 {Lpar} m=1
+C6 net10 net9 16.7421p m=1
+C7 net6 VSS {C0Par} m=1
+R5 net11 Out {Rser} m=1
+L7 net6 net12 {Lser} m=1
+C8 net12 net11 16.7421p m=1
+C9 net6 Out {C0Ser} m=1
+R6 net13 VSS {Rpar} m=1
+L8 Out net14 {Lpar} m=1
+C10 net14 net13 16.7421p m=1
+C11 Out VSS {C0Par} m=1
+R7 net6 VSS 1meg m=1
+R8 net1 VSS 1meg m=1
+.ends
+
+.end

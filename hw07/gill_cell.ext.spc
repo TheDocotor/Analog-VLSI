@@ -57,8 +57,9 @@ Xnmos_40_0 nmos_40_1/D nmos_40_0/G nmos_40_0/S VSUBS nmos_40
 Xnmos_40_1 nmos_40_1/D nmos_40_1/G nmos_40_1/S VSUBS nmos_40
 .ends
 
-.subckt gill_cell VDD IFp IFn LOp LOn RFp RFn Vref VSS
+.subckt gill_cell VDD IF LOp LOn RFp RFn VM Vref VSS
 Xnmos_40_2 VSS VM Vamp VSS nmos_40
+Xnmos_40_3 IF IFn VSS VSS nmos_40
 Xsky130_fd_pr__pfet_01v8_AXDRNP_0 VDD li_160_n3890# VDD VM sky130_fd_pr__pfet_01v8_AXDRNP
 Xsky130_fd_pr__nfet_01v8_8WUFR5_0 VSS Vref li_160_n3890# VSS sky130_fd_pr__nfet_01v8_8WUFR5
 Xif_res_1 VDD IFn VSS if_res
@@ -74,5 +75,6 @@ XGilbert_1 LOn Vmid2 IF-- LOp IF++ VSS Gilbert
 XGilbert_2 RFp Vbottom Vmid2 RFn Vmid VSS Gilbert
 XGilbert_3 IF-- Vamp IFn IF++ IFp VSS Gilbert
 Xnmos_40_0 VSS VM Vbottom VSS nmos_40
+Xnmos_40_1 IF Vref VDD VSS nmos_40
 .ends
 

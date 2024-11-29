@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1732761497
+timestamp 1732923339
 << nwell >>
 rect 9000 -11600 29200 1400
 << pwell >>
@@ -577,13 +577,13 @@ use sky130_fd_pr__nfet_01v8_Q7B869  sky130_fd_pr__nfet_01v8_Q7B869_0
 timestamp 1732757215
 transform 1 0 29428 0 -1 -763
 box -158 -257 158 257
-use sky130_fd_pr__nfet_01v8_QX7BC3  sky130_fd_pr__nfet_01v8_QX7BC3_0
-timestamp 1732738914
-transform 0 -1 5577 -1 0 -3022
+use sky130_fd_pr__nfet_01v8_QX7BC3  sky130_fd_pr__nfet_01v8_QX7BC3_0 ~/Documents/ece5120/hw06/mag
+timestamp 1732923339
+transform 0 -1 5337 -1 0 1218
 box -158 -357 158 357
 use sky130_fd_pr__nfet_01v8_QX7BC3  sky130_fd_pr__nfet_01v8_QX7BC3_1
-timestamp 1732738914
-transform 0 -1 5337 -1 0 1218
+timestamp 1732923339
+transform 0 -1 5577 -1 0 -3022
 box -158 -357 158 357
 use sky130_fd_pr__res_xhigh_po_0p35_AS6SD6  sky130_fd_pr__res_xhigh_po_0p35_AS6SD6_0
 timestamp 1732738914
@@ -635,4 +635,6 @@ flabel metal1 8706 3086 8706 3086 0 FreeSans 1600 0 0 0 Vref
 port 4 nsew
 flabel pwell 4616 2952 4616 2952 0 FreeSans 1600 0 0 0 VSS
 port 3 nsew
+<< properties >>
+string demod parameters
 << end >>

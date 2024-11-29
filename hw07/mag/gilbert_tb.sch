@@ -5,56 +5,70 @@ K {}
 V {}
 S {}
 E {}
-N 370 -180 410 -180 {
+N 270 -150 310 -150 {
 lab=VDD}
-N 370 -140 400 -140 {
-lab=LOn}
-N 370 -120 400 -120 {
-lab=LOp}
-N 370 -100 400 -100 {
-lab=RFn}
-N 370 -80 400 -80 {
-lab=RFp}
-N 370 -60 400 -60 {
-lab=IFp}
-N 370 -40 400 -40 {
-lab=IFn}
-N 370 -160 410 -160 {
+N 270 10 290 10 {
 lab=GND}
-C {sky130_fd_pr/corner.sym} -360 -160 0 0 {name=CORNER only_toplevel=true corner=tt}
-C {devices/simulator_commands_shown.sym} -380 -610 0 0 {name=COMMANDS
+N 290 10 290 20 {
+lab=GND}
+N 270 -130 300 -130 {
+lab=IFp}
+N 270 -110 300 -110 {
+lab=IFn}
+N 270 -90 300 -90 {
+lab=LOp}
+N 270 -70 300 -70 {
+lab=LOn}
+N 270 -50 300 -50 {
+lab=RFp}
+N 270 -30 300 -30 {
+lab=RFn}
+N 270 -10 300 -10 {
+lab=Vref}
+C {devices/simulator_commands_shown.sym} -380 -600 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
 value= "
-.include /home/renslow/Documents/ece5120/hw03/mag/gill_cell.spice
 VVDD VDD 0 1.8
 VVSS VSS 0 0
-VRF RFp RFn SINE(0 5m 1k)
-VLO LOp LOn SINE(0 5m 1.1k)
+VVREF Vref VSS 1.07
+VVRFDC RFp 0 0.75991
+VRF RFp RFn SINE(0 6m 1Meg)
+VLO LOp LOn SINE(0 5m 1.455Meg)
+
+.option wnflag=1
+.option savecurrents
 .control
 save all
+op
+write gilbert_tb.raw
 set color0=white
 set color1=blue
-tran 10u 20m
-write diff_pair_d_tb.raw
+tran 10n 20u
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
 let IF = V(IFp, IFn)
 plot LO RF
 plot IF
-spec 10 3k 100 LO RF IF
+spec 1000 2Meg 51k LO RF IF
 plot mag(LO) mag(RF)
 plot mag(IF)
 .endc
 "}
-C {devices/gnd.sym} 410 -160 3 0 {name=l1 lab=GND}
-C {devices/lab_wire.sym} 410 -180 0 1 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 400 -60 0 1 {name=p2 sig_type=std_logic lab=IFp
+C {devices/gnd.sym} 290 20 0 1 {name=l1 lab=GND}
+C {devices/lab_wire.sym} 310 -150 0 1 {name=p1 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} 300 -130 0 1 {name=p2 sig_type=std_logic lab=IFp
 }
-C {devices/lab_wire.sym} 400 -40 0 1 {name=p3 sig_type=std_logic lab=IFn
+C {devices/lab_wire.sym} 300 -110 0 1 {name=p3 sig_type=std_logic lab=IFn
 }
-C {devices/lab_wire.sym} 400 -120 0 1 {name=p4 sig_type=std_logic lab=LOp}
-C {devices/lab_wire.sym} 400 -140 0 1 {name=p5 sig_type=std_logic lab=LOn}
-C {devices/lab_wire.sym} 400 -80 0 1 {name=p6 sig_type=std_logic lab=RFp}
-C {devices/lab_wire.sym} 400 -100 0 1 {name=p7 sig_type=std_logic lab=RFn}
-C {gill_cell.sym} 220 -110 0 0 {name=x1}
+C {devices/lab_wire.sym} 300 -90 0 1 {name=p4 sig_type=std_logic lab=LOp}
+C {devices/lab_wire.sym} 300 -70 0 1 {name=p5 sig_type=std_logic lab=LOn}
+C {devices/lab_wire.sym} 300 -50 0 1 {name=p6 sig_type=std_logic lab=RFp}
+C {devices/lab_wire.sym} 300 -30 0 1 {name=p7 sig_type=std_logic lab=RFn}
+C {sky130_fd_pr/corner.sym} -50 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {gill_cell.sym} 120 -70 0 0 {name=x1}
+C {devices/launcher.sym} -240 80 0 0 {name=h1
+descr="Annotate OP" 
+tclcommand="set show_hidden_texts 1; xschem annotate_op"
+}
+C {devices/lab_wire.sym} 300 -10 0 1 {name=p8 sig_type=std_logic lab=Vref}

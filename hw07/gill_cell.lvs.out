@@ -42,7 +42,7 @@ Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
-Flattening unmatched subcell nmos_40 in circuit gill_cell (0)(2 instances)
+Flattening unmatched subcell nmos_40 in circuit gill_cell (0)(4 instances)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_AXDRNP in circuit gill_cell (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_8WUFR5 in circuit gill_cell (0)(1 instance)
 Flattening unmatched subcell if_res in circuit gill_cell (0)(2 instances)
@@ -56,15 +56,15 @@ Flattening unmatched subcell sky130_fd_pr__nfet_01v8_P82RFK in circuit gill_cell
 Flattening unmatched subcell Gilbert in circuit gill_cell (0)(4 instances)
 Flattening unmatched subcell nmos_40 in circuit gill_cell (0)(8 instances)
 
-Class gill_cell (0):  Merged 30 parallel devices.
+Class gill_cell (0):  Merged 36 parallel devices.
 Subcircuit summary:
 Circuit 1: gill_cell                       |Circuit 2: gill_cell                       
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (42->12)           |sky130_fd_pr__nfet_01v8 (12)               
+sky130_fd_pr__nfet_01v8 (50->14)           |sky130_fd_pr__nfet_01v8 (14)               
 sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
 sky130_fd_pr__res_xhigh_po_0p69 (8)        |sky130_fd_pr__res_xhigh_po_0p69 (8)        
-Number of devices: 22                      |Number of devices: 22                      
-Number of nets: 17                         |Number of nets: 17                         
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 18                         |Number of nets: 18                         
 ---------------------------------------------------------------------------------------
 Resolving symmetries by property value.
 Resolving symmetries by pin name.
@@ -73,14 +73,14 @@ Netlists match uniquely.
 Subcircuit pins:
 Circuit 1: gill_cell                       |Circuit 2: gill_cell                       
 -------------------------------------------|-------------------------------------------
-IFn                                        |IFn                                        
-IFp                                        |IFp                                        
 RFp                                        |RFp                                        
 RFn                                        |RFn                                        
-Vref                                       |Vref                                       
 LOp                                        |LOp                                        
 LOn                                        |LOn                                        
 VDD                                        |VDD                                        
+Vref                                       |Vref                                       
+IF                                         |IF                                         
+VM                                         |VM                                         
 VSS                                        |VSS                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.

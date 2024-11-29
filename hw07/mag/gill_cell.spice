@@ -5,9 +5,9 @@ X0 D G S B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=1.5 ps=10.3 w=10 l=1.1
 X1 D G S B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=3 ps=20.6 w=10 l=1.1
 X2 S G D B sky130_fd_pr__nfet_01v8 ad=3 pd=20.6 as=1.5 ps=10.3 w=10 l=1.1
 X3 S G D B sky130_fd_pr__nfet_01v8 ad=1.5 pd=10.3 as=1.5 ps=10.3 w=10 l=1.1
-C0 G S 3.20505f
-C1 G D 2.53191f
-C2 D S 2.16384f
+C0 D G 2.53191f
+C1 S G 3.20505f
+C2 S D 2.16384f
 C3 G B 2.53805f
 .ends
 
@@ -69,8 +69,9 @@ C0 nmos_40_1/G VSUBS 2.53805f
 C1 nmos_40_0/G VSUBS 2.53805f
 .ends
 
-.subckt gill_cell VDD IFp IFn LOp LOn RFp RFn Vref VSS
+.subckt gill_cell VDD IF LOp LOn RFp RFn VM Vref VSS
 Xnmos_40_2 VSS VM Vamp VSS nmos_40
+Xnmos_40_3 IF IFn VSS VSS nmos_40
 Xsky130_fd_pr__pfet_01v8_AXDRNP_0 VDD li_160_n3890# VDD VM VSS sky130_fd_pr__pfet_01v8_AXDRNP
 Xsky130_fd_pr__nfet_01v8_8WUFR5_0 VSS Vref li_160_n3890# VSS sky130_fd_pr__nfet_01v8_8WUFR5
 Xif_res_1 VDD IFn VSS if_res
@@ -86,24 +87,29 @@ XGilbert_1 LOn Vmid2 IF-- LOp IF++ VSS Gilbert
 XGilbert_2 RFp Vbottom Vmid2 RFn Vmid VSS Gilbert
 XGilbert_3 IF-- Vamp IFn IF++ IFp VSS Gilbert
 Xnmos_40_0 VSS VM Vbottom VSS nmos_40
+Xnmos_40_1 IF Vref VDD VSS nmos_40
 C0 VM Vbottom 2.777358f
-C1 IF-- IF++ 5.905255f
-C2 VM VDD 2.228558f
-C3 LOp LOn 3.100316f
-C4 VDD LOn 4.288698f
-C5 li_160_n3890# VDD 4.10864f
-C6 RFp RFn 2.077873f
-C7 Vamp VSS 2.800525f
-C8 IFp VSS 2.008836f
-C9 IF-- VSS 7.894808f
-C10 IFn VSS 2.027672f
-C11 IF++ VSS 7.013063f
-C12 RFp VSS 4.946413f
-C13 RFn VSS 3.552918f
-C14 LOp VSS 7.196622f
-C15 LOn VSS 3.066394f
-C16 li_160_n3890# VSS 3.143289f
-C17 VDD VSS 43.950954f
-C18 VM VSS 15.529099f
+C1 LOn VDD 4.288698f
+C2 IF++ IF-- 5.905255f
+C3 li_160_n3890# VDD 4.10864f
+C4 VM Vref 3.871526f
+C5 VM VSS 2.492363f
+C6 VM VDD 2.233489f
+C7 LOp LOn 3.100316f
+C8 RFp RFn 2.077873f
+C9 Vamp 0 2.376602f
+C10 IFp 0 2.008243f
+C11 IF-- 0 7.894808f
+C12 IFn 0 4.747303f
+C13 IF++ 0 6.607438f
+C14 RFp 0 4.94621f
+C15 RFn 0 3.552825f
+C16 LOp 0 7.208399f
+C17 LOn 0 3.076439f
+C18 VM 0 11.813897f
+C19 VDD 0 46.013992f
+C20 VSS 0 -18.939379f
+C21 li_160_n3890# 0 3.181262f
+C22 Vref 0 14.409013f
 .ends
 

@@ -4,7 +4,7 @@
 *.iopin Vin
 *.iopin Vref
 *.iopin VSS
-x1 VDD IFp IFn LOp LOn RFp RFn Vref GND gill_cell
+x1 VDD IF LOp LOn RFp RFn net1 Vref GND gill_cell
 C1 Vs1 Vattn 10u m=1
 R1 Vin Vattn 300 m=1
 x2 VDD RFn RFp Vs1 Vref VSS lna
@@ -19,9 +19,9 @@ VVREF Vref VSS 1.07
 *VVRFDC RFp 0 0.75991
 *VRF RFp RFn SINE(0 6m 1Meg)
 VLO LOp LOn SINE(0 5m 1.455Meg)
-
-.include /home/renslow/Documents/ece5120/hw07/mag/lna.spice
 .include /home/renslow/Documents/ece5120/hw07/mag/gill_cell.spice
+.include /home/renslow/Documents/ece5120/hw07/mag/lna.spice
+
 .option wnflag=1
 .option savecurrents
 .control
@@ -33,7 +33,6 @@ set color1=blue
 tran 10n 20u
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
-let IF = V(IFp, IFn)
 plot LO RF
 plot IF
 spec 1000 2Meg 51k LO RF IF
@@ -52,5 +51,12 @@ plot mag(IF)
 
 **** end user architecture code
 **.ends
+
+* expanding   symbol:  gill_cell.sym # of pins=9
+** sym_path: /home/renslow/Documents/ece5120/hw07/mag/gill_cell.sym
+** sch_path: /home/renslow/Documents/ece5120/hw07/mag/gill_cell.sch
+.subckt gill_cell VDD IF LOp LOn RFp RFn VM Vref VSS
+.ends
+
 .GLOBAL GND
 .end
