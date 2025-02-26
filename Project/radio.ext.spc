@@ -213,6 +213,10 @@ X0 VDD Vpgates Vpgates VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.
 X1 VDD Vpgates Vdm2 VDD sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
 .ends
 
+.subckt sky130_fd_pr__nfet_01v8_QX2DR5 a_100_n331# a_n100_n357# a_n158_n331# VSUBS
+X0 a_100_n331# a_n100_n357# a_n158_n331# VSUBS sky130_fd_pr__nfet_01v8 ad=0.87 pd=6.58 as=0.87 ps=6.58 w=3 l=1
+.ends
+
 .subckt sky130_fd_pr__nfet_01v8_Q7B869 a_100_n169# a_n158_n169# a_n100_n257# VSUBS
 X0 a_100_n169# a_n100_n257# a_n158_n169# VSUBS sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=1
 .ends
@@ -375,13 +379,12 @@ Xp1_80x1_0 p1_80x1_0/D p1_80x1_1/G p1_80x1_1/S p1_80x1_1/B p1_80x1
 Xp1_80x1_1 p1_80x1_1/G p1_80x1_1/G p1_80x1_1/S p1_80x1_1/B p1_80x1
 .ends
 
-.subckt demod Vout VDD Vinp VSS Vref
-Xsky130_fd_pr__nfet_01v8_QX7BC3_0 Vref n1x30_diff_pair_0/n1x30_2/S VSS VSS sky130_fd_pr__nfet_01v8_QX7BC3
-Xsky130_fd_pr__nfet_01v8_QX7BC3_1 Vref VSS n1x15_diff_pair_0/n1x15_1/S VSS sky130_fd_pr__nfet_01v8_QX7BC3
+.subckt demod VDD Vinp VSS Vref Vout Vdo
+Xsky130_fd_pr__nfet_01v8_QX2DR5_1 VSS Vref n1x15_diff_pair_0/n1x15_1/S VSS sky130_fd_pr__nfet_01v8_QX2DR5
 Xsky130_fd_pr__nfet_01v8_Q7B869_0 VSS p1x30_diff_pair_0/p1x30_1/G Vref VSS sky130_fd_pr__nfet_01v8_Q7B869
 Xn1x30_diff_pair_0 n1x30_diff_pair_0/n1x30_2/S Vinp Vp Vinn diff80_0/p1_80x1_0/D VSS
 + n1x30_diff_pair
-Xsky130_fd_pr__rf_npn_05v5_W1p00L1p00_0 Vdo Vdo Vout VSS sky130_fd_pr__rf_npn_05v5_W1p00L1p00 m=1
+Xsky130_fd_pr__rf_npn_05v5_W1p00L1p00_0 Vdo Vout Vdo VSS sky130_fd_pr__rf_npn_05v5_W1p00L1p00 m=1
 Xp1x15_diif_pair_0 Vg p1x15_diif_pair_0/p1x15_1/G VDD VDD p1x15_diif_pair
 Xp1x30_diff_pair_0 p1x30_diff_pair_0/p1x30_1/G VDD Vdo VDD p1x30_diff_pair
 Xn1x15_diff_pair_0 Vp p1x15_diif_pair_0/p1x15_1/G diff80_0/p1_80x1_0/D Vg n1x15_diff_pair_0/n1x15_1/S
@@ -392,6 +395,7 @@ Xp1_80x80_0 Vdo Vg VSS VDD p1_80x80
 Xsky130_fd_pr__res_xhigh_po_0p35_V22KJH_0 VSS Vinp VSS sky130_fd_pr__res_xhigh_po_0p35_V22KJH
 Xdiff80_0 diff80_0/p1_80x1_0/D VDD Vp VDD diff80
 Xsky130_fd_pr__res_xhigh_po_0p35_V22KJH_1 VSS Vinn VSS sky130_fd_pr__res_xhigh_po_0p35_V22KJH
+Xsky130_fd_pr__nfet_01v8_QX2DR5_0 n1x30_diff_pair_0/n1x30_2/S Vref VSS VSS sky130_fd_pr__nfet_01v8_QX2DR5
 .ends
 
 .subckt nmos_40 D G S B
@@ -472,10 +476,10 @@ Xnmos_40_0 VSS VM Vbottom VSS nmos_40
 Xnmos_40_1 IF Vref VDD VSS nmos_40
 .ends
 
-.subckt radio RC ANT IF_in IF_out LOp LOn VDD Vref VSS
+.subckt radio ANT IF_in IF_out LOp LOn VDD Vref VSS RC
 Xlna_0 VDD lna_0/Voutn lna_0/Voutp Vref VSS ANT lna
 Xbandgap_0 VDD Vref VSS bandgap
-Xdemod_0 RC VDD IF_in VSS RFn demod
+Xdemod_0 VDD IF_in VSS RFn RC demod_0/Vdo demod
 Xgill_cell_0 VDD IF_out LOp LOn lna_0/Voutp lna_0/Voutn RFn Vref VSS gill_cell
 .ends
 

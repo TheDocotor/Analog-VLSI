@@ -29,8 +29,8 @@ only_toplevel=false
 value= "
 VVDD VDD 0 1.8
 VVSS VSS 0 0
-VRF RFp RFn SINE(0 6m 1k)
-VLO LOp LOn SINE(0 5m 1.1k)
+VRF RFp RFn SINE(0 5m 1Meg)
+VLO LOp LOn SINE(0 5m 1.455Meg)
 .option wnflag =1
 .option savecurrents
 .control
@@ -39,13 +39,13 @@ op
 write gilbert_tb.raw
 set color0=white
 set color1=blue
-tran 10u 20m
+tran 10n 20u
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
 let IF = V(IFp, IFn)
 plot LO RF
 plot IF
-spec 10 3k 100 LO RF IF
+spec 1000 2Meg 51k LO RF IF
 plot mag(LO) mag(RF)
 plot mag(IF)
 .endc

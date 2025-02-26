@@ -7,19 +7,19 @@ resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 
 use nmos_40 nmos_40_1 1 0 1400 0 -1 300
 use nmos_40 nmos_40_0 1 0 1400 0 1 -200
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "nmos_40_0/G" "nmos_40_1/D" 4.62982
-cap "nmos_40_1/G" "nmos_40_1/D" 4.62982
+cap "nmos_40_1/S" "nmos_40_0/S" 6.35469
+cap "nmos_40_1/G" "nmos_40_0/G" 35.2
 cap "nmos_40_1/S" "nmos_40_0/S" 9.56224
-cap "nmos_40_0/G" "nmos_40_1/G" 35.2
+cap "nmos_40_0/S" "nmos_40_1/S" 9.56224
 cap "nmos_40_1/D" "nmos_40_1/G" 4.62982
-cap "nmos_40_0/G" "nmos_40_1/G" 35.2
-cap "nmos_40_0/G" "nmos_40_1/G" 35.2
-cap "nmos_40_0/S" "nmos_40_1/D" 0.914205
-cap "nmos_40_0/G" "nmos_40_1/G" 35.2
-cap "nmos_40_1/S" "nmos_40_0/S" 9.56224
-cap "nmos_40_0/S" "nmos_40_1/S" 6.35469
+cap "nmos_40_1/G" "nmos_40_0/G" 35.2
+cap "nmos_40_1/G" "nmos_40_0/G" 35.2
 cap "nmos_40_1/D" "nmos_40_0/G" 4.62982
-cap "nmos_40_1/S" "nmos_40_1/D" 0.914205
+cap "nmos_40_1/G" "nmos_40_0/G" 35.2
+cap "nmos_40_1/D" "nmos_40_1/G" 4.62982
+cap "nmos_40_1/D" "nmos_40_1/S" 0.914205
+cap "nmos_40_1/D" "nmos_40_0/G" 4.62982
+cap "nmos_40_1/D" "nmos_40_0/S" 0.914205
 merge "nmos_40_0/B" "nmos_40_1/B" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "nmos_40_1/B" "VSUBS"
 merge "nmos_40_0/D" "nmos_40_1/D" -273.969 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1200 0 0 0 0 0 0 0 0 0 0 0 0

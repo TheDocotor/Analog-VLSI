@@ -130,6 +130,11 @@ Circuit 1 contains 14 nets,    Circuit 2 contains 14 nets.
 
 
 Final result: 
-Netlists do not match.
+Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ demod
+
 Logging to file "/home/renslow/Documents/ece5120/hw08/demod.lvs.out" disabled
 LVS Done.

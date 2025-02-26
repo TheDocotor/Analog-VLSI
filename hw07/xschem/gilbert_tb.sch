@@ -12,19 +12,19 @@ lab=GND}
 N 290 10 290 20 {
 lab=GND}
 N 270 -130 300 -130 {
-lab=IFp}
+lab=IF}
 N 270 -110 300 -110 {
-lab=IFn}
-N 270 -90 300 -90 {
 lab=LOp}
-N 270 -70 300 -70 {
+N 270 -90 300 -90 {
 lab=LOn}
-N 270 -50 300 -50 {
+N 270 -70 300 -70 {
 lab=RFp}
-N 270 -30 300 -30 {
+N 270 -50 300 -50 {
 lab=RFn}
 N 270 -10 300 -10 {
 lab=Vref}
+N 270 -30 420 -40 {
+lab=VM}
 C {devices/simulator_commands_shown.sym} -380 -600 0 0 {name=COMMANDS
 simulator=ngspice
 only_toplevel=false 
@@ -47,7 +47,7 @@ set color1=blue
 tran 10n 20u
 let RF = V(RFp, RFn)
 let LO = V(LOp,LOn)
-let IF = V(IFp, IFn)
+*let IF = V(IFp, IFn)
 plot LO RF
 plot IF
 spec 1000 2Meg 51k LO RF IF
@@ -57,14 +57,12 @@ plot mag(IF)
 "}
 C {devices/gnd.sym} 290 20 0 1 {name=l1 lab=GND}
 C {devices/lab_wire.sym} 310 -150 0 1 {name=p1 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 300 -130 0 1 {name=p2 sig_type=std_logic lab=IFp
+C {devices/lab_wire.sym} 300 -130 0 1 {name=p2 sig_type=std_logic lab=IF
 }
-C {devices/lab_wire.sym} 300 -110 0 1 {name=p3 sig_type=std_logic lab=IFn
-}
-C {devices/lab_wire.sym} 300 -90 0 1 {name=p4 sig_type=std_logic lab=LOp}
-C {devices/lab_wire.sym} 300 -70 0 1 {name=p5 sig_type=std_logic lab=LOn}
-C {devices/lab_wire.sym} 300 -50 0 1 {name=p6 sig_type=std_logic lab=RFp}
-C {devices/lab_wire.sym} 300 -30 0 1 {name=p7 sig_type=std_logic lab=RFn}
+C {devices/lab_wire.sym} 300 -110 0 1 {name=p4 sig_type=std_logic lab=LOp}
+C {devices/lab_wire.sym} 300 -90 0 1 {name=p5 sig_type=std_logic lab=LOn}
+C {devices/lab_wire.sym} 300 -70 0 1 {name=p6 sig_type=std_logic lab=RFp}
+C {devices/lab_wire.sym} 300 -50 0 1 {name=p7 sig_type=std_logic lab=RFn}
 C {sky130_fd_pr/corner.sym} -50 -420 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {gill_cell.sym} 120 -70 0 0 {name=x1}
 C {devices/launcher.sym} -240 80 0 0 {name=h1
@@ -72,3 +70,4 @@ descr="Annotate OP"
 tclcommand="set show_hidden_texts 1; xschem annotate_op"
 }
 C {devices/lab_wire.sym} 300 -10 0 1 {name=p8 sig_type=std_logic lab=Vref}
+C {devices/lab_wire.sym} 420 -40 0 1 {name=p3 sig_type=std_logic lab=VM}

@@ -85,41 +85,8 @@ sky130_fd_pr__res_xhigh_po_0p35 (4)        |sky130_fd_pr__res_xhigh_po_0p35 (4)
 Number of devices: 19                      |Number of devices: 19                      
 Number of nets: 14                         |Number of nets: 14                         
 ---------------------------------------------------------------------------------------
-NET mismatches: Class fragments follow (with fanout counts):
-Circuit 1: demod                           |Circuit 2: demod                           
-
----------------------------------------------------------------------------------------
-Net: Vout                                  |Net: Vout                                  
-  sky130_fd_pr__npn_05v5_W1p00L1p00/1 = 1  |  sky130_fd_pr__npn_05v5_w1p00l1p00/3 = 1  
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: Vdo                                   |Net: Vdo                                   
-  sky130_fd_pr__npn_05v5_W1p00L1p00/2 = 1  |  sky130_fd_pr__npn_05v5_w1p00l1p00/2 = 1  
-  sky130_fd_pr__npn_05v5_W1p00L1p00/3 = 1  |  sky130_fd_pr__npn_05v5_w1p00l1p00/1 = 1  
-  sky130_fd_pr__pfet_01v8/(1|3) = 2        |  sky130_fd_pr__pfet_01v8/(1|3) = 2        
----------------------------------------------------------------------------------------
-
----------------------------------------------------------------------------------------
-Net: VSS                                   |Net: VSS                                   
-  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 3        
-  sky130_fd_pr__nfet_01v8/4 = 7            |  sky130_fd_pr__nfet_01v8/4 = 7            
-  sky130_fd_pr__npn_05v5_W1p00L1p00/4 = 1  |  sky130_fd_pr__npn_05v5_w1p00l1p00/4 = 1  
-  sky130_fd_pr__res_xhigh_po_0p35/3 = 4    |  sky130_fd_pr__res_xhigh_po_0p35/3 = 4    
-  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
-  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  |  sky130_fd_pr__res_xhigh_po_0p35/(1|2) =  
----------------------------------------------------------------------------------------
-DEVICE mismatches: Class fragments follow (with node fanout counts):
-Circuit 1: demod                           |Circuit 2: demod                           
-
----------------------------------------------------------------------------------------
-Instance: sky130_fd_pr__rf_npn_05v5_W1p00L |Instance: sky130_fd_pr__npn_05v5_w1p00l1p0 
-  1 = 1                                    |  1 = 4                                    
-  2 = 4                                    |  2 = 4                                    
-  3 = 4                                    |  3 = 1                                    
-  4 = 18                                   |  4 = 18                                   
----------------------------------------------------------------------------------------
-Netlists do not match.
+Netlists match uniquely with property errors.
+Circuit 2 demod instance sky130_fd_pr__npn_05v5_w1p00l1p00:Q1 property "NE" has no match in circuit 1.
 
 Subcircuit pins:
 Circuit 1: demod                           |Circuit 2: demod                           
@@ -133,4 +100,8 @@ Vref                                       |Vref
 Cell pin lists are equivalent.
 Device classes demod and demod are equivalent.
 
-Final result: Netlists do not match.
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ demod

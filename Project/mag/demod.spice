@@ -1,7 +1,7 @@
-* NGSPICE file created from demod.ext - technology: sky130A
+* SPICE3 file created from demod.ext - technology: sky130A
 
-.subckt sky130_fd_pr__nfet_01v8_QX7BC3 a_n100_n357# a_100_n269# a_n158_n269# VSUBS
-X0 a_100_n269# a_n100_n357# a_n158_n269# VSUBS sky130_fd_pr__nfet_01v8 ad=0.87 pd=6.58 as=0.87 ps=6.58 w=3 l=1
+.subckt sky130_fd_pr__nfet_01v8_QX2DR5 a_100_n331# a_n100_n357# a_n158_n331# VSUBS
+X0 a_100_n331# a_n100_n357# a_n158_n331# VSUBS sky130_fd_pr__nfet_01v8 ad=0.87 pd=6.58 as=0.87 ps=6.58 w=3 l=1
 .ends
 
 .subckt sky130_fd_pr__nfet_01v8_Q7B869 a_100_n169# a_n158_n169# a_n100_n257# VSUBS
@@ -161,14 +161,18 @@ X3 S G D B sky130_fd_pr__pfet_01v8 ad=3.2 pd=16.4 as=3.2 ps=16.4 w=16 l=0.2
 X4 D G S B sky130_fd_pr__pfet_01v8 ad=3.2 pd=16.4 as=6.4 ps=32.8 w=16 l=0.2
 .ends
 
-.subckt diff80 p1_80x1_0/D p1_80x1_1/S p1_80x1_1/G p1_80x1_1/B
+.subckt diff80 p1_80x1_0/D p1_80x1_1/G p1_80x1_1/B p1_80x1_1/S
 Xp1_80x1_0 p1_80x1_0/D p1_80x1_1/G p1_80x1_1/S p1_80x1_1/B p1_80x1
 Xp1_80x1_1 p1_80x1_1/G p1_80x1_1/G p1_80x1_1/S p1_80x1_1/B p1_80x1
 .ends
 
+.subckt sky130_fd_pr__rf_npn_05v5_W1p00L2p00 VSUBS m=1
+X0 dw_80_80# w_360_360# a_762_762# VSUBS sky130_fd_pr__npn_05v5_W1p00L2p00
+**devattr s=80000,1200 d=2758896,6656
+.ends
+
 .subckt demod VDD Vinp VSS Vref Vout
-Xsky130_fd_pr__nfet_01v8_QX7BC3_0 Vref n1x30_diff_pair_0/n1x30_2/S VSS VSS sky130_fd_pr__nfet_01v8_QX7BC3
-Xsky130_fd_pr__nfet_01v8_QX7BC3_1 Vref VSS n1x15_diff_pair_0/n1x15_1/S VSS sky130_fd_pr__nfet_01v8_QX7BC3
+Xsky130_fd_pr__nfet_01v8_QX2DR5_1 VSS Vref n1x15_diff_pair_0/n1x15_1/S VSS sky130_fd_pr__nfet_01v8_QX2DR5
 Xsky130_fd_pr__nfet_01v8_Q7B869_0 VSS p1x30_diff_pair_0/p1x30_1/G Vref VSS sky130_fd_pr__nfet_01v8_Q7B869
 Xn1x30_diff_pair_0 n1x30_diff_pair_0/n1x30_2/S Vinp Vp Vinn diff80_0/p1_80x1_0/D VSS
 + n1x30_diff_pair
@@ -181,7 +185,9 @@ Xsky130_fd_pr__res_xhigh_po_0p35_Y6F53N_0 Vinp VDD VSS sky130_fd_pr__res_xhigh_p
 Xsky130_fd_pr__res_xhigh_po_0p35_Y6F53N_1 Vinn VDD VSS sky130_fd_pr__res_xhigh_po_0p35_Y6F53N
 Xp1_80x80_0 Vdo Vg VSS VDD p1_80x80
 Xsky130_fd_pr__res_xhigh_po_0p35_V22KJH_0 VSS Vinp VSS sky130_fd_pr__res_xhigh_po_0p35_V22KJH
-Xdiff80_0 diff80_0/p1_80x1_0/D VDD Vp VDD diff80
+Xdiff80_0 diff80_0/p1_80x1_0/D Vp VDD VDD diff80
 Xsky130_fd_pr__res_xhigh_po_0p35_V22KJH_1 VSS Vinn VSS sky130_fd_pr__res_xhigh_po_0p35_V22KJH
+Xsky130_fd_pr__rf_npn_05v5_W1p00L2p00_0 VSS sky130_fd_pr__rf_npn_05v5_W1p00L2p00 m=1
+Xsky130_fd_pr__nfet_01v8_QX2DR5_0 n1x30_diff_pair_0/n1x30_2/S Vref VSS VSS sky130_fd_pr__nfet_01v8_QX2DR5
 .ends
 

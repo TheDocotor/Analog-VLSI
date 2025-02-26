@@ -12,12 +12,14 @@ simulator=ngspice
 only_toplevel=false 
 value= "VVDD VDD 0 1.8
 VVSS VSS 0 0
-.include bandgap.spice
+*.include bandgap.spice
 *x1 Vref VSS VDD bandgap
 C1 Vref VSS 100n
-
+.option savecurrents
 .control
 save all
+op
+write bandgap_tb.raw
 set color0=white
 set color1=blue
 foreach temp 0 30 60

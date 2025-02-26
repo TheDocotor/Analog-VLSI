@@ -19,11 +19,12 @@ x6 Vout Vs1 IF_filtered IF_out Lop Lon VDD Vref VSS radio
 .param VDD=1.8
 VVDD VDD 0 {VDD}
 VVSS VSS 0 0
-*VVREF Vref 0 1.07
+*VVREF Vref 0 1
 VAM RF 0 AM(10u 1.5 1k 1000k)
 VLO LOp LOn sine(0 5m 1455k)
 .include /home/renslow/Documents/ece5120/Project/mag/radio.spice
 .option savecurrents
+.ic V(vref)=1.07
 .control
 set BIAS=1
 if $BIAS
@@ -35,7 +36,7 @@ set color0=white
 set color1=blue
 set TRANS=1
 if $TRANS=1
- tran 100n 2m 1m
+ tran 100n 200m 199m
  plot RF
  plot IF_filtered
  plot x6.LNA_out

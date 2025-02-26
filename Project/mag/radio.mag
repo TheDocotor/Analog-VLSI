@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1732923339
+timestamp 1733333627
 << locali >>
 rect -2400 17520 -1600 27500
 rect -2400 17440 21740 17520
@@ -36,7 +36,8 @@ rect 7460 18560 7480 19520
 rect 7540 18560 7560 19540
 rect 7460 18520 7560 18560
 rect -1240 13660 -1120 14040
-rect 24440 12440 24940 12640
+rect 24800 12440 24940 12640
+rect 25480 11792 25718 12014
 << via1 >>
 rect 1800 32000 2200 32200
 rect 5240 28720 5440 28820
@@ -164,7 +165,7 @@ timestamp 1732920865
 transform 1 0 -15746 0 1 19418
 box -6800 -18000 13400 8100
 use demod  demod_0 ~/Documents/ece5120/hw08/mag
-timestamp 1732923339
+timestamp 1733331218
 transform 1 0 -5460 0 1 13840
 box 1300 -13500 32200 3600
 use gill_cell  gill_cell_0 ~/Documents/ece5120/hw07/mag
@@ -172,7 +173,7 @@ timestamp 1732920865
 transform 1 0 1540 0 1 22520
 box -3200 -5000 20200 2400
 use lna  lna_0 ~/Documents/ece5120/hw06/mag
-timestamp 1732923339
+timestamp 1733178114
 transform 1 0 3940 0 1 26120
 box -5600 -1200 18400 6800
 << labels >>
@@ -185,8 +186,6 @@ port 4 nsew
 flabel metal1 0 22280 0 22280 0 FreeSans 1600 0 0 0 LOn
 port 5 nsew
 flabel via2 7500 16940 7500 16940 0 FreeSans 1600 0 0 0 RFn
-flabel metal1 24600 12500 24600 12500 0 FreeSans 1600 0 0 0 RC
-port 0 nsew
 flabel metal1 -1200 13800 -1200 13800 0 FreeSans 1600 0 0 0 IF_in
 port 2 nsew
 flabel metal1 2800 25600 2800 25600 0 FreeSans 1600 0 0 0 ANT
@@ -195,4 +194,6 @@ flabel metal1 -21900 26400 -21900 26400 0 FreeSans 1600 0 0 0 VSS
 port 8 nsew
 flabel metal1 -14000 25200 -14000 25200 0 FreeSans 1600 0 0 0 VDD
 port 6 nsew
+flabel metal1 25598 11912 25598 11912 0 FreeSans 1600 0 0 0 RC
+port 9 nsew
 << end >>

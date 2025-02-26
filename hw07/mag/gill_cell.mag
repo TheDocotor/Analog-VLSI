@@ -546,19 +546,19 @@ rect -200 -4400 17260 -4280
 use Gilbert  Gilbert_0
 timestamp 1732917019
 transform 0 1 4800 -1 0 -100
-box 0 -2300 1404 2400
+box 0 -2300 1400 2400
 use Gilbert  Gilbert_1
 timestamp 1732917019
 transform 0 1 9380 -1 0 -100
-box 0 -2300 1404 2400
+box 0 -2300 1400 2400
 use Gilbert  Gilbert_2
 timestamp 1732917019
 transform 0 1 7100 -1 0 -1440
-box 0 -2300 1404 2400
+box 0 -2300 1400 2400
 use Gilbert  Gilbert_3
 timestamp 1732917019
 transform 0 1 15800 -1 0 0
-box 0 -2300 1404 2400
+box 0 -2300 1400 2400
 use if_res  if_res_0
 timestamp 1729706060
 transform 0 1 12940 -1 0 -162

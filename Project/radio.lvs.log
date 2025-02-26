@@ -326,17 +326,19 @@ Circuit radio contains 22 device instances.
   Class: lna                   instances:   1
   Class: gill_cell             instances:   1
   Class: bandgap               instances:   1
-Circuit contains 21 nets.
+Circuit contains 22 nets.
 
 Circuit 1 contains 22 devices, Circuit 2 contains 22 devices.
 Circuit 1 contains 21 nets,    Circuit 2 contains 21 nets.
 
 
 Final result: 
-Netlists do not match.
+Circuits match uniquely.
+Property errors were found.
 
 The following cells had property errors:
  bandgap
+ radio
 
 Logging to file "/home/renslow/Documents/ece5120/Project/radio.lvs.out" disabled
 LVS Done.

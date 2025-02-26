@@ -424,4 +424,4 @@ C {sky130_fd_pr/npn_05v5.sym} 440 -660 3 0 {name=Q1
 model=npn_05v5_w1p00l1p00
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 440 -680 0 1 {name=p4 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 440 -680 3 1 {name=p4 sig_type=std_logic lab=VSS}

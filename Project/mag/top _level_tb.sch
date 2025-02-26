@@ -40,11 +40,12 @@ value= "
 .param VDD=1.8
 VVDD VDD 0 \{VDD\}
 VVSS VSS 0 0 
-*VVREF Vref 0 1.07
+*VVREF Vref 0 1
 VAM RF 0 AM(10u 1.5 1k 1000k)
 VLO LOp LOn sine(0 5m 1455k)
 .include /home/renslow/Documents/ece5120/Project/mag/radio.spice
 .option savecurrents
+.ic V(vref)=1.07
 .control
 set BIAS=1
 if $BIAS
@@ -56,7 +57,7 @@ set color0=white
 set color1=blue
 set TRANS=1
 if $TRANS=1
- tran 100n 2m 1m
+ tran 100n 200m 199m
  plot RF
  plot IF_filtered
  plot x6.LNA_out
@@ -64,7 +65,7 @@ if $TRANS=1
 end
 .endc
 "}
-C {sky130_fd_pr/corner.sym} -110 -520 0 0 {name=CORNER only_toplevel=true corner=tt}
+C {sky130_fd_pr/corner.sym} 40 -540 0 0 {name=CORNER only_toplevel=true corner=tt}
 C {devices/iopin.sym} 170 20 0 0 {name=p9 lab=VDD}
 C {devices/iopin.sym} 460 -80 0 0 {name=p12 lab=RF}
 C {devices/iopin.sym} 170 60 0 0 {name=p14 lab=VSS}
